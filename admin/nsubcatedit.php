@@ -56,9 +56,8 @@
                                      <?php
                                           if ($value['category_id'] == $result['category_id']) { ?> 
                                              selected="selected"
-                                     <?php }
-                                     ?> 
-                                     value="<?php echo $value['category_id']; ?>"><?php echo $result['category_title']; ?>
+                                     <?php } ?> 
+                                     value="<?php echo $result['category_id']; ?>"><?php echo $result['category_title']; ?>
                                     </option>
 
                                   <?php } } ?>

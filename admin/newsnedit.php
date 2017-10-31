@@ -56,7 +56,7 @@
                                 <label>Category</label>
                             </td>
                             <td>
-                                <select name="category_id">
+                                <select id="select" name="category_id">
                                 <?php
                                 $cat = new CategoryNatioal(); 
                                     $getcat = $cat->getAllNCat();
@@ -69,7 +69,7 @@
                                                  selected="selected"
                                          <?php }
                                          ?> 
-                                        value="<?php echo $value['category_id']; ?>"><?php echo $catres['category_title']; ?>
+                                        value="<?php echo $catres['category_id']; ?>"><?php echo $catres['category_title']; ?>
                                   </option>
                                 <?php } } ?>    
                                 </select>
@@ -81,7 +81,7 @@
                                 <label>Sub Category</label>
                             </td>
                             <td>
-                                <select name="subcategory_id">
+                                <select id="select" name="subcategory_id">
                                 <?php
                                   $subcat = new SubCategoryNational(); 
                                     $getscat = $subcat->getAllNsCat();
@@ -94,7 +94,7 @@
                                                  selected="selected"
                                          <?php }
                                          ?> 
-                                        value="<?php echo $value['subcategory_id']; ?>"><?php echo $subcatres['sub_category_title']; ?>
+                                        value="<?php echo $subcatres['subcategory_id']; ?>"><?php echo $subcatres['sub_category_title']; ?>
                                      </option>
                                 <?php } } ?>    
                                 </select>

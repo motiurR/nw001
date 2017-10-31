@@ -104,7 +104,7 @@ class CategoryNatioal{
 
 
 	  public function getAllCat(){
-	  	$ncatShowquery = "SELECT * FROM tbl_ncategory";
+	  	$ncatShowquery = "SELECT * FROM tbl_ncategory ORDER BY category_id DESC";
 		$result = $this->db->select($ncatShowquery);
 		return $result;
 	  }

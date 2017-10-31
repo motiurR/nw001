@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 30, 2017 at 12:23 PM
+-- Generation Time: Oct 31, 2017 at 09:10 AM
 -- Server version: 10.1.9-MariaDB
 -- PHP Version: 5.5.30
 
@@ -39,7 +39,9 @@ CREATE TABLE `tbl_admin` (
 --
 
 INSERT INTO `tbl_admin` (`admin_id`, `adminUser`, `adminEmail`, `adminPassword`, `level`) VALUES
-(1, 'admin', 'admin@gmail.com', '21232f297a57a5a743894a0e4a801fc3', 0);
+(1, 'admin', 'admin@gmail.com', '21232f297a57a5a743894a0e4a801fc3', 0),
+(12, 'editor', 'editor@gmail.com', '5aee9dbd2a188839105073571bee1b1f', 1),
+(14, 'admin2', 'admin2@gmail.com', 'c84258e9c39059a89ab77d846ddab909', 0);
 
 -- --------------------------------------------------------
 
@@ -172,7 +174,7 @@ ALTER TABLE `tbl_subcategory`
 -- AUTO_INCREMENT for table `tbl_admin`
 --
 ALTER TABLE `tbl_admin`
-  MODIFY `admin_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `admin_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 --
 -- AUTO_INCREMENT for table `tbl_ncategory`
 --
@@ -182,12 +184,12 @@ ALTER TABLE `tbl_ncategory`
 -- AUTO_INCREMENT for table `tbl_newses`
 --
 ALTER TABLE `tbl_newses`
-  MODIFY `news_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `news_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 --
 -- AUTO_INCREMENT for table `tbl_subcategory`
 --
 ALTER TABLE `tbl_subcategory`
-  MODIFY `subcategory_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `subcategory_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

@@ -66,10 +66,10 @@
                 <li class="ic-dashboard"><a href="../admin/index.php"><span>Dashboard</span></a> </li>
             <?php
                 if (Session::get('level') == '0') { ?>
-                <li class="ic-form-style"><a href="adduser.php"><span>Add User</span></a></li>
-            <?php } ?>    
-                <li class="ic-form-style"><a href="userlist.php"><span>User List</span></a></li>
-				<li class="ic-typography"><a href="changepassword.php"><span>Change Password</span></a></li>
+                <li class="ic-form-style"><a href="AddnUser.php"><span>Add User</span></a></li>
+            <?php } ?>
+               <li class="ic-form-style"><a href="usernlist.php"><span>User List</span></a></li>  
+				<li class="ic-charts"><a href="changeadminpas.php"><span>Change Password</span></a></li>
                 <li class="ic-grid-tables"><a href="cusinbox.php"><span>Inbox</li>
                 <li class="ic-charts"><a href="../index.php" target="_blank"><span>Visit Website</span></a></li>
                 <li class="ic-grid-tables"><a href="?action=logout"><span>Logout</li>
