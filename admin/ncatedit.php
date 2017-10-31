@@ -4,9 +4,17 @@
 <?php include 'inc/sidebar.php';?>
 
 <?php
+    if (!isset($_GET['ncatid']) || $_GET['ncatid'] == NULL) { 
+        echo "<script>window.location = 'ncatlist.php';</script>";
+    }else{
+        $id =  $_GET['ncatid'];
+    }
+?>
+
+<?php
     $catN = new CategoryNatioal();
     if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-        $insertNationCat = $catN->addNCatTitle($_POST);
+        $updateNationlCat = $catN->UpdateNCatTitle($_POST, $id);
     }
 
 ?>
@@ -16,21 +24,26 @@
 
                 <p style="text-align: center;">
                     <?php
-                 if (isset($insertNationCat)) {
-                     echo $insertNationCat;
+                 if (isset($updateNationlCat)) {
+                     echo $updateNationlCat;
                  }
                ?></p>
                 
                <div class="block copyblock"> 
 
                  <form action="" method="POST">
+            <?php
+                $showNcat = $catN->getNcatforupdate($id);
+                if ($showNcat) {
+                    while ($result = $showNcat->fetch_assoc()) {
+            ?>        
                     <table class="form">					
                         <tr>
                             <td>
                                 <label>Title</label>
                             </td>
                             <td>
-                                <input type="text" name="category_title" placeholder="Enter title" class="medium" />
+                                <input type="text" name="category_title" value="<?php echo $result['category_title']; ?>" class="medium" />
                             </td>
                         </tr>
 
@@ -38,7 +51,7 @@
                             <td><label>Url</label></td>
                           
                             <td>
-                                <input type="text" name="category_url" placeholder="Enter url" class="medium" />
+                                <input type="text" name="category_url" value="<?php echo $result['category_url']; ?>" class="medium" />
                             </td>
                         </tr>
 
@@ -46,27 +59,20 @@
                             <td><label>SEO Title</label></td>
                             
                             <td>
-                                <input type="text" name="category_seo_title" placeholder="Seo Title">
+                                <input type="text" name="category_seo_title" value="<?php echo $result['category_seo_title']; ?>">
                             </td>
                         </tr>
 
-                         <tr>
-                            <td><label>Status</label></td>
-                            
-                            <td>
-                                 <select name="status">
-                                <option value="1">active</option>
-                                <option value="0">in-active</option>
-                            </select>
-                            </td>
-                        </tr>
 						<tr> 
                             <td>
-                                <input type="submit" name="submit" Value="uypdate" />
+                                <input type="submit" name="submit" Value="Update" />
                             </td>
                         </tr>
 
                     </table>
+
+            <?php } } ?>
+                    
                     </form>
                 </div>
             </div>

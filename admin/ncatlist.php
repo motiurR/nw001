@@ -21,14 +21,6 @@
         <div class="grid_10">
             <div class="box round first grid">
                 <h2>Category List</h2>
-
-                <p style="text-align: center;">
-	                <?php
-		                 if (isset($changeNCategoryststus)) {
-		                     echo $changeNCategoryststus;
-		                 }
-		              ?>
-               </p>
             
                     <table class="data display datatable" id="example">
 					<thead>

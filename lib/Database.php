@@ -20,6 +20,10 @@ Class Database{
 private function connectDB(){
  $this->link = new mysqli($this->host, $this->user, $this->pass, 
   $this->dbname);
+ 
+ mysqli_query($this->link,'SET CHARACTER SET utf8'); 
+ mysqli_query($this->link,"SET SESSION collation_connection ='utf8_general_ci'");
+
  if(!$this->link){
    $this->error ="Connection fail".$this->link->connect_error;
   return false;

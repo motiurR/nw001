@@ -1,44 +1,12 @@
-<?php
-    include '../lib/Session.php';
-    Session::checkSession();
-?>
-
-<!DOCTYPE html>
-<html>
-<head>
-	<title>SelectAdmin</title>
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-</head>
-<body>
-<div class="container" style="text-align: center;">
-	<div class="row">
-		<h2 style="text-align: center;padding: 40px;background: #cdcdcd;margin-bottom: 50px;">Plese Chose Your Admin Panel For Add Your News</h2>
-		<div class="international col-md-6">
-			<a href="mainadminpanel.php" class="btn btn-success">For All Country</a>
-		</div>
-		<div class="local col-md-6"">
-			<a href="localadminpanel.php" class="btn btn-primary">For Local</a>
-		</div>
-
-		<div class="adminlogout">
-            <?php
-                if (isset($_GET['action']) && $_GET['action'] == "logout") {
-                    Session::destroy();
-                }
-            ?>    
-
-            <div class="">
-                <ul class="">
-                    <h4 style="font-size: 25px;">Hello <span style="color: red;font-weight: bold;"><?php echo Session::get('adminUser');?></span></h4><hr> 
-                    <a style="font-size: 20px;" class="btn btn-danger" href="?action=logout">Logout</a>
-                </ul>
+﻿<?php include 'inc/header.php';?>
+<?php include 'inc/sidebar.php';?>
+        <div class="grid_10">
+            <div class="box round first grid">
+                <h2> Dashbord</h2>
+                <div class="block">
+                <h2 style="text-align: center;">Hello <?php echo Session::get('adminUser');?></h2>               
+               <h2 style="text-align: center;">Welcome To The National Admin panel</h2>       
+                </div>
             </div>
         </div>
-
-
-	</div>
-</div>
-</body>
-</html>
+<?php include 'inc/footer.php';?>

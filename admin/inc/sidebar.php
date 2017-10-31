@@ -27,15 +27,15 @@
 
                 <li><a class="menuitem">Sub Category</a>
                     <ul class="submenu">
-                        <li><a href="subcatadd.php">Add SubCategory</a> </li>
-                        <li><a href="subcatlist.php">SubCategory List</a> </li>
+                        <li><a href="nsubcatadd.php">Add SubCategory</a> </li>
+                        <li><a href="nsubcatlist.php">SubCategory List</a> </li>
                     </ul>
                 </li>
 
                 <li><a class="menuitem">News</a>
                     <ul class="submenu">
-                        <li><a href="newsadd.php">Add News</a> </li>
-                        <li><a href="newslist.php">news List</a> </li>
+                        <li><a href="newsnadd.php">Add News</a> </li>
+                        <li><a href="newsnlist.php">news List</a> </li>
                     </ul>
                 </li>
                 

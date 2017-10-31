@@ -65,7 +65,49 @@ class CategoryNatioal{
 		$changstutus = $this->db->delete($query);
 		return $changstutus;
 	  }
+	   public function getNcatforupdate($id){
+	  	$ncatShowquery = "SELECT * FROM tbl_ncategory WHERE category_id = '$id'";
+		$result = $this->db->select($ncatShowquery);
+		return $result;
+	  }
 
+	  public function UpdateNCatTitle($data,$id){
+	  	$category_title = $this->fm->validation($data['category_title']);
+		$category_title = mysqli_real_escape_string($this->db->link,$category_title);
+		$category_url = $this->fm->validation($data['category_url']);
+		$category_url = mysqli_real_escape_string($this->db->link,$category_url); 
+		$category_seo_title = $this->fm->validation($data['category_seo_title']);
+		$category_seo_title = mysqli_real_escape_string($this->db->link,$category_seo_title);
+
+
+		if (empty($category_title) || empty($category_url) || empty($category_seo_title)){
+			$msg = "<span class='unsuccess'>Category Must Not Be Empty.</span>";
+			return $msg;
+		}else{
+			$updatequery = "UPDATE tbl_ncategory 
+							SET 
+							category_title = '$category_title',
+							category_url = '$category_url',
+							category_seo_title = '$category_seo_title'
+							WHERE category_id = '$id'";
+			$update_row = $this->db->update($updatequery); 
+			
+			if ($update_row) {
+				$msg = "<span class='success'>Category Update Successfully.</span>";
+				return $msg;
+		}else{
+			$msg = "<span class='unsuccess'>Something Went Wrong</span>";
+			return $msg;
+		}
+	}
+	  }
+
+
+	  public function getAllCat(){
+	  	$ncatShowquery = "SELECT * FROM tbl_ncategory";
+		$result = $this->db->select($ncatShowquery);
+		return $result;
+	  }
 
 
 }
