@@ -3,6 +3,10 @@
 <?php include '../classes/SubCategoryNational.php';?>
 
 <?php
+	$fm = new Format();
+?>
+
+<?php
     $newslist = new NewsAddN();
     if (isset($_GET['istop'])) {
     	$id = $_GET['istop'];
@@ -47,7 +51,7 @@
 							<th>SubCat Id</th>
 							<th>Is Top</th>
 							<th>News Title</th>
-							<th>News url</th>
+							<!-- <th>News url</th> -->
 							<th>iamge</th>
 							<th>Author</th>
 							<th>Status</th>
@@ -74,7 +78,7 @@
 
 							<td><?php echo $result['news_title']?></td>
 
-							<td><?php echo $result['news_url']?></td>
+							<!-- <td><?php echo $fm->textShorten($result['news_url'],80)?></td> -->
 
 							<td>
 								<img src="<?php echo $result['image']?>" width="50px" height="50px;">

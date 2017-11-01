@@ -4,10 +4,9 @@
             <ul class="section menu">
                <li><a class="menuitem">Site Option</a>
                     <ul class="submenu">
-                        <li><a href="titleslogan.php">Title & Slogan</a></li>
-                        <li><a href="social.php">Social Media</a></li>
-                        <!-- <li><a href="copyright.php">Copyright</a></li> -->
-                        
+                        <li><a href="announcement.php">Announcement</a></li>
+                        <li><a href="ntitleslogan.php">Logo</a></li>
+                        <li><a href="nsocial.php">Social Site</a></li>
                     </ul>
                 </li>
 
@@ -17,6 +16,12 @@
                         <li><a href="sliderlist.php">Slider List</a> </li>
                     </ul>
                 </li> -->
+                <li><a class="menuitem">Breaking News </a>
+                    <ul class="submenu">
+                        <li><a href="addbreakingnews.php">Add Breaking News</a> </li>
+                        <li><a href="breakingnewslist.php">Manage Breaking</a> </li>
+                    </ul>
+                </li>
 
                 <li><a class="menuitem">Category Option</a>
                     <ul class="submenu">
