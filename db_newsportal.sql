@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 01, 2017 at 12:03 PM
+-- Generation Time: Nov 02, 2017 at 06:24 AM
 -- Server version: 10.1.9-MariaDB
 -- PHP Version: 5.5.30
 
@@ -79,9 +79,8 @@ CREATE TABLE `tbl_breakingnews` (
 
 INSERT INTO `tbl_breakingnews` (`breaking_id`, `title`, `status`) VALUES
 (4, '<p><span>যেভাবে হেরেছে, তা নিয়ে ভীষণ উদ্বিগ্ন&nbsp;</span></p>', 0),
-(5, '<p>নাজমুল হাসান। গতকাল মঙ্গলবার বিকেলে&nbsp;</p>', 0),
 (6, '<p>নাজমুল হাসান। গতকাল মঙ্গলবার বিকেলে&nbsp;</p>', 0),
-(7, '<p>নাজমুল হাসান। গতকাল মঙ্গলবার বিকেলে&nbsp;</p>', 1);
+(7, '<div class="right_title">\r\n<h1 class="title mb10"><span style="font-size: x-small;">সেই সুমি রাজশাহী বিশ্ববিদ্যালয়ে ভর্তির সুযোগ পেলেন</span></h1>\r\n</div>', 0);
 
 -- --------------------------------------------------------
 

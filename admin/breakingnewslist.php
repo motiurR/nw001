@@ -46,7 +46,7 @@
 								<a href="?status=<?php echo $result['breaking_id']?>" onclick="return confirm('Are You Sure Want To Change?') " style="color:<?php echo $result['status']?'green':'red'; ?>"><?php echo $result['status']?'active':'in-active'; ?></a>
 							</td>
 
-				            <td><a href="ncatedit.php?ncatid=<?php echo $result['breaking_id']?>">Edit</a> 
+				            <td><a href="breakingedit.php?breakid=<?php echo $result['breaking_id']?>">Edit</a> 
 				 <?php if (Session::get('level') == '0') { ?> <!-- admin hole del kora jabe -->
 
 				            || <a onclick="return confirm('Are You Sure Want To Delete?') " href="?delb=<?php echo $result['breaking_id']?>">Delete</a>

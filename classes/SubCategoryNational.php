@@ -64,7 +64,7 @@ class SubCategoryNational{
 
 	  public function changeNsCatStatusById($id){
 	  	$query = "UPDATE tbl_subcategory SET status = !status WHERE subcategory_id = '$id'";
-		$changstutus = $this->db->delete($query);
+		$changstutus = $this->db->update($query);
 		return $changstutus;
 	  }
 	  public function getsubcatById($id){

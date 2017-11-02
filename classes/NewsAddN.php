@@ -48,7 +48,7 @@ class NewsAddN{
 	    $uploaded_image = "upload/".$unique_image;
 
 	    if ($category_id =="" || $subcategory_id =="" || $news_title ==""|| $news_url =="" || $news_seo_title =="" || $news_summery =="" || $news_details =="" || $file_name=="" || $author =="") {
-	    	$msg = "<span class='error'>Product Field must not be empty!</span>";
+	    	$msg = "<span class='error'>Field must not be empty!</span>";
 			return $msg;
 	    }
 	    else if ($file_size >1048567) {
@@ -94,7 +94,7 @@ class NewsAddN{
 
 	   public function changenNewsStatusById($id){
 	  	$query = "UPDATE tbl_newses SET status = !status WHERE news_id = '$id'";
-		$changstutus = $this->db->delete($query);
+		$changstutus = $this->db->update($query);
 		return $changstutus;
 	  }
 

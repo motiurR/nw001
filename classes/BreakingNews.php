@@ -43,4 +43,53 @@ class BreakingNews{
 		return $result;
 	  }
 
+	  public function changeNbreakingById($id){
+	  	$query = "UPDATE tbl_breakingnews SET status = !status WHERE breaking_id = '$id'";
+		$changstutus = $this->db->update($query);
+		return $changstutus;
+	  }
+
+	  public function delNBreaktById($id){
+	  	$query = "DELETE FROM tbl_breakingnews WHERE breaking_id = '$id'";
+		$delete_row = $this->db->delete($query);
+		if ($delete_row) {
+			$msg = "<span class='success'>Data Deleted Successfully.</span>";
+				return $msg;
+		}else{
+			$msg = "<span class='unsuccess'>Something Went Wrong!!</span>";
+			return $msg;
+		}
+	  }
+
+	  public function getbreakingforshow($id){
+	  	$showQuery = "SELECT * FROM tbl_breakingnews WHERE breaking_id = '$id'";
+	  	$result = $this->db->select($showQuery);
+	  	return $result;
+	  }
+
+	  public function getupBreakingNews($data, $id){
+	  	 $title = $this->fm->validation($data['title']);
+	  	 $title = mysqli_real_escape_string($this->db->link,$title);
+
+	  	 if (empty($title)) {
+	  	 	$msg = "<span class='unsuccess'>Field Must Not Be Empty !!</span>";
+			return $msg;
+	  	 }else{
+	  	 	$upquery ="UPDATE tbl_breakingnews
+	  	 				SET
+	  	 				title = '$title'
+	  	 				WHERE breaking_id = '$id'";
+	  	 	$result = $this->db->update($upquery);
+
+	  	 	if ($result) {
+				$msg = "<span class='success'>Data Update Successfully.</span>";
+				return $msg;
+		}else{
+			$msg = "<span class='unsuccess'>Something Went Wrong!!</span>";
+			return $msg;
+		}
+
+	   }
+	 }
+
 }	  

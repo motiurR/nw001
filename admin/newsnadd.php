@@ -5,6 +5,24 @@
 <?php include 'inc/header.php';?>
 <?php include 'inc/sidebar.php';?>
 
+<script>
+function getSubcat(val) {
+    $.ajax({
+    type: "POST",
+    url: "get_state.php",
+    data:'subcatid='+val,
+    success: function(data){
+        $("#state-list").html(data);
+    }
+    });
+}
+
+function selectCountry(val) {
+$("#search-box").val(val);
+$("#suggesstion-box").hide();
+}
+</script>
+
 <?php
     $catN = new NewsAddN();
     if ($_SERVER['REQUEST_METHOD'] == 'POST') {
@@ -33,7 +51,8 @@
                                 <label>Category</label>
                             </td>
                             <td>
-                                <select name="category_id">
+                                <select name="category_id" onChange="getSubcat(this.value)">
+                                     <option value="">select Category</option>
                                 <?php
                                 $cat = new CategoryNatioal(); 
                                     $getcat = $cat->getAllNCat();
@@ -51,15 +70,8 @@
                                 <label>Sub Category</label>
                             </td>
                             <td>
-                                <select name="subcategory_id">
-                                <?php
-                                  $subcat = new SubCategoryNational(); 
-                                    $getscat = $subcat->getAllNsCat();
-                                    if ($getscat) {
-                                        while ($subcatres = $getscat->fetch_assoc()) {
-                                ?>  
-                                    <option value="<?php echo $subcatres['subcategory_id']; ?>"><?php echo $subcatres['sub_category_title']; ?></option>
-                                <?php } } ?>    
+                                <select name="subcategory_id" id="state-list">
+                                    <option value="">Select SubCategory</option>
                                 </select>
                             </td>
                         </tr>

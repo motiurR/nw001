@@ -62,7 +62,7 @@ class CategoryNatioal{
 
 	  public function changeNCatStatusById($id){
 	  	$query = "UPDATE tbl_ncategory SET status = !status WHERE category_id = '$id'";
-		$changstutus = $this->db->delete($query);
+		$changstutus = $this->db->update($query);
 		return $changstutus;
 	  }
 	   public function getNcatforupdate($id){
