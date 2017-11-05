@@ -1,4 +1,5 @@
 <?php 
+	error_reporting(0);
     $filepath = realpath(dirname(__FILE__));
 	include_once ($filepath.'/../lib/Database.php');
 	include_once ($filepath.'/../helpers/Format.php');
@@ -47,16 +48,18 @@ class NewsAddN{
 	    $unique_image = substr(md5(time()), 0, 10).'.'.$file_ext;
 	    $uploaded_image = "upload/".$unique_image;
 
-	    if ($category_id =="" || $subcategory_id =="" || $news_title ==""|| $news_url =="" || $news_seo_title =="" || $news_summery =="" || $news_details =="" || $file_name=="" || $author =="") {
-	    	$msg = "<span class='error'>Field must not be empty!</span>";
+	    if ($category_id =="" || $news_title ==""|| $news_url =="" || $news_seo_title =="" || $news_summery =="" || $news_details =="" || $file_name=="" || $author =="") {
+	    	$msg = "<span class='error'>Product Field must not be empty!</span>";
 			return $msg;
 	    }
 	    else if ($file_size >1048567) {
-		     echo "<span class='error'>Image Size should be less then 1MB!
-		     </span>";
+		     $msg =  "<span class='error'>Image Size should be less then 1MB!
+                         </span>";
+                  return $msg;
 		    } else if (in_array($file_ext, $permited) === false) {
-		     echo "<span class='error'>You can upload only:-"
-		     .implode(', ', $permited)."</span>";
+		     $msg = "<span class='error'>You can upload only:-</span>"
+                       .implode(', ', $permited)."</span>";
+                   return $msg;
 		    }else{
 	    	move_uploaded_file($file_temp, $uploaded_image);
 	    	$query = "INSERT INTO tbl_newses(category_id,subcategory_id,top_news, news_title, news_url, news_seo_title,news_summery, news_details,image, author,status) VALUES('$category_id','$subcategory_id','$top_news','$news_title','$news_url','$news_seo_title','$news_summery','$news_details','$uploaded_image','$author','$status')";
@@ -74,17 +77,15 @@ class NewsAddN{
 
 	  }
 	  public function getAllNews(){
-	  	$newsShowquery = "SELECT tbl_newses.*,tbl_ncategory.category_title,tbl_subcategory.sub_category_title 
-
+	  	$newsShowquery = "SELECT tbl_newses.*,tbl_ncategory.category_title
 					           FROM tbl_newses
 					           INNER JOIN tbl_ncategory 
 					           ON tbl_newses.category_id = tbl_ncategory.category_id
-					           INNER JOIN tbl_subcategory 
-					           ON tbl_newses.subcategory_id = tbl_subcategory.subcategory_id
 					           ORDER BY tbl_newses.news_id DESC";
 		$result = $this->db->select($newsShowquery);
 		return $result;
 	  }
+
 
 	   public function changenNewsTopById($id){
 	  	$query = "UPDATE tbl_newses SET top_news = !top_news WHERE news_id = '$id'";
@@ -157,11 +158,13 @@ class NewsAddN{
 	    } else { /*jehitu photo check korte hocchena*/
 	    	if (!empty($file_name)) {
 			     if ($file_size >1048567) {
-				     echo "<span class='error'>Image Size should be less then 1MB!
-				     </span>";
-				    } else if (in_array($file_ext, $permited) === false) {
-				     echo "<span class='error'>You can upload only:-"
-				     .implode(', ', $permited)."</span>";
+				     $msg =  "<span class='error'>Image Size should be less then 1MB!
+                         </span>";
+                          return $msg;
+				    } elseif (in_array($file_ext, $permited) === false) {
+				     $msg = "<span class='error'>You can upload only:-</span>"
+                       .implode(', ', $permited)."</span>";
+                        return $msg;
 				    }else{
 			    	move_uploaded_file($file_temp, $uploaded_image);
 					    	$query = "UPDATE tbl_newses

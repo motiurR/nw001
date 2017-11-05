@@ -13,6 +13,7 @@
     if (isset($_GET['status'])) {
     	$id = $_GET['status'];
     	$changebreaking =$nbrk->changeNbreakingById($id);
+    	echo "<script>window.location = 'breakingnewslist.php';</script>";
     }
 ?>
 

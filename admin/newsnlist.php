@@ -17,6 +17,7 @@
     if (isset($_GET['status'])) {
     	$id = $_GET['status'];
     	$changeNewseststus =$newslist->changenNewsStatusById($id);
+    	echo "<script>window.location = 'newsnlist.php';</script>";
     }
 ?>
 <?php
@@ -47,8 +48,8 @@
 					<thead>
 						<tr>
 							<th>SL</th>
-							<th>Cat Id</th>
-							<th>SubCat Id</th>
+							<th>Category</th>
+							<!-- <th>SubCat Id</th> -->
 							<th>Is Top</th>
 							<th>News Title</th>
 							<!-- <th>News url</th> -->
@@ -69,8 +70,8 @@
 			?>
 						<tr class="odd gradeX">
 							<td><?php echo $i;?></td>
-							<td><?php echo $result['category_id']?>/<?php echo $result['category_title']?></td>
-							<td><?php echo $result['subcategory_id']?>/<?php echo $result['sub_category_title']?></td>
+							<td><?php echo $result['category_title']?></td>
+							<!-- <td><?php echo $result['subcategory_id']?></td> -->
 							
 							<td>
 								<a href="?istop=<?php echo $result['news_id']?>" onclick="return confirm('Are You Sure Want To Change?') " style="color:<?php echo $result['top_news']?'green':'red'; ?>"><?php echo $result['top_news']?'Top':'General'; ?></a>

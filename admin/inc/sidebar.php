@@ -19,7 +19,7 @@
                 <li><a class="menuitem">Breaking News </a>
                     <ul class="submenu">
                         <li><a href="addbreakingnews.php">Add Breaking News</a> </li>
-                        <li><a href="breakingnewslist.php">Manage Breaking</a> </li>
+                        <li><a href="breakingnewslist.php">Breaking News List</a> </li>
                     </ul>
                 </li>
 
@@ -34,6 +34,13 @@
                     <ul class="submenu">
                         <li><a href="nsubcatadd.php">Add SubCategory</a> </li>
                         <li><a href="nsubcatlist.php">SubCategory List</a> </li>
+                    </ul>
+                </li>
+
+                <li><a class="menuitem">Columnist News</a>
+                    <ul class="submenu">
+                        <li><a href="columnistnewsadd.php">Add C News</a> </li>
+                        <li><a href="columnlistnewslist.php">C News List</a> </li>
                     </ul>
                 </li>
 

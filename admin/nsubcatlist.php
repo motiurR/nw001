@@ -13,6 +13,7 @@
     if (isset($_GET['status'])) {
     	$id = $_GET['status'];
     	$changeNsCategoryststus =$nscatglist->changeNsCatStatusById($id);
+    	echo "<script>window.location = 'nsubcatlist.php';</script>";
     }
 ?>
 

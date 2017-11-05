@@ -1,98 +1,45 @@
-<?php include '../classes/NewsAddN.php';?>
-<?php include '../classes/CategoryNatioal.php';?>
-<?php include '../classes/SubCategoryNational.php';?>
+<?php include '../classes/Columnistnews.php';?>
 
 <?php include 'inc/header.php';?>
 <?php include 'inc/sidebar.php';?>
 
 <?php
-    if (!isset($_GET['newsid']) || $_GET['newsid'] == NULL) { 
-        echo "<script>window.location = 'newsnlist.php';</script>";
+    if (!isset($_GET['colnewsid']) || $_GET['colnewsid'] == NULL) { 
+        echo "<script>window.location = 'columnlistnewslist.php';</script>";
     }else{
-        $id =  $_GET['newsid'];
+        $id =  $_GET['colnewsid'];
     }
 ?>
 
 <?php
-    $newsn = new NewsAddN();
+    $colN = new Columnistnews();
     if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-        $updateNews = $newsn->updateNewsInfo($_POST, $_FILES, $id);
+        $updateColNews = $colN->updateColNewsInfo($_POST, $_FILES, $id);
     }
 
 ?>
 
         <div class="grid_10">
             <div class="box round first grid">
-                <h2>Update News News</h2>
+                <h2>Update Columnist News</h2>
 
                <p style="text-align: center;">
                     <?php
-                 if (isset($updateNews)) {
-                     echo $updateNews;
+                 if (isset($updateColNews)) {
+                     echo $updateColNews;
                  }
                ?></p>
                 
                <div class="block copyblock">
 
             <?php
-               $newsn = new NewsAddN();
-                $getnesbyid = $newsn->getsubcatById($id);
-                if ($getnesbyid) {
-                  while ($value = $getnesbyid->fetch_assoc()) {
+                $getcolNbyid = $colN->getcolNewsById($id);
+                if ($getcolNbyid) {
+                  while ($value = $getcolNbyid->fetch_assoc()) {
             ?>      
 
                  <form action="" method="POST" enctype="multipart/form-data">
                     <table class="form">					
-
-                        <tr>
-                            <td>
-                                <label>Category</label>
-                            </td>
-                            <td>
-                                <select id="select" name="category_id">
-                                <?php
-                                $cat = new CategoryNatioal(); 
-                                    $getcat = $cat->getAllNCat();
-                                    if ($getcat) {
-                                        while ($catres = $getcat->fetch_assoc()) {
-                                ?>  
-                                    <option 
-                                         <?php
-                                              if ($value['category_id'] == $catres['category_id']) { ?> 
-                                                 selected="selected"
-                                         <?php }
-                                         ?> 
-                                        value="<?php echo $catres['category_id']; ?>"><?php echo $catres['category_title']; ?>
-                                  </option>
-                                <?php } } ?>    
-                                </select>
-                            </td>
-                        </tr>
-
-                         <tr>
-                            <td>
-                                <label>Sub Category</label>
-                            </td>
-                            <td>
-                                <select id="select" name="subcategory_id">
-                                <?php
-                                  $subcat = new SubCategoryNational(); 
-                                    $getscat = $subcat->getAllNsCat();
-                                    if ($getscat) {
-                                        while ($subcatres = $getscat->fetch_assoc()) {
-                                ?>  
-                                    <option
-                                         <?php
-                                              if ($value['subcategory_id'] == $subcatres['subcategory_id']) { ?> 
-                                                 selected="selected"
-                                         <?php }
-                                         ?> 
-                                        value="<?php echo $subcatres['subcategory_id']; ?>"><?php echo $subcatres['sub_category_title']; ?>
-                                     </option>
-                                <?php } } ?>    
-                                </select>
-                            </td>
-                        </tr>
 
                          <tr>
                             <td>
@@ -112,7 +59,7 @@
                         </tr>
 
                         <tr>
-                            <td><label>SEO Title</label></td>
+                            <td><label>Seo Title</label></td>
                             
                             <td>
                                 <input type="text" name="news_seo_title" value="<?php echo $value['news_seo_title']; ?>" class="medium">
@@ -155,7 +102,7 @@
 
 
 
-						<tr> 
+						            <tr> 
                             <td>
                                 <input type="submit" name="submit" Value="Update" />
                             </td>

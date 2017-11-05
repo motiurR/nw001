@@ -1,17 +1,16 @@
-<<?php include '../lib/Database.php';?>
-
+<?php include '../lib/Database.php';?>
 <?php
 $db = new Database();
-if(!empty($_POST["category_id"])) {
-	$query ="SELECT * FROM tbl_subcategory WHERE category_id = '" . $_POST["categoryid"] . "'";
-	$results = $db->select($query);
-	if($results > 0){
-        echo '<option value="">Select state</option>';
-        while($row = $query->fetch_assoc()){ 
-            echo '<option value="'.$row['subcategory_id'].'">'.$row['sub_category_title'].'</option>';
-        }
-    }else{
-        echo '<option value="">State not available</option>';
+if(!empty($_POST["subcatid"])) {
+    $query ="SELECT * FROM tbl_subcategory WHERE category_id = '" . $_POST["subcatid"] . "'";
+    $results = $db->select($query);
+?>
+    <option value="">Select SubCategory</option>
+<?php
+    foreach($results as $subcat) {
+?>
+    <option value="<?php echo $subcat["subcategory_id"]; ?>"><?php echo $subcat["sub_category_title"]; ?></option>
+<?php
     }
 }
 ?>
