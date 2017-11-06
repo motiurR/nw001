@@ -45,10 +45,15 @@ class SubCategoryNational{
 	  }
 
 	  public function getAllNsCat(){
-	  	$nscatShowquery = "SELECT * FROM tbl_subcategory ORDER BY subcategory_id DESC";
+	  	$nscatShowquery = "SELECT * FROM tbl_subcategory WHERE status = '1'";
 		$result = $this->db->select($nscatShowquery);
 		return $result;
 	  }
+	  public function gesubCategorybyId($subcid){
+		$catShowquery = "SELECT * FROM tbl_subcategory WHERE category_id = '$subcid' ";
+		$result = $this->db->select($catShowquery);
+		return $result;
+	}
 
 	  public function delNsCatById($id){
 	  	$query = "DELETE FROM tbl_subcategory WHERE subcategory_id = '$id'";

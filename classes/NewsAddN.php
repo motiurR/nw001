@@ -85,7 +85,48 @@ class NewsAddN{
 		$result = $this->db->select($newsShowquery);
 		return $result;
 	  }
-
+	/*recent*/
+	  public function getAllNRecentNews(){
+	  	$query = "SELECT * FROM tbl_newses WHERE status = '1' ORDER BY news_id DESC LIMIT 11";
+	  	$result = $this->db->select($query);
+	  	return $result;
+	  }
+	  /*popular*/
+	  public function getAllNPopularNews(){
+	  	$query = "SELECT * FROM tbl_newses WHERE status = '1' ORDER BY hits DESC LIMIT 11";
+	  	$result = $this->db->select($query);
+	  	return $result;
+	  }
+	  /*mot dimot*/
+	  public function getAllmotdimotNews(){
+	  	$query = "SELECT * FROM tbl_newses WHERE category_id = '24' ORDER BY category_id DESC LIMIT 5";
+	  	$result = $this->db->select($query);
+	  	return $result;
+	  }
+	  /*interview*/
+	   public function getAllInterviewNews(){
+	  	$query = "SELECT * FROM tbl_newses WHERE category_id = '25' ORDER BY category_id DESC  LIMIT 3";
+	  	$result = $this->db->select($query);
+	  	return $result;
+	  }
+	  /*government*/
+	   public function getAllgovmentNews(){
+	  	$query = "SELECT * FROM tbl_newses WHERE category_id = '26' ORDER BY category_id DESC  LIMIT 1";
+	  	$result = $this->db->select($query);
+	  	return $result;
+	  }
+	  /*oposite*/
+	   public function getAllopositeNews(){
+	  	$query = "SELECT * FROM tbl_newses WHERE category_id = '27' ORDER BY category_id DESC  LIMIT 1";
+	  	$result = $this->db->select($query);
+	  	return $result;
+	  }
+	  /*superTop*/
+	  public function getSuperTopNews(){
+	  	$query = "SELECT * FROM tbl_newses WHERE category_id = '28' ORDER BY category_id DESC  LIMIT 1";
+	  	$result = $this->db->select($query);
+	  	return $result;
+	  }
 
 	   public function changenNewsTopById($id){
 	  	$query = "UPDATE tbl_newses SET top_news = !top_news WHERE news_id = '$id'";
