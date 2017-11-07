@@ -45,7 +45,7 @@ class SubCategoryNational{
 	  }
 
 	  public function getAllNsCat(){
-	  	$nscatShowquery = "SELECT * FROM tbl_subcategory WHERE status = '1'";
+	  	$nscatShowquery = "SELECT * FROM tbl_subcategory ORDER BY subcategory_id DESC";
 		$result = $this->db->select($nscatShowquery);
 		return $result;
 	  }

@@ -16,7 +16,7 @@
                           if ($recentNews) {
                             while ($result = $recentNews->fetch_assoc()) {
                       ?>  
-                        <button type="button" class="list-group-item"><a href="#"><?php echo $result['news_title']; ?></a></button>
+                        <button type="button" class="list-group-item"><a href="singlenews.php?nurl=<?php echo $result['news_url']; ?>"><?php echo $result['news_title']; ?></a></button>
                       <?php } }?>  
                     </div>
                 </div>
@@ -28,7 +28,7 @@
                           if ($popularNews) {
                             while ($popuresult = $popularNews->fetch_assoc()) {
                       ?>  
-                        <button type="button" class="list-group-item"><a href="#"><?php echo $popuresult['news_title']; ?></a></button>
+                        <button type="button" class="list-group-item"><a href="singlenews.php?nurl=<?php echo $popuresult['news_url']; ?>"><?php echo $popuresult['news_title']; ?></a></button>
                       <?php } } ?>  
                     </div>
                 </div>

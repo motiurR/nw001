@@ -155,6 +155,16 @@ $("#suggesstion-box").hide();
                             </select>
                             </td>
                         </tr>
+
+                         <tr>
+                            <td>
+                                <label>Date</label>
+                            </td>
+                            <td>
+                                <input type="date" name="date"  class="medium" />
+                            </td>
+                        </tr>
+
 						<tr> 
                             <td>
                                 <input type="submit" name="submit" Value="Save" />

@@ -9,13 +9,13 @@
                                                 while ($result = $motdimotNews->fetch_assoc()) {
                                           ?> 
                                         <div class="col-lg-4">
-                                            <a href="#">
+                                            <a href="singlenews.php?nurl=<?php echo $result['news_url']; ?>">
                                                 <img src="admin/<?php echo $result['image']; ?>" alt="khaleda" class="img-circle"/>
                                             </a>
                                         </div>
                                         <div class="col-lg-8 m-contents-likha">
                                              
-                                            <a href="#"><?php echo $result['news_title']; ?></a>
+                                            <a href="singlenews.php?nurl=<?php echo $result['news_url']; ?>"><?php echo $result['news_title']; ?></a>
                                            
                                         </div>
                                      <?php } } ?>    

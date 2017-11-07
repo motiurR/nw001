@@ -10,12 +10,12 @@
                     <div class="sakhtatkar-content">
                          
                         <div class="col-lg-4">
-                            <a href="#">
+                            <a href="singlenews.php?nurl=<?php echo $result['news_url']; ?>">
                                 <img src="admin/<?php echo $result['image']; ?>" alt="noname" class="img-responsive"/>
                             </a>
                         </div>
                         <div class="col-lg-8 text">
-                            <a href="#">
+                            <a href="singlenews.php?nurl=<?php echo $result['news_url']; ?>">
                                 <h4><?php echo $result['news_title']; ?></h4>
                             </a>
                         </div>

@@ -43,7 +43,7 @@ class CategoryNatioal{
 	  }
 
 	  public function getAllNCat(){
-	  	$ncatShowquery = "SELECT * FROM tbl_ncategory WHERE status ='1'";
+	  	$ncatShowquery = "SELECT * FROM tbl_ncategory ORDER BY category_id DESC";
 		$result = $this->db->select($ncatShowquery);
 		return $result;
 	  }

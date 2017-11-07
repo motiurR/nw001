@@ -2,53 +2,21 @@
                         <div class="jatio-content">
                             <h1><a href="#">জাতীয় খবর</a></h1>
                             <hr />
+                        <?php
+                            $news = new NewsAddN();
+                            $nationalNews = $news->getNationalNews();
+                            if ($nationalNews) {
+                            while ($result = $nationalNews->fetch_assoc()) {
+                        ?>
                             <div class="col-lg-6">
                                 <div class="thumbnail thumbnail-content">
-                                    <a href="#"><img src="images/tashkin.jpg" alt="taskin"></a>
+                                    <a href="singlenews.php?nurl=<?php echo $result['news_url']; ?>"><img src="admin/<?php echo $result['image']; ?>" alt="taskin"></a>
                                     <div class="caption">
-                                        <a href="#"><h4>বিয়ে করলেন তাসকিন</h4></a>
+                                        <a href="singlenews.php?nurl=<?php echo $result['news_url']; ?>"><h4><?php echo $result['news_title']; ?></h4></a>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-lg-6">
-                                <div class="thumbnail thumbnail-content">
-                                    <a href="#"><img src="images/tree.jpg" alt="Tree"></a>
-                                    <div class="caption">
-                                        <a href="#"><h4>উত্তরা গণভবনের গাছ চুরি</h4></a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-6">
-                                <div class="thumbnail thumbnail-content">
-                                    <a href="#"><img src="images/tashkin.jpg" alt="taskin"></a>
-                                    <div class="caption">
-                                        <a href="#"><h4>বিয়ে করলেন তাসকিন</h4></a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-6">
-                                <div class="thumbnail thumbnail-content">
-                                    <a href="#"><img src="images/tree.jpg" alt="Tree"></a>
-                                    <div class="caption">
-                                        <a href="#"><h4>উত্তরা গণভবনের গাছ চুরি</h4></a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-6">
-                                <div class="thumbnail thumbnail-content">
-                                    <a href="#"><img src="images/tashkin.jpg" alt="taskin"></a>
-                                    <div class="caption">
-                                        <a href="#"><h4>বিয়ে করলেন তাসকিন</h4></a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-6">
-                                <div class="thumbnail thumbnail-content">
-                                    <a href="#"><img src="images/tree.jpg" alt="Tree"></a>
-                                    <div class="caption">
-                                        <a href="#"><h4>উত্তরা গণভবনের গাছ চুরি</h4></a>
-                                    </div>
-                                </div>
-                            </div>
+                        <?php } }?>
+
                         </div>
                     </div>

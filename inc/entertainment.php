@@ -4,67 +4,69 @@
                     <div class="kheladhula-total-contet">
                         <a href="#"><h1>বিনোদন</h1></a>
                         <hr />
+                        <?php
+                             $news = new NewsAddN();
+                              $motdimotNews = $news->getDhallywoodTopNews();
+                              if ($motdimotNews) {
+                                while ($result = $motdimotNews->fetch_assoc()) {
+                          ?>
                         <!--Kheladhula First part start here-->
                         <div class= "col-lg-6">
                             <div class="thumbnail kheladhula-thumbnail">
-                                <a href="#"><img src="images/binodon.jpg" alt="Sachin"></a>
+                                <a href="singlenews.php?nurl=<?php echo $result['news_url']; ?>"><img src="admin/<?php echo $result['image']; ?>" alt="Sachin"></a>
                                 <div class="caption kheladhula-thumbnail-likha">
-                                    <a href="#"><h3>এমির আসরের এক ঝলক</h3></a>
-                                    <a href="#"><p>৬৯তম এমি অ্যাওয়ার্ডে ড্রামা সিরিজ ‘দ্য হ্যান্ডমেইড’স টেল’-এর শিল্পী ও কলাকুশলীদের হাতে পুরস্কার তুলে দেন অপরাহ উইনফ্রে।</p></a>
+                                    <a href="singlenews.php?nurl=<?php echo $result['news_url']; ?>"><h3><?php echo $result['news_title']; ?></h3></a>
+                                    <a href="singlenews.php?nurl=<?php echo $result['news_url']; ?>"><p><?php echo $fm->textShorten($result['news_summery']); ?></p></a>
                                 </div>
                             </div>
                         </div>
+                       <?php } } ?> 
+
+
+                      <?php
+                            $news = new NewsAddN();
+                            $motdimotNews = $news->getBollyllywoodTopNews();
+                            if ($motdimotNews) {
+                            while ($result = $motdimotNews->fetch_assoc()) {
+                       ?> 
+
                         <div class="col-lg-6">
                             <div class="thumbnail kheladhula-thumbnail">
-                                <a href="#"><img src="images/binodon2.jpg" alt="Rafa"></a>
+                                <a href="#"><img src="admin/<?php echo $result['image']; ?>" alt="Rafa"></a>
                                 <div class="caption kheladhula-thumbnail-likha">
-                                    <a href="#"> <h3>নানারূপে মিম</h3></a>
-                                    <a href="#"><p>আগের দুই বছর কোনো গ্র্যান্ড স্লাম জিততে পারেননি। এ বছর জিতেছেন দুটি। গত...</p></a>
+                                    <a href="singlenews.php?nurl=<?php echo $result['news_url']; ?>"> <h3><?php echo $result['news_title']; ?></h3></a>
+                                    <a href="singlenews.php?nurl=<?php echo $result['news_url']; ?>"><p><?php echo $fm->textShorten($result['news_summery']); ?></p></a>
                                 </div>
                             </div>
                         </div>
+
+                       <?php } } ?> 
+
+
                         <!--Kheladhula First part end here-->
 
                         <!--Kheladhula-2nd-part start here-->
                         <div class="kheladhula-2nd-part">
                             <div class="row">
                                 <div class="col-lg-12">
+
+                                <?php
+                                     $news = new NewsAddN();
+                                      $cricketTNews = $news->getAllIEntertainmentNews();
+                                      if ($cricketTNews) {
+                                        while ($result = $cricketTNews->fetch_assoc()) {
+                                  ?>    
                                     <div class="col-lg-3">
                                         <div class="thumbnail kheladhula-2nd-part-thumbnail">
-                                            <a href="#"><img src="images/binodon3.jpg" alt="PSG"></a>
+                                            <a href="#"><img src="admin/<?php echo $result['image']; ?>" alt="PSG"></a>
                                             <div class="caption">
-                                                <a href="#"><h3>শিল্পী কখনো তৃপ্ত হয়?</h3></a>
-                                                <a href="#"><p>পিএসজি মানেই তো নেইমার-কাভানি আর এমবাপ্পের গল্প। কাতারের ধনকুবের নাসের...</p></a>
+                                                <a href="#"><h3><?php echo $result['news_title']; ?></h3></a>
+                                                <a href="#"><p><?php echo $fm->textShorten($result['news_summery']); ?></p></a>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-lg-3">
-                                        <div class="thumbnail kheladhula-2nd-part-thumbnail">
-                                            <a href="#"><img src="images/binodon4.jpg" alt="Chan"></a>
-                                            <div class="caption">
-                                                <a href="#"><h3>নিজেকে ভালো রাখতে চেয়েছি</h3></a>
-                                                <a href="#"><p>২০১৭–১৮ চ্যাম্পিয়নস লিগের গ্রুপ পর্বে দুই দলের প্রথম লড়াইয়ের মতোই গোলবহুল ম্যাচ ...</p></a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-3">
-                                        <div class="thumbnail kheladhula-2nd-part-thumbnail">
-                                            <a href="#"><img src="images/binodon5.jpg" alt="Bolt"></a>
-                                            <div class="caption">
-                                                <a href="#"><h3>অস্ট্রেলিয়ার পথে পথে পরিণীতি</h3></a>
-                                                <a href="#"><p>ক্রীড়াঙ্গনের সাবেক-বর্তমান অনেক তারকাই রেস্তোরাঁ ব্যবসা খুলে বসেছেন। ক্রিকেটের শচীন ...</p></a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-3">
-                                        <div class="thumbnail kheladhula-2nd-part-thumbnail">
-                                            <a href="#"><img src="images/binodon6.jpg" alt="Mash"></a>
-                                            <div class="caption">
-                                                <a href="#"><h3>নভেম্বরে ফিরবেন সেলেনা’</h3></a>
-                                                <a href="#"><p>২০১৩-১৪ মৌসুমের বিসিএলের পর এবারের জাতীয় লিগেই আবার খেললেন দীর্ঘ পরিসরের...</p></a>
-                                            </div>
-                                        </div>
-                                    </div>
+                                 <?php } } ?>   
+
                                 </div>
                             </div>
                         </div>

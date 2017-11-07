@@ -1,5 +1,4 @@
 <?php 
-	error_reporting(0);
     $filepath = realpath(dirname(__FILE__));
 	include_once ($filepath.'/../lib/Database.php');
 	include_once ($filepath.'/../helpers/Format.php');
@@ -36,6 +35,8 @@ class NewsAddN{
 		$author = mysqli_real_escape_string($this->db->link,$author);
 		$status = $this->fm->validation($data['status']);
 		$status = mysqli_real_escape_string($this->db->link,$status);
+		$date = $this->fm->validation($data['date']);
+		$date = mysqli_real_escape_string($this->db->link,$date);
 		
 
 		$permited  = array('jpg', 'jpeg', 'png', 'gif');
@@ -48,7 +49,7 @@ class NewsAddN{
 	    $unique_image = substr(md5(time()), 0, 10).'.'.$file_ext;
 	    $uploaded_image = "upload/".$unique_image;
 
-	    if ($category_id =="" || $news_title ==""|| $news_url =="" || $news_seo_title =="" || $news_summery =="" || $news_details =="" || $file_name=="" || $author =="") {
+	    if ($category_id =="" || $news_title ==""|| $news_url =="" || $news_seo_title =="" || $news_summery =="" || $news_details =="" || $file_name=="" || $author =="" || $date=="") {
 	    	$msg = "<span class='error'>Product Field must not be empty!</span>";
 			return $msg;
 	    }
@@ -62,7 +63,7 @@ class NewsAddN{
                    return $msg;
 		    }else{
 	    	move_uploaded_file($file_temp, $uploaded_image);
-	    	$query = "INSERT INTO tbl_newses(category_id,subcategory_id,top_news, news_title, news_url, news_seo_title,news_summery, news_details,image, author,status) VALUES('$category_id','$subcategory_id','$top_news','$news_title','$news_url','$news_seo_title','$news_summery','$news_details','$uploaded_image','$author','$status')";
+	    	$query = "INSERT INTO tbl_newses(category_id,subcategory_id,top_news, news_title, news_url, news_seo_title,news_summery, news_details,image, author,status,date) VALUES('$category_id','$subcategory_id','$top_news','$news_title','$news_url','$news_seo_title','$news_summery','$news_details','$uploaded_image','$author','$status','$date')";
 
 	    	$inserted_row = $this->db->insert($query);
 			if ($inserted_row) {
@@ -99,31 +100,137 @@ class NewsAddN{
 	  }
 	  /*mot dimot*/
 	  public function getAllmotdimotNews(){
-	  	$query = "SELECT * FROM tbl_newses WHERE category_id = '24' ORDER BY category_id DESC LIMIT 5";
+	  	$query = "SELECT * FROM tbl_newses WHERE status = '1'AND category_id = '24' ORDER BY news_id DESC LIMIT 5";
 	  	$result = $this->db->select($query);
 	  	return $result;
 	  }
 	  /*interview*/
 	   public function getAllInterviewNews(){
-	  	$query = "SELECT * FROM tbl_newses WHERE category_id = '25' ORDER BY category_id DESC  LIMIT 3";
+	  	$query = "SELECT * FROM tbl_newses WHERE status = '1'AND category_id = '25' ORDER BY news_id DESC  LIMIT 3";
 	  	$result = $this->db->select($query);
 	  	return $result;
 	  }
 	  /*government*/
 	   public function getAllgovmentNews(){
-	  	$query = "SELECT * FROM tbl_newses WHERE category_id = '26' ORDER BY category_id DESC  LIMIT 1";
+	  	$query = "SELECT * FROM tbl_newses WHERE status = '1'AND category_id = '26' ORDER BY news_id DESC  LIMIT 1";
 	  	$result = $this->db->select($query);
 	  	return $result;
 	  }
 	  /*oposite*/
 	   public function getAllopositeNews(){
-	  	$query = "SELECT * FROM tbl_newses WHERE category_id = '27' ORDER BY category_id DESC  LIMIT 1";
+	  	$query = "SELECT * FROM tbl_newses WHERE status = '1'AND category_id = '27' ORDER BY news_id DESC  LIMIT 1";
 	  	$result = $this->db->select($query);
 	  	return $result;
 	  }
 	  /*superTop*/
 	  public function getSuperTopNews(){
-	  	$query = "SELECT * FROM tbl_newses WHERE category_id = '28' ORDER BY category_id DESC  LIMIT 1";
+	  	$query = "SELECT * FROM tbl_newses WHERE status = '1'AND category_id = '28' ORDER BY news_id DESC  LIMIT 1";
+	  	$result = $this->db->select($query);
+	  	return $result;
+	  }
+
+	  public function getNationalNews(){
+	  	$query = "SELECT * FROM tbl_newses WHERE status = '1'AND category_id = '29' ORDER BY news_id DESC  LIMIT 6";
+	  	$result = $this->db->select($query);
+	  	return $result;
+	  }
+	  /*get cricket top news*/
+	  public function getCricketTopNews(){
+	  	$query = "SELECT * FROM tbl_newses WHERE status = '1' AND top_news = '1' AND subcategory_id = '2' ORDER BY news_id DESC  LIMIT 1";
+	  	$result = $this->db->select($query);
+	  	return $result;
+	  }
+	  /*get footbal top news*/
+	  public function getFootbalTopNews(){
+	  	$query = "SELECT * FROM tbl_newses WHERE status = '1' AND top_news = '1' AND subcategory_id = '3' ORDER BY news_id DESC  LIMIT 1";
+	  	$result = $this->db->select($query);
+	  	return $result;
+	  }
+	  /*get all sports news*/
+	  public function getAllSportsNews(){
+	  	$query = "SELECT * FROM tbl_newses WHERE status = '1'AND category_id = '19' ORDER BY news_id DESC  LIMIT 4";
+	  	$result = $this->db->select($query);
+	  	return $result;
+	  }
+
+	  /*get top political news*/
+	  public function getTopPoliticalNews(){
+	  	$query = "SELECT * FROM tbl_newses WHERE status = '1' AND top_news = '1' AND category_id = '15' ORDER BY news_id DESC  LIMIT 1";
+	  	$result = $this->db->select($query);
+	  	return $result;
+	  }
+
+	  /*get all political news*/
+	  public function getAllPoliticalNews(){
+	  	$query = "SELECT * FROM tbl_newses WHERE status = '1'AND category_id = '15' ORDER BY news_id DESC  LIMIT 3";
+	  	$result = $this->db->select($query);
+	  	return $result;
+	  }
+	  /*get all international new*/
+	  public function getAllInternationalNews(){
+	  	$query = "SELECT * FROM tbl_newses WHERE status = '1'AND category_id = '18' ORDER BY news_id DESC  LIMIT 6";
+	  	$result = $this->db->select($query);
+	  	return $result;
+	  }
+	  /*get all economical news*/
+	  public function getAllEconomicalNews(){
+	  	$query = "SELECT * FROM tbl_newses WHERE status = '1'AND category_id = '17' ORDER BY news_id DESC  LIMIT 4";
+	  	$result = $this->db->select($query);
+	  	return $result;
+	  }
+	 /* get hollywood top news*/
+	  public function getDhallywoodTopNews(){
+	  	$query = "SELECT * FROM tbl_newses WHERE status = '1' AND top_news = '1' AND subcategory_id = '11' ORDER BY news_id DESC  LIMIT 1";
+	  	$result = $this->db->select($query);
+	  	return $result;
+	  }
+	  /* get bollywood top news*/
+	  public function getBollyllywoodTopNews(){
+	  	$query = "SELECT * FROM tbl_newses WHERE status = '1' AND top_news = '1' AND subcategory_id = '10' ORDER BY news_id DESC  LIMIT 1";
+	  	$result = $this->db->select($query);
+	  	return $result;
+	  }
+	  /*get all Entertainment new*/
+	  public function getAllIEntertainmentNews(){
+	  	$query = "SELECT * FROM tbl_newses WHERE status = '1'AND category_id = '20' ORDER BY news_id DESC  LIMIT 4";
+	  	$result = $this->db->select($query);
+	  	return $result;
+	  }
+	  /* get top Education news*/
+	  public function getTopEducationNews(){
+	  	$query = "SELECT * FROM tbl_newses WHERE status = '1' AND top_news = '1' AND category_id = '30' ORDER BY news_id DESC  LIMIT 1";
+	  	$result = $this->db->select($query);
+	  	return $result;
+	  }
+	  /*get all Education new*/
+	  public function getAllEducationNews(){
+	  	$query = "SELECT * FROM tbl_newses WHERE status = '1'AND category_id = '30' ORDER BY news_id DESC  LIMIT 3";
+	  	$result = $this->db->select($query);
+	  	return $result;
+	  }
+	  /*get all Technology new*/
+	  public function getAllITechnologyNews(){
+	  	$query = "SELECT * FROM tbl_newses WHERE status = '1'AND category_id = '31' ORDER BY news_id DESC  LIMIT 6";
+	  	$result = $this->db->select($query);
+	  	return $result;
+	  }
+	  /*get all Lifestyle new*/
+	  public function getAlllifestyleNews(){
+	  	$query = "SELECT * FROM tbl_newses WHERE status = '1'AND subcategory_id = '6' ORDER BY news_id DESC  LIMIT 6";
+	  	$result = $this->db->select($query);
+	  	return $result;
+	  }
+
+
+
+
+
+
+
+
+	  /*get details news*/
+	  public function getsinglenews($singleid){
+	  	 $query = "SELECT * FROM tbl_newses WHERE news_url = '$singleid'";
 	  	$result = $this->db->select($query);
 	  	return $result;
 	  }
@@ -255,6 +362,22 @@ class NewsAddN{
 			       }
 	           }
 	       }
+	  }
+
+	  /*date wise search*/
+	  public function getnewsByid($data){
+	  	$year = $this->fm->validation($data['year']);
+		$year = mysqli_real_escape_string($this->db->link,$year);
+		$month = $this->fm->validation($data['month']);
+		$month = mysqli_real_escape_string($this->db->link,$month);
+		$day = $this->fm->validation($data['day']);
+		$day = mysqli_real_escape_string($this->db->link,$day);
+
+		$date = $year.'-'.$month.'-'.$day;
+
+		$query = "SELECT * FROM tbl_newses WHERE date = '$date'";
+		$result =$this->db->select($query);
+		return $result;
 	  }
 
 }

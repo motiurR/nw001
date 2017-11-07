@@ -13,11 +13,11 @@
                                             <a href="#">সরকারী দল</a>
                                         </h1>
                                         <div class="thumbnail thumbnail-content">
-                                            <a href="#">
+                                            <a href="singlenews.php?nurl=<?php echo $result['news_url']; ?>">
                                                 <img src="admin/<?php echo $result['image'];?>" alt="kader">
                                             </a>
                                             <div class="caption text">
-                                                <h4><a href="#"><?php echo $result['news_title']; ?></a></h4>
+                                                <h4><a href="singlenews.php?nurl=<?php echo $result['news_url']; ?>"><?php echo $result['news_title']; ?></a></h4>
                                             </div>
                                         </div>
                                     </div>
@@ -37,11 +37,11 @@
                                             <a href="#">বিরোধী দল</a>
                                         </h1>
                                         <div class="thumbnail thumbnail-content">
-                                            <a href="#">
+                                            <a href="singlenews.php?nurl=<?php echo $result['news_url']; ?>">
                                                 <img src="admin/<?php echo $result['image'];?>" alt="bnp">
                                             </a>
                                             <div class="caption text">
-                                                <h4><a href="#"><?php echo $result['news_title']; ?></a></h4>
+                                                <h4><a href="singlenews.php?nurl=<?php echo $result['news_url']; ?>"><?php echo $result['news_title']; ?></a></h4>
                                             </div>
                                         </div>
                                     </div>
