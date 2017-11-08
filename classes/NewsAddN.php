@@ -220,6 +220,18 @@ class NewsAddN{
 	  	$result = $this->db->select($query);
 	  	return $result;
 	  }
+	  /* get get Last One Women News*/
+	  public function getLastOneWomenNews(){
+	  	$query = "SELECT * FROM tbl_newses WHERE status = '1' AND subcategory_id = '8' ORDER BY news_id DESC  LIMIT 1";
+	  	$result = $this->db->select($query);
+	  	return $result;
+	  }
+	  /* get get Last One bicitro News*/
+	  public function getLastOneBicitroNews(){
+	  	$query = "SELECT * FROM tbl_newses WHERE status = '1'AND category_id = '22' ORDER BY news_id DESC  LIMIT 1";
+	  	$result = $this->db->select($query);
+	  	return $result;
+	  }	  
 
 
 

@@ -18,9 +18,13 @@
         <!-- Bootstrap v3.3.7 -->
         <link rel="stylesheet" href="css/bootstrap.min.css" />
 
-        <!----here css file link hrer --->
-        <link rel="stylesheet" href="css/style.css" /><!-- jQuery link here-->
+        <!-- here css file link hrer  -->
+        <link rel="stylesheet" href="css/style.css" />
+        <link rel="stylesheet" href="css/archive.css" />
+        <link rel="stylesheet" href="css/news-view.css" />
+        <!-- jQuery link here -->
         <script type="text/javascript" src="js/jquery-3.2.1.js"></script>
+        <script type="text/javascript" src="js/bootstrap.min.js"></script>
     </head>
     <body>
         <header>
@@ -43,7 +47,7 @@
                     </div>
                 </div>
             </div>
-            <!--Navbar start here=-->
+          
 
           <div class="navbar navbar-default menu">
                 <nav class="container menu-items">

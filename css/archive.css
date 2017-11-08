@@ -1,0 +1,38 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Nov 8, 2017, 11:01:15 AM
+    Author     : John
+*/
+.archive_page .archive_content h2{
+    margin-top: 0;
+    font-weight: bold;
+    margin-left: -15px;
+}
+.archive_page .archive_content hr{
+    margin-top: 0px;
+    margin-bottom: 15px;
+    margin-left: -15px;
+}
+.archive_page .archive_content .thumbnail_content{
+    margin-left: -15px;
+    padding: 0px;
+    border-radius: 0px;
+    margin-bottom: 15px;
+    box-shadow: 0 3px 8px 0px rgba(0, 0, 0, 0.2), 0px 1px 15px 0 rgba(0, 0, 0, 0.19);
+}
+.archive_page .archive_content .thumbnail_content a img{
+    display: block;
+    height: 150px;
+    overflow: hidden;
+}
+.archive_page .archive_content .thumbnail_content h4 a{
+    display: block;
+    height: 80px;
+    overflow: hidden;
+    line-height: 23px;
+    color: black;
+}

@@ -41,7 +41,9 @@
                             <!--=======Sakhatkar part end here=========-->
 
                             <!--Sorborcho Sorbadhik Part start here-->
-                            <?php include 'inc/recentPopular.php';?>
+                            <div class="col-lg-6">
+                                <?php include 'inc/recentPopular.php';?>
+                            </div>
                             <!--Sorborcho Sorbadhik Part end here-->
                         </div>
                     </div>

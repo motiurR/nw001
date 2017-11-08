@@ -1,7 +1,7 @@
 <?php
     include_once "classes/NewsAddN.php";
 ?>
-    <div class="col-lg-6">
+    
         <div class="sorbcho-sorbadhik">
             <ul class="nav nav-pills btns nav-justified btns">
                 <li class="active"><a data-toggle="tab" href="#home">সর্বশেষ</a></li>
@@ -34,4 +34,4 @@
                 </div>
             </div>
         </div>
-    </div>
+    

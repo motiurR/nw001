@@ -1,0 +1,150 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Nov 7, 2017, 11:08:56 AM
+    Author     : John
+*/
+.news_view_page .news_view_content{
+    border: 1px solid lightgrey;
+    margin-top: 6px;
+    margin-bottom: 20px;
+    box-shadow: 0 3px 8px 0px rgba(0, 0, 0, 0.2), 0px 1px 15px 0 rgba(0, 0, 0, 0.19);
+}
+.news_view_page .news_view_content h2{
+    padding: 8px 10px;
+    margin-top: 0px;
+    overflow: hidden;
+    height: 90px;
+}
+.news_view_page .news_view_content hr{
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+.news_view_page .news_view_content .media-part{
+    margin-top: 30px;
+    margin-left: 9px;
+    font-size: 16px;
+    color: lightsteelblue;
+    display: inline-block;
+}
+.news_view_page .news_view_content .custom_social_share{
+    display: inline-block;
+    float: right;
+}
+.news_view_page .news_view_content .custom_social_share .custom_share_count{
+    margin-top: 10px;
+    display: inline-block;
+    position: relative;
+    width: 100px;
+    border-right: 1px solid #cecece;
+    text-align: center;
+    color: rgb(102, 102, 102);
+    line-height: 1;
+}
+.news_view_page .news_view_content .custom_social_share .custom_share_count .custom_num {
+    font-weight: bold;
+    font-size: 26px;
+    display: block;
+    margin-bottom: 5px;
+}
+.news_view_page .news_view_content .custom_social_share .custom_share_count .share_word {
+    font-size: 14px;
+}
+.social_media{
+    display: inline-block;
+    text-align: left !important;
+    margin-top: 11px;
+    margin-right: 13px
+}
+.social_media li {
+    display: inline-block;
+}
+.social_media li button {
+    color: #000;
+    border: none;
+    background: none;
+    padding: 0;
+}
+.social_media li button i {
+    width: 34px;
+    height: 34px;
+    border-radius: 100%;
+    text-align: center;
+    line-height: 34px;
+    color: #fff;
+}
+.social_media button .fa-facebook {
+    background: #3b5998;
+}
+.social_media button .fa-google-plus{
+    background: #d34836;
+}
+.news_view_page .news_view_content img{
+    width: 100%;
+    padding: 10px 10px;
+}
+.news_view_page .news_view_content .tt{
+    display: block;
+    float: right;
+    margin-right: 20px;
+    padding-top: 3px;
+    font-size: 15px;
+    color: lightsteelblue;
+}
+.news_view_page .news_view_content p{
+    padding: 0 17px;
+    font-size: 18px;
+    line-height: 30px;
+    margin-top: 35px;
+}
+.news_view_page .related_news h3{
+    margin-top: 0;
+    font-weight: bold;
+    margin-left: 15px;
+}
+.news_view_page .related_news hr{
+    margin-top: 0;
+    margin-bottom: 12px;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+.news_view_page .thumbnail-content a{
+    display: block;
+    width: 100%;
+    height: 110px;
+    overflow: hidden;
+}
+.news_view_page .thumbnail-content{
+    padding: 0px;
+    border-radius: 0px; 
+    box-shadow: 0 3px 8px 0px rgba(0, 0, 0, 0.2), 0px 1px 15px 0 rgba(0, 0, 0, 0.19);
+    margin-right: -8px;
+    margin-top: 10px;
+}
+.news_view_page .thumbnail-content h4{
+    margin-top: 0px;
+}
+.news_view_page .thumbnail-content h4 a{
+    font-size: 20px;
+    max-height: 80px;
+    overflow: hidden;
+    padding-top: 6px;
+    line-height: 25px;
+}
+.comment_section{
+    margin-bottom: 20px;
+}
+.comment_section h3{
+    margin-top: 0;
+    font-weight: bold;
+    margin-left: 15px;
+}
+.comment_section hr{
+    margin-top: 0;
+    margin-bottom: 12px;
+    margin-left: 15px;
+    margin-right: 15px;
+}
