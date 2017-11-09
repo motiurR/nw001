@@ -160,7 +160,7 @@
                     <!-- bicitro khobor end -->
 
                     <!-- kartun start here -->
-                    <?php include 'inc/kartun.php';?> 
+                    <?php include 'inc/cartoon.php';?> 
                      <!-- kartun end here -->
 
                 </div>

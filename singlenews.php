@@ -68,38 +68,26 @@
                             <div class="related_news">
                                 <h3>সম্পর্কিত খবর</h3>
                                 <hr />
+
+                             <?php
+                                $catid = $result['category_id']; /*uoporei sejetu select kore nea ase tai ar laglona*/
+                                $querycat = "SELECT * FROM tbl_newses WHERE category_id = '$catid' ORDER BY rand() LIMIT 4";
+                                $relatedpost = $db->select($querycat);
+                                   if ($relatedpost) {
+                                 while ($reletedresult = $relatedpost->fetch_assoc()) {
+                              ?>    
+
                                 <div class="col-lg-3">
                                     <div class="thumbnail thumbnail-content">
-                                        <a href="#"><img src="images/liton.jpg" alt="Liton" class="img-responsive"></a>
+                                        <a href="singlenews.php?nurl=<?php echo $reletedresult['news_url']; ?>"><img src="admin/<?php echo $reletedresult['image']; ?>" alt="Liton" class="img-responsive"></a>
                                         <div class="caption">
-                                            <h4><a href="#">ম্যাচ হেরেও চিন্তিত নন লিটন?</a></h4>
+                                            <h4><a href="singlenews.php?nurl=<?php echo $reletedresult['news_url']; ?>"><?php echo $reletedresult['news_title']; ?></a></h4>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-lg-3">
-                                    <div class="thumbnail thumbnail-content">
-                                        <a href="#"><img src="images/gavaskar.jpg" alt="Gavaskar" class="img-responsive"></a>
-                                        <div class="caption">
-                                            <h4><a href="#">ধোনির পাশে গাভাস্কার-শেবাগ</a></h4>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-3">
-                                    <div class="thumbnail thumbnail-content">
-                                        <a href="#"><img src="images/chittagong.jpg" alt="CHI" class="img-responsive"></a>
-                                        <div class="caption">
-                                            <h4><a href="#">চিটাগং ভাইকিংসের সুন্দর শুরু</a></h4>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-3">
-                                    <div class="thumbnail thumbnail-content">
-                                        <a href="#"><img src="images/akhter.jpg" alt="Shoieb Akhter" class="img-responsive"></a>
-                                        <div class="caption">
-                                            <h4><a href="#">‘ভাগ্যিস, কোহলির বিপক্ষে বল করতে হয়নি!’</a></h4>
-                                        </div>
-                                    </div>
-                                </div>
+                              <?php } } else { echo "No Related Post Available";} ?>
+
+
                             </div>
                             <!--comment section here-->
                             <div class="comment_section">

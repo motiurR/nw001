@@ -50,7 +50,7 @@ class NewsAddN{
 	    $uploaded_image = "upload/".$unique_image;
 
 	    if ($category_id =="" || $news_title ==""|| $news_url =="" || $news_seo_title =="" || $news_summery =="" || $news_details =="" || $file_name=="" || $author =="" || $date=="") {
-	    	$msg = "<span class='error'>Product Field must not be empty!</span>";
+	    	$msg = "<span class='error'>Field must not be empty!</span>";
 			return $msg;
 	    }
 	    else if ($file_size >1048567) {
@@ -231,7 +231,13 @@ class NewsAddN{
 	  	$query = "SELECT * FROM tbl_newses WHERE status = '1'AND category_id = '22' ORDER BY news_id DESC  LIMIT 1";
 	  	$result = $this->db->select($query);
 	  	return $result;
-	  }	  
+	  }
+	  /*get all breaking news*/	
+	  public function getAllBreakingNews(){
+	  	$query = "SELECT * FROM tbl_breakingnews WHERE status = '1' ORDER BY breaking_id DESC";
+	  	$result = $this->db->select($query);
+	  	return $result;
+	  }  
 
 
 
@@ -249,7 +255,7 @@ class NewsAddN{
 
 	   public function changenNewsTopById($id){
 	  	$query = "UPDATE tbl_newses SET top_news = !top_news WHERE news_id = '$id'";
-		$changstutus = $this->db->delete($query);
+		$changstutus = $this->db->update($query);
 		return $changstutus;
 	  }
 
@@ -279,7 +285,7 @@ class NewsAddN{
 			    	return $msg;
 	    	}
 	  }
-
+	 /*for update*/
 	  public function getsubcatById($id){
 	  	$ncatShowquery = "SELECT * FROM tbl_newses WHERE news_id = '$id'";
 		$result = $this->db->select($ncatShowquery);

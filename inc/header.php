@@ -22,57 +22,118 @@
         <link rel="stylesheet" href="css/style.css" />
         <link rel="stylesheet" href="css/archive.css" />
         <link rel="stylesheet" href="css/news-view.css" />
+        <link rel="stylesheet" href="css/font-awesome.min.css" />
+
         <!-- jQuery link here -->
         <script type="text/javascript" src="js/jquery-3.2.1.js"></script>
         <script type="text/javascript" src="js/bootstrap.min.js"></script>
     </head>
     <body>
-        <header>
+       <header>
+            <div class="col-lg-12">
+             <p id="demo" class="text-center">
+                <script type="text/javascript" src="http://bangladate.appspot.com/index4.php"></script>
+             </p>
+            </div>
             <div class="container main-content">
                 <div class="row">
                     <div class="logo col-lg-6">
                         <a href="index.php">
-                            <img src="images/logo2.png" alt="logo" />
+                            <img src="images/logo3.png" alt="logo" class="img-responsive"/>
                         </a>
                     </div>
                     <div class="date col-lg-6">
-                        <p id="demo"></p>
-                        <script>
-                            document.getElementById("demo").innerHTML = Date();
-                        </script>
-                        <hr />
                         <div class="add">
-                            <h1>Add</h1>
+
                         </div>
                     </div>
                 </div>
             </div>
-          
-
-          <div class="navbar navbar-default menu">
-                <nav class="container menu-items">
-                    <div class="navbar-header" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                        <button type="button" class="navbar-toggle collapsed navbar-toggle-center" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+            <!--Navbar start here --->
+            <nav class="navbar menu" data-spy = "affix" data-offset-top= "197">
+                <div class="container">
+                    <!-- Brand and toggle get grouped for better mobile display -->
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
                             <span class="sr-only">Toggle navigation</span>
-                            <span class="glyphicon glyphicon-menu-hamburger"></span>
-                            <span class="navmenu">MENU</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
                         </button>
                     </div>
-                    <div class="collapse navbar-collapse navbar-nav-justified menu-items-contents" id="bs-example-navbar-collapse-1">
-                        <ul class="nav nav-pills nav-justified">
-                            <li><a href="#">নীড়পাতা</a></li>
-                            <li><a href="#">রাজনীতি</a></li>
-                            <li><a href="#">সারা বাংলা</a></li>
-                            <li><a href="#">অর্থনীতি</a></li>
-                            <li><a href="#">আন্তর্জাতিক</a></li>
-                            <li><a href="#">খেলা</a></li>
-                            <li><a href="#">বিনোদন</a></li>
-                            <li><a href="#">ফিচার</a></li>
-                            <li><a href="#">আজব নিউজ</a></li>
-                            <li><a href="#">কলাম</a></li>
+
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse menu-item" id="bs-example-navbar-collapse-1">
+                        <ul class="nav nav-justified menu-item-content">
+                            <li>
+                                <a href="#" class="menu-items">নীড়পাতা</a>
+                            </li>
+                            <li>
+                                <a href="#" class="menu-items">রাজনীতি</a>
+                            </li>
+                            <li>
+                                <a href="#" class="menu-items">সারা বাংলা</a>
+                            </li>
+                            <li>
+                                <a href="#" class="menu-items">অর্থনীতি</a>
+                            </li>
+                            <li>
+                                <a href="#" class="menu-items">আন্তর্জাতিক</a>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle menu-items" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">খেলা<i class="fa fa-chevron-down" aria-hidden="true"></i></a>
+                                <ul class="dropdown-menu dropdown-content">
+                                    <li><a href="#">ক্রিকেট</a></li>
+                                    <li><a href="#">ফুটবল</a></li>
+                                    <li><a href="#">হকি</a></li>
+                                    <li><a href="#">টেনিস</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle menu-items" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">বিনোদন<i class="fa fa-chevron-down" aria-hidden="true"></i></a>
+                                <ul class="dropdown-menu dropdown-content">
+                                    <li><a href="#">ঢালিউড</a></li>
+                                    <li><a href="#">বলিউড</a></li>
+                                    <li><a href="#">হলিউড</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle menu-items" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">ফিচার<i class="fa fa-chevron-down" aria-hidden="true"></i></a>
+                                <ul class="dropdown-menu dropdown-content">
+                                    <li><a href="#">প্রবাস</a></li>
+                                    <li><a href="#">ফেসবুক কথন</a></li>
+                                    <li><a href="#">জীবনযাপন</a></li>
+                                    <li><a href="#">নারী</a></li>
+                                    <li><a href="#">সাহিত্য</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#" class="menu-items">আজব নিউজ</a>
+                            </li>
+                            <li>
+                                <a href="#" class="menu-items">কলাম</a>
+                            </li>
                         </ul>
-                    </div>
-                </nav>
-               </div> 
-           
+                    </div><!-- /.navbar-collapse -->
+                </div><!-- /.container-fluid -->
+                <script type="text/javascript">
+                    $('.dropdown').hover(
+                            function () {
+                                $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeIn();
+                            },
+                            function () {
+                                $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeOut();
+                            }
+                    );
+
+                    $('.dropdown-menu').hover(
+                            function () {
+                                $(this).stop(true, true);
+                            },
+                            function () {
+                                $(this).stop(true, true).delay(200).fadeOut();
+                            }
+                    );
+                </script>
+            </nav>
         </header>

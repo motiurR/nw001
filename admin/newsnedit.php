@@ -23,7 +23,7 @@
 
         <div class="grid_10">
             <div class="box round first grid">
-                <h2>Update News News</h2>
+                <h2>Update News</h2>
 
                <p style="text-align: center;">
                     <?php

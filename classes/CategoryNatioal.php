@@ -47,6 +47,12 @@ class CategoryNatioal{
 		$result = $this->db->select($ncatShowquery);
 		return $result;
 	  }
+	  /*for cartoon*/
+	  public function getAllNCatforCartoon(){
+	  	$ncatShowquery = "SELECT * FROM tbl_ncategory WHERE category_id = '32'";
+		$result = $this->db->select($ncatShowquery);
+		return $result;
+	  }
 
 	  public function delNCatById($id){
 	  	$query = "DELETE FROM tbl_ncategory WHERE category_id = '$id'";

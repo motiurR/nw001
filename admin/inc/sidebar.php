@@ -37,6 +37,13 @@
                     </ul>
                 </li>
 
+                <li><a class="menuitem">Cartoon News</a>
+                    <ul class="submenu">
+                        <li><a href="cartoonadd.php">Add C News</a> </li>
+                        <li><a href="cartoonmanage.php">Cartoon News List</a> </li>
+                    </ul>
+                </li>
+
                 <li><a class="menuitem">Columnist News</a>
                     <ul class="submenu">
                         <li><a href="columnistnewsadd.php">Add C News</a> </li>

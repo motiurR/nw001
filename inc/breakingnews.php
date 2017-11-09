@@ -26,26 +26,31 @@
                 <div class="row"> 
                     <div class="col-md-12">
                         <div class="breaking_news_lbl">Breaking News</div>
-                        <div id="breaking_news" class="carousel slide breaking_news_slider" data-ride="carousel"> 
+                        <div id="breaking_news" class="carousel slide breaking_news_slider" data-ride="carousel">
 
                             <!-- Wrapper for slides -->
                             <div class="carousel-inner" role="listbox">
-                                <div class="item active">
-                                    <a href="#">এবার প্যারাডাইজ পেপারস কেলেঙ্কারি</a>
-                                </div>
-                                <div class="item">
-                                    <a href="#">‘বিচারপতিরা না চাইলে তিনি কীভাবে বিচার করবেন?’</a> 
-                                </div>
-                                <div class="item">
-                                    <a href="#">স্পেন নয়, বেলজিয়ামে আত্মসমর্পণ করলেন পুজেমন</a> 
-                                </div>
-                                <div class="item">
-                                    <a href="#">‘বিচারপতিরা না চাইলে তিনি কীভাবে বিচার করবেন?’</a> 
-                                </div>
-                            </div> 
-                        </div>
-                        <div class="slider_controller">
-                            <!-- Controls -->
+                            <?php
+                                 $news = new NewsAddN();
+                                  $breakingNews = $news->getAllBreakingNews();
+                                  $i = 1;
+                             foreach ($breakingNews as $slidetop_pro) {
+                                        if ($i==1) {    
+                             ?>
+                             <div class="item active">
+                                 <?php } else{ ?>
+                                 <div class="item">
+                                  <?php } ?> 
+                                    <p style="margin: 0 auto;"><?php echo $slidetop_pro['title']; ?></p>
+
+                                 </div> 
+                             <?php $i++;} ?>
+
+                             </div>
+                           </div>  
+
+                         <div class="slider_controller">
+                            
                             <a class="left" href="#breaking_news" role="button" data-slide="prev">
                                 <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
                                 <span class="sr-only">Previous</span>
@@ -58,10 +63,12 @@
                                 <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
                                 <span class="sr-only">Next</span>
                             </a>
-                        </div>
+                        </div> 
+
                     </div> 
                 </div>
-            </div>
+              </div>
         </div>
+      </div>
 
         <!--Breaking news part end here-->
