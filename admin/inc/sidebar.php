@@ -44,6 +44,13 @@
                     </ul>
                 </li>
 
+                 <li><a class="menuitem">Columnist Profile</a>
+                    <ul class="submenu">
+                        <li><a href="columnistdd.php">Add Columnist</a> </li>
+                        <li><a href="columnistlist.php">Columnist List</a> </li>
+                    </ul>
+                </li>
+
                 <li><a class="menuitem">Columnist News</a>
                     <ul class="submenu">
                         <li><a href="columnistnewsadd.php">Add C News</a> </li>

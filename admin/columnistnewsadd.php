@@ -52,13 +52,6 @@
                             </td>
                         </tr>
 
-                        <tr>
-                            <td><label>Author Image</label></td>
-                            <td>
-                                <input type="file" name="image">
-                            </td>
-                        </tr>
-
                          <tr>
                             <td><label>News Summery</label></td>
                             
@@ -80,7 +73,20 @@
                                 <label>Author Name</label>
                             </td>
                             <td>
-                                <input type="text" name="author" class="medium" />
+                                <select name="author">
+                                     <option value="">select Name</option>
+                                <?php
+                                $colname = new Columnistnews(); 
+                                    $getcolname = $colname->getAllColumnistName();
+                                    if ($getcolname) {
+                                        while ($colName = $getcolname->fetch_assoc()) {
+                                            $id = $colName['columnistProfile_id'];
+                                ?>  
+                                    <option value="<?php echo $colName['columnistProfile_id']; ?>"><?php echo $colName['author']; ?>          
+                                    </option>
+
+                                <?php } } ?>    
+                                </select>
                             </td>
                         </tr>
 

@@ -1,0 +1,83 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Nov 9, 2017, 3:51:44 PM
+    Author     : John
+*/
+.kolamist_page{
+    margin-top: 6px;
+    margin-bottom: 6px;
+}
+.kolamist_page .thumbnail-content{
+    padding: 0;
+    border-radius: 0;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    margin-right: -9px;
+    box-shadow: 0 3px 8px 0px rgba(0, 0, 0, 0.2), 0px 1px 15px 0 rgba(0, 0, 0, 0.19);
+}
+.kolamist_page .thumbnail-content a{
+    display: block;
+    height: 140px;
+    overflow: hidden;
+}
+.kolamist_page .likha h3 a{
+    font-size: 17px;
+    display: block;
+    height: 60px;
+    overflow: hidden;
+    line-height: 25px;
+    font-weight: bold;
+}
+.author_holder{
+    background-color: lightgrey;
+    padding: 5px 0;
+    margin-top: 6px;
+}
+.author_holder span{
+    font-size: 18px;
+    color: lightslategrey;
+}
+.author_holder span i{
+    margin-right: 6px;
+    margin-left: 6px;
+}
+.kolamist_page .thumbnail-content .likha .details{
+    height: 90px;
+    line-height: 21px;
+    overflow: hidden;
+    color: black;
+    display: block;
+    font-size: 15px;
+}
+.kolamist_list{
+    box-shadow: 0 3px 8px 0px rgba(0, 0, 0, 0.2), 0px 1px 15px 0 rgba(0, 0, 0, 0.19);
+}
+.kolamist_list h3{
+    margin-top: 10px;
+    background-color: lightgrey;
+    padding: 7px 0;
+    padding-left: 6px;
+}
+.kolamist_list .content{
+    height: 50px;
+    border-bottom: 1px solid lightgrey;
+}
+.kolamist_list .media img{
+    height: 40px;
+    width: 40px;
+    margin-left: 10px;
+}
+.kolamist_list .media-body .kolamist_name{
+    margin-top: 10px;
+}
+.kolamist_list .media-body .kolamist_name a{
+    font-size: 16px;
+    color: lightslategray;
+}
+.kolamist_list .media-body .kolamist_name a:hover{
+    color: #e54e53;
+}

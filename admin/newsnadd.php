@@ -12,7 +12,7 @@ function getSubcat(val) {
     url: "get_subcat.php",
     data:'subcatid='+val,
     success: function(data){
-        $("#state-list").html(data);
+        $("#subcategoy-list").html(data);
     }
     });
 }
@@ -70,7 +70,7 @@ $("#suggesstion-box").hide();
                                 <label>Sub Category</label>
                             </td>
                             <td>
-                                <select name="subcategory_id" id="state-list">
+                                <select name="subcategory_id" id="subcategoy-list">
                                     <option value="">Select SubCategory</option>
                                 </select>
                             </td>

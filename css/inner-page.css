@@ -1,0 +1,51 @@
+.inner_page .main_content{
+    border: 1px solid lightgrey;
+    box-shadow: 0 3px 8px 0px rgba(0, 0, 0, 0.2), 0px 1px 15px 0 rgba(0, 0, 0, 0.19);
+    height: 300px;
+    margin-right: 14px;
+    margin-top: 6px;
+}
+.inner_page .main_content a img{
+    height: 290px;
+    width: 100%;
+    margin-left: -11px;
+    margin-top: 4px;
+}
+.inner_page .main_content .details{
+    margin-left: -25px;
+}
+.inner_page .main_content .details h3 a{
+    display: block;
+    height: 80px;
+    overflow: hidden;
+    color: black;
+}
+.inner_page .main_content .details p{
+    display: block;
+    overflow: hidden;
+    font-size: 18px;
+    line-height: 24px;
+}
+.inner_page .content{
+    border: 1px solid lightgrey;
+    height: 115px;
+    box-shadow: 0 3px 8px 0px rgba(0, 0, 0, 0.2), 0px 1px 15px 0 rgba(0, 0, 0, 0.19);
+    margin-top: 6px;
+    margin-bottom: 8px;
+    margin-left: -15px;
+}
+.inner_page .content a img{
+    height: 100px;
+    margin-top: 6px;
+    margin-left: -9px;
+}
+.inner_page .content h3 a{
+    display: block;
+    height: 85px;
+    overflow: hidden;
+    margin-left: -30px;
+    font-size: 20px;
+    margin-top: -10px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+}

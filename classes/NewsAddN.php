@@ -140,9 +140,33 @@ class NewsAddN{
 	  	$result = $this->db->select($query);
 	  	return $result;
 	  }
+	  /*get all cricket news*/
+	  public function getAllcricketNewsinner(){
+	  	$query = "SELECT * FROM tbl_newses WHERE status = '1'AND subcategory_id = '2' ORDER BY news_id DESC  LIMIT 10";
+	  	$result = $this->db->select($query);
+	  	return $result;
+	  }
 	  /*get footbal top news*/
 	  public function getFootbalTopNews(){
 	  	$query = "SELECT * FROM tbl_newses WHERE status = '1' AND top_news = '1' AND subcategory_id = '3' ORDER BY news_id DESC  LIMIT 1";
+	  	$result = $this->db->select($query);
+	  	return $result;
+	  }
+	  /*get all cricket news*/
+	  public function getAllfootballNewsinner(){
+	  	$query = "SELECT * FROM tbl_newses WHERE status = '1'AND subcategory_id = '3' ORDER BY news_id DESC  LIMIT 10";
+	  	$result = $this->db->select($query);
+	  	return $result;
+	  }
+	  /*get top othersoprts news*/
+	  public function getothersportsTopNews(){
+	  	$query = "SELECT * FROM tbl_newses WHERE status = '1' AND top_news = '1' AND subcategory_id = '4' ORDER BY news_id DESC  LIMIT 1";
+	  	$result = $this->db->select($query);
+	  	return $result;
+	  }
+	  /*getAll othersoprts news*/
+	  public function getAllOthersportsNews(){
+	  	$query = "SELECT * FROM tbl_newses WHERE status = '1'AND subcategory_id = '4' ORDER BY news_id DESC  LIMIT 10";
 	  	$result = $this->db->select($query);
 	  	return $result;
 	  }
@@ -166,9 +190,33 @@ class NewsAddN{
 	  	$result = $this->db->select($query);
 	  	return $result;
 	  }
+	  /*get all political news for inner*/
+	  public function getAllPoliticalNewsinner(){
+	  	$query = "SELECT * FROM tbl_newses WHERE status = '1'AND category_id = '15' ORDER BY news_id DESC  LIMIT 10";
+	  	$result = $this->db->select($query);
+	  	return $result;
+	  }
+	  /*get top international news*/
+	  public function getTopInternationalNews(){
+	  	$query = "SELECT * FROM tbl_newses WHERE status = '1' AND top_news = '1' AND category_id = '18' ORDER BY news_id DESC  LIMIT 1";
+	  	$result = $this->db->select($query);
+	  	return $result;
+	  }
 	  /*get all international new*/
 	  public function getAllInternationalNews(){
 	  	$query = "SELECT * FROM tbl_newses WHERE status = '1'AND category_id = '18' ORDER BY news_id DESC  LIMIT 6";
+	  	$result = $this->db->select($query);
+	  	return $result;
+	  }
+	  /*get all international new for inner*/
+	  public function getAllInternationalNewsinner(){
+	  	$query = "SELECT * FROM tbl_newses WHERE status = '1'AND category_id = '18' ORDER BY news_id DESC  LIMIT 10";
+	  	$result = $this->db->select($query);
+	  	return $result;
+	  }
+	  /*get top economical news*/
+	  public function getTopEconomicalNews(){
+	  	$query = "SELECT * FROM tbl_newses WHERE status = '1' AND top_news = '1' AND category_id = '17' ORDER BY news_id DESC  LIMIT 1";
 	  	$result = $this->db->select($query);
 	  	return $result;
 	  }
@@ -178,9 +226,22 @@ class NewsAddN{
 	  	$result = $this->db->select($query);
 	  	return $result;
 	  }
-	 /* get hollywood top news*/
+	  /*get all economical news for inner page*/
+	  public function getAllEconomicalNewsinner(){
+	  	$query = "SELECT * FROM tbl_newses WHERE status = '1'AND category_id = '17' ORDER BY news_id DESC  LIMIT 10";
+	  	$result = $this->db->select($query);
+	  	return $result;
+	  }
+
+	 /* get dhalywood top news*/
 	  public function getDhallywoodTopNews(){
 	  	$query = "SELECT * FROM tbl_newses WHERE status = '1' AND top_news = '1' AND subcategory_id = '11' ORDER BY news_id DESC  LIMIT 1";
+	  	$result = $this->db->select($query);
+	  	return $result;
+	  }
+	    /*get all cricket news*/
+	  public function getAlldhallywoodNewsinner(){
+	  	$query = "SELECT * FROM tbl_newses WHERE status = '1'AND subcategory_id = '11' ORDER BY news_id DESC  LIMIT 10";
 	  	$result = $this->db->select($query);
 	  	return $result;
 	  }
@@ -190,6 +251,97 @@ class NewsAddN{
 	  	$result = $this->db->select($query);
 	  	return $result;
 	  }
+	  /* get bollywood top news*/
+	  public function getAllbollywoodNewsinner(){
+	  	$query = "SELECT * FROM tbl_newses WHERE status = '1' AND subcategory_id = '10' ORDER BY news_id DESC  LIMIT 10";
+	  	$result = $this->db->select($query);
+	  	return $result;
+	  }
+	  /* get bollywood top news*/
+	  public function gethollyllywoodTopNews(){
+	  	$query = "SELECT * FROM tbl_newses WHERE status = '1' AND top_news = '1' AND subcategory_id = '12' ORDER BY news_id DESC  LIMIT 1";
+	  	$result = $this->db->select($query);
+	  	return $result;
+	  }
+	  /* get bollywood top news*/
+	  public function getAllhollywoodNewsinner(){
+	  	$query = "SELECT * FROM tbl_newses WHERE status = '1' AND subcategory_id = '12' ORDER BY news_id DESC  LIMIT 10";
+	  	$result = $this->db->select($query);
+	  	return $result;
+	  }
+	  /* get probas top news*/
+	  public function getProbasTopNews(){
+	  	$query = "SELECT * FROM tbl_newses WHERE status = '1' AND top_news = '1' AND subcategory_id = '5' ORDER BY news_id DESC  LIMIT 1";
+	  	$result = $this->db->select($query);
+	  	return $result;
+	  }
+	  /* get probas top news*/
+	  public function getAllprobasNewsinner(){
+	  	$query = "SELECT * FROM tbl_newses WHERE status = '1' AND subcategory_id = '5' ORDER BY news_id DESC  LIMIT 10";
+	  	$result = $this->db->select($query);
+	  	return $result;
+	  }
+	  /* get facebook kothon top news*/
+	  public function getFacebookKothonTopNews(){
+	  	$query = "SELECT * FROM tbl_newses WHERE status = '1' AND top_news = '1' AND subcategory_id = '14' ORDER BY news_id DESC  LIMIT 1";
+	  	$result = $this->db->select($query);
+	  	return $result;
+	  }
+	  /* get facebook kothon top news*/
+	  public function getAllfaceKothonNewsinner(){
+	  	$query = "SELECT * FROM tbl_newses WHERE status = '1' AND subcategory_id = '14' ORDER BY news_id DESC  LIMIT 10";
+	  	$result = $this->db->select($query);
+	  	return $result;
+	  }
+	  /* get jibonjapon top news*/
+	  public function getjibonjaponTopNews(){
+	  	$query = "SELECT * FROM tbl_newses WHERE status = '1' AND top_news = '1' AND subcategory_id = '6' ORDER BY news_id DESC  LIMIT 1";
+	  	$result = $this->db->select($query);
+	  	return $result;
+	  }
+	  /* get jibonjapon top news*/
+	  public function getAlljibonjaponNewsinner(){
+	  	$query = "SELECT * FROM tbl_newses WHERE status = '1' AND subcategory_id = '6' ORDER BY news_id DESC  LIMIT 10";
+	  	$result = $this->db->select($query);
+	  	return $result;
+	  }
+	  /* get women top news*/
+	  public function getwomenTopNews(){
+	  	$query = "SELECT * FROM tbl_newses WHERE status = '1' AND top_news = '1' AND subcategory_id = '8' ORDER BY news_id DESC  LIMIT 1";
+	  	$result = $this->db->select($query);
+	  	return $result;
+	  }
+	  /* get women top news*/
+	  public function getAllwomenNewsinner(){
+	  	$query = "SELECT * FROM tbl_newses WHERE status = '1' AND subcategory_id = '8' ORDER BY news_id DESC  LIMIT 10";
+	  	$result = $this->db->select($query);
+	  	return $result;
+	  }
+	  /* get sahitto top news*/
+	  public function getsahittoTopNews(){
+	  	$query = "SELECT * FROM tbl_newses WHERE status = '1' AND top_news = '1' AND subcategory_id = '9' ORDER BY news_id DESC  LIMIT 1";
+	  	$result = $this->db->select($query);
+	  	return $result;
+	  }
+	  /* get sahitto top news*/
+	  public function getAllsahittoNewsinner(){
+	  	$query = "SELECT * FROM tbl_newses WHERE status = '1' AND subcategory_id = '9' ORDER BY news_id DESC  LIMIT 10";
+	  	$result = $this->db->select($query);
+	  	return $result;
+	  }
+	  /*top bicitrokhobor news*/
+	  public function getTopbicitroNews(){
+	  	$query = "SELECT * FROM tbl_newses WHERE status = '1' AND top_news = '1' AND category_id = '22' ORDER BY news_id DESC  LIMIT 1";
+	  	$result = $this->db->select($query);
+	  	return $result;
+	  }
+	  /*get all bicitrokhobor news*/
+	  public function getAllbicitroNewsinner(){
+	  	$query = "SELECT * FROM tbl_newses WHERE status = '1'AND category_id = '22' ORDER BY news_id DESC  LIMIT 10";
+	  	$result = $this->db->select($query);
+	  	return $result;
+	  }
+
 	  /*get all Entertainment new*/
 	  public function getAllIEntertainmentNews(){
 	  	$query = "SELECT * FROM tbl_newses WHERE status = '1'AND category_id = '20' ORDER BY news_id DESC  LIMIT 4";

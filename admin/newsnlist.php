@@ -2,6 +2,26 @@
 <?php include '../classes/CategoryNatioal.php';?>
 <?php include '../classes/SubCategoryNational.php';?>
 
+<?php include 'inc/header.php';?>
+<?php include 'inc/sidebar.php';?>
+
+
+
+<!-- Sub category wise search -->
+<script>
+function getSubcat(val) {
+    $.ajax({
+    type: "POST",
+    url: "subCategorySearch.php",
+    data:'catsearch='+val,
+    success: function(data){
+        $("#subcat-list").html(data);
+    }
+    });
+}
+
+</script>
+
 <?php
 	$fm = new Format();
 ?>
@@ -29,11 +49,9 @@
     }
 ?>
 
-<?php include 'inc/header.php';?>
-<?php include 'inc/sidebar.php';?>
         <div class="grid_10">
             <div class="box round first grid">
-                <h2>Category List</h2>
+                <h2>News List</h2>
                 <div class="block"> 
                 <?php
                		if (isset($delnNewsbyid)) {
@@ -44,64 +62,96 @@
                		if (isset($changeNewseststus)) {
                			echo $changeNewseststus;
                		}
-               ?>            
-                    <table class="data display datatable" id="example">
-					<thead>
-						<tr>
-							<th>SL</th>
-							<th>Category</th>
-							<th>SubCat Id</th>
-							<th>Is Top</th>
-							<th>News Title</th>
-							<!-- <th>News url</th> -->
-							<th>iamge</th>
-							<th>Author</th>
-							<th>Status</th>
-							<th>Action</th>
-						</tr>
-					</thead>
-					<tbody>
-			<?php
-			$newslist = new NewsAddN();
-				$getNews = $newslist->getAllNews();
-				if ($getNews) {
-					$i = 0;
-					while ($result = $getNews->fetch_assoc()) {
-						$i++;
-			?>
-						<tr class="odd gradeX">
-							<td><?php echo $i;?></td>
-							<td><?php echo $result['category_title']?>(<?php echo $result['category_id']?>)</td>
-						    <td><?php echo $result['subcategory_id']?></td>
-							
-							<td>
-								<a href="?istop=<?php echo $result['news_id']?>" onclick="return confirm('Are You Sure Want To Change?') " style="color:<?php echo $result['top_news']?'green':'red'; ?>"><?php echo $result['top_news']?'Top':'General'; ?></a>
-							</td>
+               ?> 
 
-							<td><?php echo $result['news_title']?></td>
 
-							<!-- <td><?php echo $fm->textShorten($result['news_url'],80)?></td> -->
 
-							<td>
-								<img src="<?php echo $result['image']?>" width="50px" height="50px;">
-							</td>
-							<td><?php echo $result['author']?></td>
+  
 
-							<td>
-								<a href="?status=<?php echo $result['news_id']?>" onclick="return confirm('Are You Sure Want To Change?') " style="color:<?php echo $result['status']?'green':'red'; ?>"><?php echo $result['status']?'active':'in-active'; ?></a>
-							</td>
+    <!-- sub category wise search -->
+                <div class="subCategory_search">
+                   	    <tr>
+                            <td>
+                                <label>Sub Category</label>
+                            </td>
+                            <td>
+                                <select id="subcategory_id"  onChange="getSubcat(this.value)">
+                                     <option value="">select Sub Category</option>
+                                <?php
+                                $subcat = new SubCategoryNational(); 
+                                    $getcat = $subcat->getAllNsCat();
+                                    if ($getcat) {
+                                        while ($catres = $getcat->fetch_assoc()) {
+                                ?>  
+                                    <option value="<?php echo $catres['subcategory_id']; ?>"><?php echo $catres['sub_category_title']; ?></option>
+                                <?php } } ?>    
+                                </select>
+                            </td>
+                        </tr> 
+                 </div>
 
-				            <td><a href="newsnedit.php?newsid=<?php echo $result['news_id']?>">Edit</a> 
-				 <?php if (Session::get('level') == '0') { ?> <!-- admin hole del kora jabe -->
 
-				            || <a onclick="return confirm('Are You Sure Want To Delete?') " href="?delnNews=<?php echo $result['news_id']?>">Delete</a>
 
-				        <?php } ?>    
-				            </td>
-						</tr>
-				<?php } } ?>		
-					</tbody>
-				</table>
+                 <table class="data display datatable" id="subcat-list">
+                    <thead>
+                        <tr>
+                            <th>SL</th>
+                            <th>Category</th>
+                            <th>SubCat Id</th>
+                            <th>Is Top</th>
+                            <th>News Title</th>
+                            <!-- <th>News url</th> -->
+                            <th>iamge</th>
+                            <th>Author</th>
+                            <th>Status</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+            <?php
+            $newslist = new NewsAddN();
+                $getNews = $newslist->getAllNews();
+                if ($getNews) {
+                    $i = 0;
+                    while ($result = $getNews->fetch_assoc()) {
+                        $i++;
+            ?>
+                        <tr class="odd gradeX">
+                            <td><?php echo $i;?></td>
+                            <td><?php echo $result['category_title']?>(<?php echo $result['category_id']?>)</td>
+                            <td><?php echo $result['subcategory_id']?></td>
+                            
+                            <td>
+                                <a href="?istop=<?php echo $result['news_id']?>" onclick="return confirm('Are You Sure Want To Change?') " style="color:<?php echo $result['top_news']?'green':'red'; ?>"><?php echo $result['top_news']?'Top':'General'; ?></a>
+                            </td>
+
+                            <td><?php echo $result['news_title']?></td>
+
+                            <!-- <td><?php echo $fm->textShorten($result['news_url'],80)?></td> -->
+
+                            <td>
+                                <img src="<?php echo $result['image']?>" width="50px" height="50px;">
+                            </td>
+                            <td><?php echo $result['author']?></td>
+
+                            <td>
+                                <a href="?status=<?php echo $result['news_id']?>" onclick="return confirm('Are You Sure Want To Change?') " style="color:<?php echo $result['status']?'green':'red'; ?>"><?php echo $result['status']?'active':'in-active'; ?></a>
+                            </td>
+
+                            <td><a href="newsnedit.php?newsid=<?php echo $result['news_id']?>">Edit</a> 
+                 <?php if (Session::get('level') == '0') { ?> <!-- admin hole del kora jabe -->
+
+                            || <a onclick="return confirm('Are You Sure Want To Delete?') " href="?delnNews=<?php echo $result['news_id']?>">Delete</a>
+
+                        <?php } ?>    
+                            </td>
+                        </tr>
+                <?php } } ?>        
+                    </tbody>
+                </table>
+
+
+                    
                </div>
             </div>
         </div>
@@ -114,6 +164,8 @@
 	    setSidebarHeight();
 	});
 </script>
+
+
 
 <?php include 'inc/footer.php';?>
 

@@ -20,6 +20,9 @@
 
         <!-- here css file link hrer  -->
         <link rel="stylesheet" href="css/style.css" />
+        <link rel="stylesheet" href="css/inner-page.css" />
+        <link rel="stylesheet" href="css/kolamist.css" />
+        <link rel="stylesheet" href="css/kolamist_profile.css" />
         <link rel="stylesheet" href="css/archive.css" />
         <link rel="stylesheet" href="css/news-view.css" />
         <link rel="stylesheet" href="css/font-awesome.min.css" />
@@ -66,52 +69,51 @@
                     <div class="collapse navbar-collapse menu-item" id="bs-example-navbar-collapse-1">
                         <ul class="nav nav-justified menu-item-content">
                             <li>
-                                <a href="#" class="menu-items">নীড়পাতা</a>
+                                <a href="index.php" class="menu-items">নীড়পাতা</a>
                             </li>
                             <li>
-                                <a href="#" class="menu-items">রাজনীতি</a>
+                                <a href="political.php" class="menu-items">রাজনীতি</a>
                             </li>
                             <li>
                                 <a href="#" class="menu-items">সারা বাংলা</a>
                             </li>
                             <li>
-                                <a href="#" class="menu-items">অর্থনীতি</a>
+                                <a href="economic.php" class="menu-items">অর্থনীতি</a>
                             </li>
                             <li>
-                                <a href="#" class="menu-items">আন্তর্জাতিক</a>
+                                <a href="international.php" class="menu-items">আন্তর্জাতিক</a>
                             </li>
                             <li class="dropdown">
                                 <a href="#" class="dropdown-toggle menu-items" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">খেলা<i class="fa fa-chevron-down" aria-hidden="true"></i></a>
                                 <ul class="dropdown-menu dropdown-content">
-                                    <li><a href="#">ক্রিকেট</a></li>
-                                    <li><a href="#">ফুটবল</a></li>
-                                    <li><a href="#">হকি</a></li>
-                                    <li><a href="#">টেনিস</a></li>
+                                    <li><a href="cricket.php">ক্রিকেট</a></li>
+                                    <li><a href="footbal.php">ফুটবল</a></li>
+                                    <li><a href="otherssports.php">অন্যান্য</a></li>
                                 </ul>
                             </li>
                             <li class="dropdown">
                                 <a href="#" class="dropdown-toggle menu-items" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">বিনোদন<i class="fa fa-chevron-down" aria-hidden="true"></i></a>
                                 <ul class="dropdown-menu dropdown-content">
-                                    <li><a href="#">ঢালিউড</a></li>
-                                    <li><a href="#">বলিউড</a></li>
-                                    <li><a href="#">হলিউড</a></li>
+                                    <li><a href="dhallywood.php">ঢালিউড</a></li>
+                                    <li><a href="bollywood.php">বলিউড</a></li>
+                                    <li><a href="hollywood.php">হলিউড</a></li>
                                 </ul>
                             </li>
                             <li class="dropdown">
                                 <a href="#" class="dropdown-toggle menu-items" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">ফিচার<i class="fa fa-chevron-down" aria-hidden="true"></i></a>
                                 <ul class="dropdown-menu dropdown-content">
-                                    <li><a href="#">প্রবাস</a></li>
-                                    <li><a href="#">ফেসবুক কথন</a></li>
-                                    <li><a href="#">জীবনযাপন</a></li>
-                                    <li><a href="#">নারী</a></li>
-                                    <li><a href="#">সাহিত্য</a></li>
+                                    <li><a href="probas.php">প্রবাস</a></li>
+                                    <li><a href="facebookkothon.php">ফেসবুক কথন</a></li>
+                                    <li><a href="lifestyle.php">জীবনযাপন</a></li>
+                                    <li><a href="women.php">নারী</a></li>
+                                    <li><a href="sahitto.php">সাহিত্য</a></li>
                                 </ul>
                             </li>
                             <li>
-                                <a href="#" class="menu-items">আজব নিউজ</a>
+                                <a href="bicitrokhobor.php" class="menu-items">বিচিত্র খবর</a>
                             </li>
                             <li>
-                                <a href="#" class="menu-items">কলাম</a>
+                                <a href="colamist.php" class="menu-items">কলাম</a>
                             </li>
                         </ul>
                     </div><!-- /.navbar-collapse -->
