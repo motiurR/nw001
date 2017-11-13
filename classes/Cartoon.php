@@ -201,5 +201,25 @@ class Cartoon{
 	  	return $result;
 	  }
 
+	  /*get top cartoon news*/
+	  public function getcartoonTopNews(){
+	  	 $query = "SELECT * FROM tbl_cartoon WHERE status = '1' AND top_news = '1' AND category_id = '32' ORDER BY category_id DESC  LIMIT 1";
+	  	$result = $this->db->select($query);
+	  	return $result;
+	  }
+	  /*get all cartoon news*/
+	  public function getAllcartoonNewsinner(){
+	  	$query = "SELECT * FROM tbl_cartoon WHERE status = '1'AND category_id = '32' ORDER BY category_id DESC  LIMIT 10";
+	  	$result = $this->db->select($query);
+	  	return $result;
+	  }
+
+	  /*get cartoon single news*/
+	  public function getsingleCartoonnews($singleid){
+	  	$query = "SELECT * FROM tbl_cartoon WHERE status = '1'AND news_url = '$singleid'";
+	  	$result = $this->db->select($query);
+	  	return $result;
+	  }
+
 
 }

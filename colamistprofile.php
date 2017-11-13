@@ -1,4 +1,5 @@
 <?php include 'inc/header.php';?>
+<?php include 'inc/breakingnews.php';?>
 <?php
 	$db = new Database();
 	$fm = new Format();
@@ -33,7 +34,7 @@
                             </div>
                             <div class="ro--w">
 
-			<?php
+			      <?php
                  $cnews = new Columnistnews();
                   $colamistnews = $cnews->getcolamistnewsbyid($id);
                   if ($colamistnews) {
@@ -43,7 +44,7 @@
                                     <div class="thumbnail thumbnail-content">
                                         <div class="caption likha">
                                             <h3>
-                                                <a href="#"><?php echo $value['news_title'];?></a>
+                                                <a href="singleColmnistnews.php?colN=<?php echo $value['news_url']; ?>"><?php echo $value['news_title'];?></a>
                                             </h3>
                                             <div class="publice_date">
                                                 <span><i class="fa fa-clock-o" aria-hidden="true"></i><?php echo $result['create_date']; ?></span>

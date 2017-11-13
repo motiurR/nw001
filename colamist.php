@@ -1,4 +1,5 @@
 <?php include 'inc/header.php';?>
+<?php include 'inc/breakingnews.php';?>
 <?php
     $fm = new Format();
 ?>
@@ -25,9 +26,9 @@
                                     </div>
                                     <div class="caption likha">
                                         <h3>
-                                            <a href="#"><?php echo $result['news_title']; ?></a>
+                                            <a href="singleColmnistnews.php?colN=<?php echo $result['news_url']; ?>"><?php echo $result['news_title']; ?></a>
                                         </h3>
-                                        <a href="#" class="details">
+                                        <a href="singleColmnistnews.php?colN=<?php echo $result['news_url']; ?>" class="details">
                                             <p><?php echo $fm->textShorten($result['news_summery']); ?></p>
                                         </a>
                                     </div>

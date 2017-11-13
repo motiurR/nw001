@@ -80,7 +80,6 @@
                                     $getcolname = $colname->getAllColumnistName();
                                     if ($getcolname) {
                                         while ($colName = $getcolname->fetch_assoc()) {
-                                            $id = $colName['columnistProfile_id'];
                                 ?>  
                                     <option value="<?php echo $colName['columnistProfile_id']; ?>"><?php echo $colName['author']; ?>          
                                     </option>
@@ -89,6 +88,7 @@
                                 </select>
                             </td>
                         </tr>
+
 
                          <tr>
                             <td><label>Status</label></td>

@@ -40,7 +40,6 @@
                         <tr>
                             <th>SL</th>
                             <th>News Title</th>
-                            <th>iamge</th>
                             <th>Author</th>
                             <th>Status</th>
                             <th>Action</th>
@@ -57,9 +56,6 @@
                         <tr class="odd gradeX">
                             <td><?php echo $i;?></td>
                             <td><?php echo $result['news_title']?></td>
-                            <td>
-                                <img src="<?php echo $result['image']?>" width="55px" height="50px;">
-                            </td>
                             <td><?php echo $result['author']?></td>
 
                             <td>

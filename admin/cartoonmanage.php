@@ -86,11 +86,11 @@
 							</td>
 
 				            <td><a href="cartoonedit.php?cnewsid=<?php echo $result['cartoon_id']?>">Edit</a> 
-				 <?php if (Session::get('level') == '0') { ?> <!-- admin hole del kora jabe -->
 
+				        <!-- <?php if (Session::get('level') == '0') { ?> 
 				            || <a onclick="return confirm('Are You Sure Want To Delete?') " href="?delCrtnNews=<?php echo $result['cartoon_id']?>">Delete</a>
-
-				        <?php } ?>    
+				        <?php } ?>  -->  
+				         
 				            </td>
 						</tr>
 				<?php } } ?>		

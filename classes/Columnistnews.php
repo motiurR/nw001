@@ -45,9 +45,17 @@ class Columnistnews{
 	  }
 
 	  public function getAllColNews(){
-	  	$query = "SELECT * FROM tbl_columnist ORDER BY columnistn_id";
-	  	$result = $this->db->select($query);
+	  	$query = "SELECT tbl_columnist.*,tbl_columnistProfile.author
+					           FROM tbl_columnist
+					           INNER JOIN tbl_columnistProfile 
+					           ON tbl_columnist.author = tbl_columnistProfile.columnistProfile_id
+					           ORDER BY tbl_columnist.columnistn_id DESC";
+	    $result = $this->db->select($query);
 	  	return $result;
+
+	  	/*$query = "SELECT * FROM tbl_columnist ORDER BY columnistn_id";
+	  	$result = $this->db->select($query);
+	  	return $result;*/
 	  }
 
 	  public function changenColNStatusById($id){
@@ -167,38 +175,161 @@ class Columnistnews{
 	   	 $getdata = $this->db->select($query);
 	   	 return $getdata;
 	  }
-	  /*get all colamist name*/
+	  /*get all colamist name and Image*/
 	  public function getAllColumnistName(){
 	  	 $query ="SELECT * FROM tbl_columnistProfile ORDER BY columnistProfile_id DESC";
 	   	 $getdata = $this->db->select($query);
 	   	 return $getdata;
 	  }
 
+
 	  /*colamist profile*/
 	  public function getcolamistprofile(){
-	  	 $query ="SELECT * FROM tbl_columnist ORDER BY columnistn_id DESC";
+/*	  	$query = "SELECT tbl_columnist.*,tbl_columnistProfile.*
+					           FROM tbl_columnist
+					           INNER JOIN tbl_columnistProfile 
+					           ON tbl_columnist.author = tbl_columnistProfile.columnistProfile_id
+					           ORDER BY tbl_columnist.columnistn_id DESC";*/
+
+	  	 $query ="SELECT * FROM tbl_columnistProfile ORDER BY columnistProfile_id DESC";
 	   	 $getdata = $this->db->select($query);
 	   	 return $getdata;
 	  }
 
 	  /*individual profile*/
 	  public function getcolamistprofilebyid($id){
-	  	$query ="SELECT * FROM tbl_columnist WHERE columnistn_id = '$id'";
+	  	$query = "SELECT tbl_columnist.*,tbl_columnistProfile.*
+					           FROM tbl_columnist
+					           INNER JOIN tbl_columnistProfile 
+					           ON tbl_columnist.author = tbl_columnistProfile.columnistProfile_id
+					           WHERE tbl_columnist.columnistn_id ='$id'";
+	  	/*$query ="SELECT * FROM tbl_columnist WHERE columnistn_id = '$id'";*/
 	   	 $result = $this->db->select($query);
 	   	 return $result;
 	  }
 
 	  /*columist news by id*/
 	  public function getcolamistnewsbyid($id){
-	  	$query ="SELECT * FROM tbl_columnist WHERE columnistn_id = '$id'";
+	  	$query ="SELECT * FROM tbl_columnist WHERE author = '$id'";
 	   	 $result = $this->db->select($query);
 	   	 return $result;
 	  }
 	  /*colamist news with profile*/
 	  public function getcolamistNewsWithprof(){
-	  	$query ="SELECT * FROM tbl_columnist ORDER BY columnistn_id DESC";
+	  	$query = "SELECT tbl_columnist.*,tbl_columnistProfile.*
+					           FROM tbl_columnist
+					           INNER JOIN tbl_columnistProfile 
+					           ON tbl_columnist.author = tbl_columnistProfile.columnistProfile_id
+					           ORDER BY columnistn_id DESC";
+	  	/*$query ="SELECT * FROM tbl_columnist ORDER BY columnistn_id DESC";*/
 	   	 $result = $this->db->select($query);
 	   	 return $result;
+	  }
+
+	  /*get single colamist news*/
+	  public function getsingleColmnistnews($singleid){
+	  	$query = "SELECT tbl_columnist.*,tbl_columnistProfile.*
+					           FROM tbl_columnist
+					           INNER JOIN tbl_columnistProfile 
+					           ON tbl_columnist.author = tbl_columnistProfile.columnistProfile_id
+					           WHERE news_url = '$singleid'";
+	  	/*$query = "SELECT * FROM tbl_columnist WHERE news_url = '$singleid'";*/
+	  	$result = $this->db->select($query);
+	  	return $result;
+	  }
+
+	  /*------------update colamist profile--------*/
+	  /*get colamist data*/
+	  public function getsubcatById($id){
+	  	 $query ="SELECT * FROM tbl_columnistprofile WHERE columnistProfile_id = '$id'";
+	   	 $result = $this->db->select($query);
+	   	 return $result;
+	  }
+
+	  /*update*/
+	  public function updateNewsInfo($data, $file, $id){
+	  	$author = $this->fm->validation($data['author']);
+	  	$author = mysqli_real_escape_string($this->db->link,$author);
+
+	  	$permited  = array('jpg', 'jpeg', 'png', 'gif');
+	    $file_name = $file['image']['name'];
+	    $file_size = $file['image']['size'];
+	    $file_temp = $file['image']['tmp_name'];
+
+	    $div = explode('.', $file_name);
+	    $file_ext = strtolower(end($div));
+	    $unique_image = substr(md5(time()), 0, 10).'.'.$file_ext;
+	    $uploaded_image = "upload/".$unique_image;
+
+	  	if (empty($author)) {
+	  		$msg = "<span class='error'>Field must not be empty!</span>";
+			return $msg;
+	  	} else { 
+	    	if (!empty($file_name)) {
+			     if ($file_size >1048567) {
+				     $msg =  "<span class='error'>Image Size should be less then 1MB!
+                         </span>";
+                          return $msg;
+				    } elseif (in_array($file_ext, $permited) === false) {
+				     $msg = "<span class='error'>You can upload only:-</span>"
+                       .implode(', ', $permited)."</span>";
+                        return $msg;
+				    }else{
+			    	move_uploaded_file($file_temp, $uploaded_image);
+					    	$query = "UPDATE tbl_columnistprofile
+			    			SET
+			    			author       ='$author',
+			    			image 		 ='$uploaded_image'
+			    			WHERE columnistProfile_id ='$id'";
+
+			    	$updated_row = $this->db->update($query);
+					if ($updated_row) {
+						$msg = "<span class='success'>Product updated successfully!</span>";
+					    return $msg;
+						
+					}else{
+						$msg = "<span class='error'>Product Not updated!</span>";
+					    return $msg;
+					}
+			    }
+			    } else{
+			    		$query = "UPDATE tbl_columnistprofile
+			    			SET
+			    			author       ='$author'
+			    			WHERE columnistProfile_id ='$id'";
+
+			    	$updated_row = $this->db->update($query);
+					if ($updated_row) {
+						$msg = "<span class='success'>updated successfully!</span>";
+					    return $msg;
+						
+					}else{
+						$msg = "<span class='error'>Something Went Wrong!</span>";	 
+
+			       }
+	           }
+	       }
+	  }
+	  
+	  public function delColumnistProf($id){
+
+		$query ="SELECT * FROM tbl_columnistprofile WHERE columnistProfile_id = '$id'";
+	   	 $getdata = $this->db->select($query);
+	   	 if ($getdata) {
+	   	 	while ($delimg = $getdata->fetch_assoc()) {
+	   	 		$delLink = $delimg['image']; /*from database*/
+	   	 		unlink($delLink);
+	   	 	}
+	   	 }
+	   	 $delquery = "DELETE FROM tbl_newses WHERE news_id ='$id'";
+		  $deldata =$this->db->delete($delquery);
+		   if ($deldata) {
+	    		$msg = "<span class='success'>Deleted successfully!</span>";
+			        return $msg;
+	    	}else{
+	    		$msg = "<span class='error'>SomeThing went Wrong!</span>";
+			    	return $msg;
+	    	}
 	  }
 
 

@@ -1,13 +1,13 @@
                             <div class="col-lg-6">
                                 <div class="mot-dimot">
                                     <h2 class="text-center"><a href="#">মত-দ্বিমত</a></h2>
+                                    <?php
+                                         $news = new NewsAddN();
+                                          $motdimotNews = $news->getAllmotdimotNews();
+                                          if ($motdimotNews) {
+                                            while ($result = $motdimotNews->fetch_assoc()) {
+                                      ?> 
                                     <div class="m-contents">
-                                        <?php
-                                             $news = new NewsAddN();
-                                              $motdimotNews = $news->getAllmotdimotNews();
-                                              if ($motdimotNews) {
-                                                while ($result = $motdimotNews->fetch_assoc()) {
-                                          ?> 
                                         <div class="col-lg-4">
                                             <a href="singlenews.php?nurl=<?php echo $result['news_url']; ?>">
                                                 <img src="admin/<?php echo $result['image']; ?>" alt="khaleda" class="img-circle"/>
@@ -18,8 +18,9 @@
                                             <a href="singlenews.php?nurl=<?php echo $result['news_url']; ?>"><?php echo $result['news_title']; ?></a>
                                            
                                         </div>
-                                     <?php } } ?>    
                                     </div>
+                                  <?php } } ?>    
+
                                 </div>
                                 <!--=======Sakhatkar part start here=========-->
                                 

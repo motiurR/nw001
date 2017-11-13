@@ -15,7 +15,7 @@
                     </a>
                 </div>
                 <div class="media-body">
-                    <h4 class="media-heading kolamist_name"><a href="colamistprofile.php?authorprof=<?php echo $result['columnistn_id']; ?>"><?php echo $result['author']; ?></a></h4>
+                    <h4 class="media-heading kolamist_name"><a href="colamistprofile.php?authorprof=<?php echo $result['columnistProfile_id']; ?>"><?php echo $result['author']; ?></a></h4>
                 </div>
             </div>
 

@@ -138,10 +138,10 @@ $("#suggesstion-box").hide();
 
                          <tr>
                             <td>
-                                <label>Author</label>
+                                <label>Image Caption</label>
                             </td>
                             <td>
-                                <input type="text" name="author" value="<?php echo Session::get('adminUser')?>" class="medium" readonly />
+                                <input type="text" name="author" value="" class="medium" />
                             </td>
                         </tr>
 

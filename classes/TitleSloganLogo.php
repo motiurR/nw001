@@ -57,6 +57,12 @@ class TitleSloganLogo{
 			    }
 			    } 
 	       }
+
+	       public function getLogiIcon(){
+	       	 $query = "SELECT * FROM tbl_logontitle";
+			 $data = $this->db->select($query);
+			 return $data;
+	       }
 	  
 
 }

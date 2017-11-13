@@ -99,10 +99,10 @@ function getSubcat(val) {
                             <th>Category</th>
                             <th>SubCat Id</th>
                             <th>Is Top</th>
-                            <th>News Title</th>
+                            <th width="25%">News Title</th>
                             <!-- <th>News url</th> -->
                             <th>iamge</th>
-                            <th>Author</th>
+                            <th>Caption</th>
                             <th>Status</th>
                             <th>Action</th>
                         </tr>
@@ -132,7 +132,7 @@ function getSubcat(val) {
                             <td>
                                 <img src="<?php echo $result['image']?>" width="50px" height="50px;">
                             </td>
-                            <td><?php echo $result['author']?></td>
+                            <td><?php echo $fm->textShorten($result['author'],50)?></td>
 
                             <td>
                                 <a href="?status=<?php echo $result['news_id']?>" onclick="return confirm('Are You Sure Want To Change?') " style="color:<?php echo $result['status']?'green':'red'; ?>"><?php echo $result['status']?'active':'in-active'; ?></a>

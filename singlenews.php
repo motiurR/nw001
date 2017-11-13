@@ -32,7 +32,7 @@
                             <h2><?php echo $result['news_title']; ?></h2>
                             <hr />
                             <div class="media-part">
-                                <span class="date-time">প্রকাশিত: ০৯:২৯, নভেম্বর ০৭, ২০১৭</span>
+                                <span class="date-time"><?php echo $result['create_date']; ?></span>
                             </div>
                             <!--Social share option here-->
                             <div class="custom_social_share">
@@ -55,7 +55,7 @@
                             </div>
     
                             <img src="admin/<?php echo $result['image']; ?>" alt="News View Picture" class="img-responsive" />
-                            <span class="tt">photo credit here</span>
+                            <span class="tt"><?php echo $result['author']; ?></span>
 
                             <p class="text-justify">
                               <?php echo $result['news_details']; ?>

@@ -41,9 +41,17 @@
             <div class="container main-content">
                 <div class="row">
                     <div class="logo col-lg-6">
+                  <?php
+                         $logo = new TitleSloganLogo();
+                          $getlogo = $logo->getLogiIcon();
+                          if ($getlogo) {
+                            while ($result = $getlogo->fetch_assoc()) {
+                   ?>
                         <a href="index.php">
-                            <img src="images/logo3.png" alt="logo" class="img-responsive"/>
+                            <img src="admin/<?php echo $result['logo']; ?>" alt="logo" class="img-responsive"/>
                         </a>
+                    <?php } } ?>    
+
                     </div>
                     <div class="date col-lg-6">
                         <div class="add">
@@ -97,11 +105,13 @@
                                     <li><a href="dhallywood.php">ঢালিউড</a></li>
                                     <li><a href="bollywood.php">বলিউড</a></li>
                                     <li><a href="hollywood.php">হলিউড</a></li>
+                                    <li><a href="otherentertainments.php">অন্যান্য</a></li>
                                 </ul>
                             </li>
                             <li class="dropdown">
                                 <a href="#" class="dropdown-toggle menu-items" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">ফিচার<i class="fa fa-chevron-down" aria-hidden="true"></i></a>
                                 <ul class="dropdown-menu dropdown-content">
+                                    <li><a href="technology.php">তথ্যপ্রযুক্তি</a></li>
                                     <li><a href="probas.php">প্রবাস</a></li>
                                     <li><a href="facebookkothon.php">ফেসবুক কথন</a></li>
                                     <li><a href="lifestyle.php">জীবনযাপন</a></li>
