@@ -14,7 +14,7 @@
                                         <div class="total-content-2">
                                             <div class="col-lg-5">
                                                 <a href="singlenews.php?nurl=<?php echo $result['news_url']; ?>">
-                                                    <img src="admin/<?php echo $result['image']; ?>" alt="jibonjapon" />
+                                                    <img src="global-panel/<?php echo $result['image']; ?>" alt="jibonjapon" />
                                                 </a>
                                             </div>
                                             <div class="col-lg-7">

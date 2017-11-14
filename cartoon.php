@@ -20,7 +20,7 @@
 
                                 <div class="col-lg-8">
                                     <a href="singlcartoonenews.php?cartn=<?php echo $result['news_url']; ?>">
-                                        <img src="admin/<?php echo $result['image']; ?>" alt="BPL" class="img-responsive"/>
+                                        <img src="global-panel/<?php echo $result['image']; ?>" alt="BPL" class="img-responsive"/>
                                     </a>
                                 </div>
                             
@@ -49,7 +49,7 @@
                                 <div class="content">
                                     <div class="col-lg-6">
                                         <a href="singlcartoonenews.php?cartn=<?php echo $result['news_url']; ?>">
-                                            <img src="admin/<?php echo $result['image']; ?>" alt="Dhoni" class="img-responsive"/>
+                                            <img src="global-panel/<?php echo $result['image']; ?>" alt="Dhoni" class="img-responsive"/>
                                         </a>
                                     </div>
                                     <div class="col-lg-6">

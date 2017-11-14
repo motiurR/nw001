@@ -18,7 +18,7 @@
                     ?>
                         <div class="main-news">
                             <h2><a href="#"><?php echo $result['news_title']; ?></a></h2>
-                            <a href="singlenews.php?nurl=<?php echo $result['news_url']; ?>" class="img"><img src="admin/<?php echo $result['image']; ?>" alt="" class="img-responsive"/></a>
+                            <a href="singlenews.php?nurl=<?php echo $result['news_url']; ?>" class="img"><img src="global-panel/<?php echo $result['image']; ?>" alt="" class="img-responsive"/></a>
                             <h4><a href="#"><?php echo $fm->textShorten($result['news_summery']); ?></a></h4>
                         </div>
                     <?php } } ?>    

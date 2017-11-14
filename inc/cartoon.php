@@ -10,7 +10,7 @@
                             <a href="cartoon.php"><h1>কার্টুন</h1></a>
                             <hr />
                             <div class="total-thumbnail-content-2">
-                                <a href="singlcartoonenews.php?cartn=<?php echo $result['news_url']; ?>"><img src="admin/<?php echo $result['image']; ?>" alt="katuron"></a>
+                                <a href="singlcartoonenews.php?cartn=<?php echo $result['news_url']; ?>"><img src="global-panel/<?php echo $result['image']; ?>" alt="katuron"></a>
                                 <div class="caption texts">
                                     <a href="singlcartoonenews.php?cartn=<?php echo $result['news_url']; ?>"><h3><?php echo $result['news_title']; ?></h3></a>
 

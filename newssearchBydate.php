@@ -19,7 +19,7 @@
 
                                 <div class="col-lg-3">
                                     <div class="thumbnail thumbnail_content">
-                                        <a href="singlenews.php?nurl=<?php echo $result['news_url']; ?>"><img src="admin/<?php echo $result['image']; ?>" alt="Liton" class="img-responsive"></a>
+                                        <a href="singlenews.php?nurl=<?php echo $result['news_url']; ?>"><img src="global-panel/<?php echo $result['image']; ?>" alt="Liton" class="img-responsive"></a>
                                         <div class="caption">
                                             <h4><a href="singlenews.php?nurl=<?php echo $result['news_url']; ?>"><?php echo $result['news_title']; ?></a></h4>
                                         </div>

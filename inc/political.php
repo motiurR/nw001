@@ -16,7 +16,7 @@
                               ?>    
                                     <div class="col-lg-8">
                                         <a href="singlenews.php?nurl=<?php echo $result['news_url']; ?>">
-                                          <img class="main-image" src="admin/<?php echo $result['image'];?>" alt="Mirjja Fokrul" />
+                                          <img class="main-image" src="global-panel/<?php echo $result['image'];?>" alt="Mirjja Fokrul" />
                                         </a>
                                     </div>
                                     <div class="col-lg-4">

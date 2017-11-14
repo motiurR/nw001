@@ -49,7 +49,7 @@
                                 </ul>
                             </div>
     
-                           <img src="admin/<?php echo $result['image']; ?>" alt="News View Picture" class="img-responsive" />
+                           <img src="global-panel/<?php echo $result['image']; ?>" alt="News View Picture" class="img-responsive" />
 
                             <span class="tt">photo credit here</span>
 
@@ -76,7 +76,7 @@
                                 <div class="col-lg-3">
                                     <div class="thumbnail thumbnail-content">
 
-                                        <a href="singleColmnistnews.php?colN=<?php echo $reletedresult['news_url']; ?>"><img src="admin/<?php echo $result['image']; ?>" alt="Liton" class="img-responsive">
+                                        <a href="singleColmnistnews.php?colN=<?php echo $reletedresult['news_url']; ?>"><img src="global-panel/<?php echo $result['image']; ?>" alt="Liton" class="img-responsive">
                                         </a>
 
                                         <div class="caption">

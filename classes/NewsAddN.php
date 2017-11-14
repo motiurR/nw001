@@ -64,8 +64,11 @@ class NewsAddN{
 		    }else{
 	    	move_uploaded_file($file_temp, $uploaded_image);
 	    	$query = "INSERT INTO tbl_newses(category_id,subcategory_id,top_news, news_title, news_url, news_seo_title,news_summery, news_details,image, author,status,date) VALUES('$category_id','$subcategory_id','$top_news','$news_title','$news_url','$news_seo_title','$news_summery','$news_details','$uploaded_image','$author','$status','$date')";
-
 	    	$inserted_row = $this->db->insert($query);
+
+	    	$query = "INSERT INTO local_newses_tbl(category_id,subcategory_id,top_news, news_title, news_url, news_seo_title,news_summery, news_details,image, author,status,date) VALUES('$category_id','$subcategory_id','$top_news','$news_title','$news_url','$news_seo_title','$news_summery','$news_details','$uploaded_image','$author','$status','$date')";
+	    	$inserted_row = $this->db->insert($query);
+	    	
 			if ($inserted_row) {
 				$msg = "<span class='success'>inserted successfully!</span>";
 			    return $msg;

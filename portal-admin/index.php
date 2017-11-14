@@ -1,3 +1,8 @@
+<?php
+    include '../lib/Session.php';
+    Session::checkSession();  /*login na thakle login page e pathai dibe*/
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -12,11 +17,11 @@
 		<h2 style="text-align: center;padding: 40px;background: #cdcdcd;margin-bottom: 50px;">Plese Chose Your Admin Panel For Add Your News</h2>
         
 		<div class="international col-md-6">
-			<a href="../admin/index.php" class="btn btn-success">For All Country</a>
+			<a href="../global-panel/index.php" class="btn btn-success">For All Country</a>
 		</div>
 
 		<div class="local col-md-6"">
-			<a href="#" class="btn btn-primary">For Local</a>
+			<a href="../national-panel/index.php" class="btn btn-primary">For Local Panel</a>
 		</div>
 
 	</div>

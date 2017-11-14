@@ -11,7 +11,7 @@
                          
                         <div class="col-lg-4">
                             <a href="singlenews.php?nurl=<?php echo $result['news_url']; ?>">
-                                <img src="admin/<?php echo $result['image']; ?>" alt="noname" class="img-responsive"/>
+                                <img src="global-panel/<?php echo $result['image']; ?>" alt="noname" class="img-responsive"/>
                             </a>
                         </div>
                         <div class="col-lg-8 text">

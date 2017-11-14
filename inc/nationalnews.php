@@ -10,7 +10,7 @@
                         ?>
                             <div class="col-lg-6">
                                 <div class="thumbnail thumbnail-content">
-                                    <a href="singlenews.php?nurl=<?php echo $result['news_url']; ?>"><img src="admin/<?php echo $result['image']; ?>" alt="taskin"></a>
+                                    <a href="singlenews.php?nurl=<?php echo $result['news_url']; ?>"><img src="global-panel/<?php echo $result['image']; ?>" alt="taskin"></a>
                                     <div class="caption">
                                         <a href="singlenews.php?nurl=<?php echo $result['news_url']; ?>"><h4><?php echo $result['news_title']; ?></h4></a>
                                     </div>

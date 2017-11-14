@@ -20,7 +20,7 @@
 
                             <div class="col-lg-4">
                                 <div class="thumbnail thumbnail-content">
-                                    <a href="#"><img src="admin/<?php echo $result['image']; ?>" alt="Bonna Mirjja"></a>
+                                    <a href="#"><img src="global-panel/<?php echo $result['image']; ?>" alt="Bonna Mirjja"></a>
                                     <div class="author_holder">
                                         <span><i class="fa fa-user-o" aria-hidden="true"></i><?php echo $result['author']; ?></span>
                                     </div>

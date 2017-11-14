@@ -33,16 +33,17 @@ class Session{
  }
  
 
-  /*public static function checkLogin(){
+  public static function checkLogin(){
   self::init();
-  if (self::get("userlogin")== true) {
-   header("Location:index.php");
+  if (self::get("userlogin")== false) {
+   header("Location:login.php");
   }
  }
-*/
+
+
  public static function destroy(){
   session_destroy();
-   echo "<script>window.location = 'login.php';</script>";
+   echo "<script>window.location = '../portal-admin/login.php';</script>";
 /*  header("Location:login.php");*/
  }
 }

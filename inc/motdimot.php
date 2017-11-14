@@ -10,7 +10,7 @@
                                     <div class="m-contents">
                                         <div class="col-lg-4">
                                             <a href="singlenews.php?nurl=<?php echo $result['news_url']; ?>">
-                                                <img src="admin/<?php echo $result['image']; ?>" alt="khaleda" class="img-circle"/>
+                                                <img src="global-panel/<?php echo $result['image']; ?>" alt="khaleda" class="img-circle"/>
                                             </a>
                                         </div>
                                         <div class="col-lg-8 m-contents-likha">

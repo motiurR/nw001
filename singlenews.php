@@ -54,7 +54,7 @@
                                 </ul>
                             </div>
     
-                            <img src="admin/<?php echo $result['image']; ?>" alt="News View Picture" class="img-responsive" />
+                            <img src="global-panel/<?php echo $result['image']; ?>" alt="News View Picture" class="img-responsive" />
                             <span class="tt"><?php echo $result['author']; ?></span>
 
                             <p class="text-justify">
@@ -79,7 +79,7 @@
 
                                 <div class="col-lg-3">
                                     <div class="thumbnail thumbnail-content">
-                                        <a href="singlenews.php?nurl=<?php echo $reletedresult['news_url']; ?>"><img src="admin/<?php echo $reletedresult['image']; ?>" alt="Liton" class="img-responsive"></a>
+                                        <a href="singlenews.php?nurl=<?php echo $reletedresult['news_url']; ?>"><img src="global-panel/<?php echo $reletedresult['image']; ?>" alt="Liton" class="img-responsive"></a>
                                         <div class="caption">
                                             <h4><a href="singlenews.php?nurl=<?php echo $reletedresult['news_url']; ?>"><?php echo $reletedresult['news_title']; ?></a></h4>
                                         </div>

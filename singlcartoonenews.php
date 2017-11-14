@@ -49,7 +49,7 @@
                                 </ul>
                             </div>
     
-                           <img src="admin/<?php echo $result['image']; ?>" alt="News View Picture" class="img-responsive" />
+                           <img src="global-panel/<?php echo $result['image']; ?>" alt="News View Picture" class="img-responsive" />
 
                             <span class="tt">photo credit here</span>
 

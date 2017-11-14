@@ -185,12 +185,6 @@ class Columnistnews{
 
 	  /*colamist profile*/
 	  public function getcolamistprofile(){
-/*	  	$query = "SELECT tbl_columnist.*,tbl_columnistProfile.*
-					           FROM tbl_columnist
-					           INNER JOIN tbl_columnistProfile 
-					           ON tbl_columnist.author = tbl_columnistProfile.columnistProfile_id
-					           ORDER BY tbl_columnist.columnistn_id DESC";*/
-
 	  	 $query ="SELECT * FROM tbl_columnistProfile ORDER BY columnistProfile_id DESC";
 	   	 $getdata = $this->db->select($query);
 	   	 return $getdata;
@@ -198,19 +192,19 @@ class Columnistnews{
 
 	  /*individual profile*/
 	  public function getcolamistprofilebyid($id){
-	  	$query = "SELECT tbl_columnist.*,tbl_columnistProfile.*
-					           FROM tbl_columnist
-					           INNER JOIN tbl_columnistProfile 
-					           ON tbl_columnist.author = tbl_columnistProfile.columnistProfile_id
-					           WHERE tbl_columnist.columnistn_id ='$id'";
-	  	/*$query ="SELECT * FROM tbl_columnist WHERE columnistn_id = '$id'";*/
+	  	$query ="SELECT * FROM tbl_columnistProfile WHERE columnistProfile_id = '$id'";
 	   	 $result = $this->db->select($query);
 	   	 return $result;
 	  }
 
 	  /*columist news by id*/
 	  public function getcolamistnewsbyid($id){
-	  	$query ="SELECT * FROM tbl_columnist WHERE author = '$id'";
+	  	$query = "SELECT tbl_columnistProfile.*,tbl_columnist.*
+					           FROM tbl_columnistProfile
+					           INNER JOIN tbl_columnist 
+					           ON tbl_columnistProfile.columnistProfile_id = tbl_columnist.author
+					           WHERE tbl_columnistProfile.columnistProfile_id ='$id'";
+	  	/*$query ="SELECT * FROM tbl_columnist WHERE author = '$id'";*/
 	   	 $result = $this->db->select($query);
 	   	 return $result;
 	  }
@@ -312,7 +306,6 @@ class Columnistnews{
 	  }
 	  
 	  public function delColumnistProf($id){
-
 		$query ="SELECT * FROM tbl_columnistprofile WHERE columnistProfile_id = '$id'";
 	   	 $getdata = $this->db->select($query);
 	   	 if ($getdata) {
@@ -321,7 +314,7 @@ class Columnistnews{
 	   	 		unlink($delLink);
 	   	 	}
 	   	 }
-	   	 $delquery = "DELETE FROM tbl_newses WHERE news_id ='$id'";
+	   	 $delquery = "DELETE FROM tbl_columnistprofile WHERE columnistProfile_id ='$id'";
 		  $deldata =$this->db->delete($delquery);
 		   if ($deldata) {
 	    		$msg = "<span class='success'>Deleted successfully!</span>";

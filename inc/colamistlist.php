@@ -11,7 +11,7 @@
             <div class="media content">
                 <div class="media-left media-middle">
                     <a href="#">
-                        <img class="media-object" src="admin/<?php echo $result['image']; ?>" alt="Bonna Mirjja">
+                        <img class="media-object" src="global-panel/<?php echo $result['image']; ?>" alt="Bonna Mirjja">
                     </a>
                 </div>
                 <div class="media-body">

@@ -30,7 +30,7 @@
                                 <img src="images/coverpic.jpg" alt="Cover Image" class="img-responsive"/>
                             </div>
                             <div class="profile_pic">
-                                <img src="admin/<?php echo $result['image']; ?>" alt="Profile Picture" class="img-responsive"/>
+                                <img src="global-panel/<?php echo $result['image']; ?>" alt="Profile Picture" class="img-responsive"/>
                             </div>
                             <div class="ro--w">
 
@@ -47,9 +47,9 @@
                                                 <a href="singleColmnistnews.php?colN=<?php echo $value['news_url']; ?>"><?php echo $value['news_title'];?></a>
                                             </h3>
                                             <div class="publice_date">
-                                                <span><i class="fa fa-clock-o" aria-hidden="true"></i><?php echo $result['create_date']; ?></span>
+                                                <span><i class="fa fa-clock-o" aria-hidden="true"></i><?php echo $value['create_date']; ?></span>
                                             </div>
-                                            <p><?php echo $fm->textShorten($result['news_summery']); ?></p>
+                                            <p><?php echo $fm->textShorten($value['news_summery']); ?></p>
                                         </div>
                                     </div>
                                 </div>

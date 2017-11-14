@@ -14,7 +14,7 @@
 
                         <div class= "col-lg-6">
                             <div class="thumbnail kheladhula-thumbnail">
-                                <a href="singlenews.php?nurl=<?php echo $result['news_url']; ?>"><img src="admin/<?php echo $result['image']; ?>" alt="Sachin"></a>
+                                <a href="singlenews.php?nurl=<?php echo $result['news_url']; ?>"><img src="global-panel/<?php echo $result['image']; ?>" alt="Sachin"></a>
                                 <div class="caption kheladhula-thumbnail-likha">
                                     <a href="singlenews.php?nurl=<?php echo $result['news_url']; ?>"><h3><?php echo $result['news_title']; ?></h3></a>
                                     <a href="singlenews.php?nurl=<?php echo $result['news_url']; ?>"><p><?php echo $fm->textShorten($result['news_summery']); ?></p></a>
@@ -32,7 +32,7 @@
                      ?>
                         <div class="col-lg-6">
                             <div class="thumbnail kheladhula-thumbnail">
-                                <a href="singlenews.php?nurl=<?php echo $result['news_url']; ?>"><img src="admin/<?php echo $result['image']; ?>" alt="Rafa"></a>
+                                <a href="singlenews.php?nurl=<?php echo $result['news_url']; ?>"><img src="global-panel/<?php echo $result['image']; ?>" alt="Rafa"></a>
                                 <div class="caption kheladhula-thumbnail-likha">
                                     <a href="singlenews.php?nurl=<?php echo $result['news_url']; ?>"> <h3><?php echo $result['news_title']; ?></h3></a>
                                     <a href="singlenews.php?nurl=<?php echo $result['news_url']; ?>"><p><?php echo $fm->textShorten($result['news_summery']); ?></p></a>

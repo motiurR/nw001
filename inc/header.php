@@ -48,7 +48,7 @@
                             while ($result = $getlogo->fetch_assoc()) {
                    ?>
                         <a href="index.php">
-                            <img src="admin/<?php echo $result['logo']; ?>" alt="logo" class="img-responsive"/>
+                            <img src="global-panel/<?php echo $result['logo']; ?>" alt="logo" class="img-responsive"/>
                         </a>
                     <?php } } ?>    
 
