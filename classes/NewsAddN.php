@@ -47,7 +47,7 @@ class NewsAddN{
 	    $div = explode('.', $file_name);
 	    $file_ext = strtolower(end($div));
 	    $unique_image = substr(md5(time()), 0, 10).'.'.$file_ext;
-	    $uploaded_image = "upload/".$unique_image;
+	    $uploaded_image = "../upload/".$unique_image;
 
 	    if ($category_id =="" || $news_title ==""|| $news_url =="" || $news_seo_title =="" || $news_summery =="" || $news_details =="" || $file_name=="" || $author =="" || $date=="") {
 	    	$msg = "<span class='error'>Field must not be empty!</span>";
@@ -97,7 +97,7 @@ class NewsAddN{
 	  }
 	  /*popular*/
 	  public function getAllNPopularNews(){
-	  	$query = "SELECT * FROM tbl_newses WHERE status = '1' ORDER BY hits DESC LIMIT 9";
+	  	$query = "SELECT * FROM tbl_newses WHERE status = '1' AND create_date > DATE_SUB( NOW(), INTERVAL 24 HOUR) ORDER BY hits DESC LIMIT 9";
 	  	$result = $this->db->select($query);
 	  	return $result;
 	  }
@@ -450,7 +450,7 @@ class NewsAddN{
 	   	 $getdata = $this->db->select($query);
 	   	 if ($getdata) {
 	   	 	while ($delimg = $getdata->fetch_assoc()) {
-	   	 		$delLink = $delimg['image']; /*from database*/
+	   	 		$delLink = $delimg['image'];
 	   	 		unlink($delLink);
 	   	 	}
 	   	 }
@@ -465,7 +465,7 @@ class NewsAddN{
 	    	}
 	  }
 	 /*for update*/
-	  public function getsubcatById($id){
+	  public function getNewsAllById($id){
 	  	$ncatShowquery = "SELECT * FROM tbl_newses WHERE news_id = '$id'";
 		$result = $this->db->select($ncatShowquery);
 		return $result;
@@ -486,6 +486,7 @@ class NewsAddN{
 		$news_summery = mysqli_real_escape_string($this->db->link,$news_summery);
 		$news_details = $this->fm->validation($data['news_details']);
 		$news_details = mysqli_real_escape_string($this->db->link,$news_details);
+		$update_dateN_time = date("Y-m-d H:i:s");
 
 		$permited  = array('jpg', 'jpeg', 'png', 'gif');
 	    $file_name = $file['image']['name'];
@@ -495,7 +496,7 @@ class NewsAddN{
 	    $div = explode('.', $file_name);
 	    $file_ext = strtolower(end($div));
 	    $unique_image = substr(md5(time()), 0, 10).'.'.$file_ext;
-	    $uploaded_image = "upload/".$unique_image;
+	    $uploaded_image = "../upload/".$unique_image;
 
 	    if ($category_id =="" || $subcategory_id =="" || $news_title =="" || $news_seo_title =="" || $news_summery =="" || $news_details =="") {
 	    	$msg = "<span class='error'>Field must not be empty!</span>";
@@ -521,7 +522,8 @@ class NewsAddN{
 			    			news_seo_title 		='$news_seo_title',
 			    			image 		        ='$uploaded_image',
 			    			news_summery 	    ='$news_summery',
-			    			news_details 		='$news_details'
+			    			news_details 		='$news_details',
+			    			update_dateN_time   ='$update_dateN_time' 
 			    			WHERE news_id ='$id'";
 
 			    	$updated_row = $this->db->update($query);
@@ -545,7 +547,9 @@ class NewsAddN{
 			    			news_url 		    ='$news_url',
 			    			news_seo_title 		='$news_seo_title',
 			    			news_summery 	    ='$news_summery',
-			    			news_details 		='$news_details'
+			    			news_details 		='$news_details',
+			    			update_dateN_time   ='$update_dateN_time'
+
 			    			WHERE news_id ='$id'";
 
 			    	$updated_row = $this->db->update($query);

@@ -46,6 +46,7 @@ function getSubcat(val) {
     if (isset($_GET['delnNews'])) {
     	$id = $_GET['delnNews'];
     	$delnNewsbyid =$newslist->delnNewsById($id);
+        echo "<script>window.location = 'newsnlist.php';</script>";
     }
 ?>
 

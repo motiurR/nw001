@@ -36,7 +36,7 @@
 
             <?php
                $newsn = new NewsAddN();
-                $getnesbyid = $newsn->getsubcatById($id);
+                $getnesbyid = $newsn->getNewsAllById($id);
                 if ($getnesbyid) {
                   while ($value = $getnesbyid->fetch_assoc()) {
             ?>      

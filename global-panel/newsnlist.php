@@ -46,6 +46,7 @@ function getSubcat(val) {
     if (isset($_GET['delnNews'])) {
     	$id = $_GET['delnNews'];
     	$delnNewsbyid =$newslist->delnNewsById($id);
+        echo "<script>window.location = 'newsnlist.php';</script>";
     }
 ?>
 
@@ -125,7 +126,10 @@ function getSubcat(val) {
                                 <a href="?istop=<?php echo $result['news_id']?>" onclick="return confirm('Are You Sure Want To Change?') " style="color:<?php echo $result['top_news']?'green':'red'; ?>"><?php echo $result['top_news']?'Top':'General'; ?></a>
                             </td>
 
-                            <td><?php echo $result['news_title']?></td>
+                            <td><?php echo $result['news_title']?><br>
+                                <?php echo "create:".$result['create_date']?><br>
+                                <?php echo "update:".$result['update_dateN_time']?>
+                            </td>
 
                             <!-- <td><?php echo $fm->textShorten($result['news_url'],80)?></td> -->
 

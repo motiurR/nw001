@@ -150,7 +150,7 @@ $("#suggesstion-box").hide();
                             
                             <td>
                                  <select name="status">
-                                <option value="1">active</option>
+                                <!-- <option value="1">active</option> -->
                                 <option value="0">in-active</option>
                             </select>
                             </td>

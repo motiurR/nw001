@@ -1,4 +1,4 @@
-<?php include '../classes/NewsAddN.php';?>
+<?php include '../classes/LocalNews.php';?>
 <?php include '../classes/CategoryNatioal.php';?>
 <?php include '../classes/SubCategoryNational.php';?>
 
@@ -14,7 +14,7 @@
 ?>
 
 <?php
-    $newsn = new NewsAddN();
+    $newsn = new LocalNews();
     if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $updateNews = $newsn->updateNewsInfo($_POST, $_FILES, $id);
     }
@@ -35,8 +35,8 @@
                <div class="block copyblock">
 
             <?php
-               $newsn = new NewsAddN();
-                $getnesbyid = $newsn->getsubcatById($id);
+               $newsn = new LocalNews();
+                $getnesbyid = $newsn->getLocalNewsAllById($id);
                 if ($getnesbyid) {
                   while ($value = $getnesbyid->fetch_assoc()) {
             ?>      
