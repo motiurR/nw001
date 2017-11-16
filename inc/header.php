@@ -25,6 +25,7 @@
         <link rel="stylesheet" href="css/kolamist_profile.css" />
         <link rel="stylesheet" href="css/archive.css" />
         <link rel="stylesheet" href="css/news-view.css" />
+        <link rel="stylesheet" href="css/map.css" />
         <link rel="stylesheet" href="css/font-awesome.min.css" />
 
         <!-- jQuery link here -->
@@ -48,7 +49,7 @@
                             while ($result = $getlogo->fetch_assoc()) {
                    ?>
                         <a href="index.php">
-                            <img src="<?php echo $result['logo']; ?>" alt="logo" class="img-responsive"/>
+                            <img src="global-panel/<?php echo $result['logo']; ?>" alt="logo" class="img-responsive"/>
                         </a>
                     <?php } } ?>    
 
@@ -83,7 +84,7 @@
                                 <a href="political.php" class="menu-items">রাজনীতি</a>
                             </li>
                             <li>
-                                <a href="#" class="menu-items">সারা বাংলা</a>
+                                <a href="allbangladesh.php" class="menu-items">সারা বাংলা</a>
                             </li>
                             <li>
                                 <a href="economic.php" class="menu-items">অর্থনীতি</a>

@@ -37,27 +37,6 @@
                     </ul>
                 </li>
 
-                <li><a class="menuitem">Cartoon News</a>
-                    <ul class="submenu">
-                        <li><a href="cartoonadd.php">Add C News</a> </li>
-                        <li><a href="cartoonmanage.php">Cartoon News List</a> </li>
-                    </ul>
-                </li>
-
-                 <li><a class="menuitem">Columnist Profile</a>
-                    <ul class="submenu">
-                        <li><a href="columnistdd.php">Add Columnist</a> </li>
-                        <li><a href="columnistlist.php">Columnist List</a> </li>
-                    </ul>
-                </li>
-
-                <li><a class="menuitem">Columnist News</a>
-                    <ul class="submenu">
-                        <li><a href="columnistnewsadd.php">Add C News</a> </li>
-                        <li><a href="columnlistnewslist.php">C News List</a> </li>
-                    </ul>
-                </li>
-
                 <li><a class="menuitem">News</a>
                     <ul class="submenu">
                         <li><a href="newsnadd.php">Add News</a> </li>

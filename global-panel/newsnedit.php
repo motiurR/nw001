@@ -1,5 +1,6 @@
 <?php include '../classes/NewsAddN.php';?>
 <?php include '../classes/CategoryNatioal.php';?>
+<?php include '../classes/Districts.php';?>
 <?php include '../classes/SubCategoryNational.php';?>
 
 <?php include 'inc/header.php';?>
@@ -42,7 +43,33 @@
             ?>      
 
                  <form action="" method="POST" enctype="multipart/form-data">
-                    <table class="form">					
+                    <table class="form">
+
+                        <tr>
+                            <td>
+                                <label>Districts</label>
+                            </td>
+                            <td>
+                                <select id="select" name="district_id">
+                                <?php
+                                $dist = new Districts(); 
+                                    $getdis = $dist->getAllDistricts();
+                                    if ($getdis) {
+                                        while ($disresult = $getdis->fetch_assoc()) {
+                                ?>  
+                                    <option 
+                                         <?php
+                                              if ($value['district_id'] == $disresult['district_id']) { ?> 
+                                                 selected="selected"
+                                         <?php }
+                                         ?> 
+                                        value="<?php echo $disresult['district_id']; ?>"><?php echo $disresult['name']; ?>
+                                  </option>
+                                <?php } } ?>    
+                                </select>
+                            </td>
+                        </tr>
+
 
                         <tr>
                             <td>
@@ -75,6 +102,7 @@
                             </td>
                             <td>
                                 <select id="select" name="subcategory_id">
+                                  <option>select subcategory</option>
                                 <?php
                                   $subcat = new SubCategoryNational(); 
                                     $getscat = $subcat->getAllNsCat();

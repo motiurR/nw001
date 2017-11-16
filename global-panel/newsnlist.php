@@ -99,6 +99,7 @@ function getSubcat(val) {
                             <th>SL</th>
                             <th>Category</th>
                             <th>SubCat Id</th>
+                            <th>District</th>
                             <th>Is Top</th>
                             <th width="25%">News Title</th>
                             <!-- <th>News url</th> -->
@@ -121,6 +122,7 @@ function getSubcat(val) {
                             <td><?php echo $i;?></td>
                             <td><?php echo $result['category_title']?>(<?php echo $result['category_id']?>)</td>
                             <td><?php echo $result['subcategory_id']?></td>
+                            <td><?php echo $result['district_id']?></td>
                             
                             <td>
                                 <a href="?istop=<?php echo $result['news_id']?>" onclick="return confirm('Are You Sure Want To Change?') " style="color:<?php echo $result['top_news']?'green':'red'; ?>"><?php echo $result['top_news']?'Top':'General'; ?></a>

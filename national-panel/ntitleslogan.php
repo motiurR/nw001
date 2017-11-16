@@ -1,6 +1,6 @@
 <?php include 'inc/header.php';?>
 <?php include 'inc/sidebar.php';?>
-<?php include '../classes/TitleSloganLogo.php';?>
+<?php include '../classes/TitleSloganLogoLocal.php';?>
 <style>
     .leftside{
     float: left;
@@ -17,7 +17,7 @@
 </style>
 
 <?php
-    $ttlesgn = new TitleSloganLogo();
+    $ttlesgn = new TitleSloganLogoLocal();
     if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $updatelogo = $ttlesgn->getupdatelogo($_FILES);
     }

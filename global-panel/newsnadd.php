@@ -1,5 +1,6 @@
 <?php include '../classes/NewsAddN.php';?>
 <?php include '../classes/CategoryNatioal.php';?>
+<?php include '../classes/Districts.php';?>
 <?php include '../classes/SubCategoryNational.php';?>
 
 <?php include 'inc/header.php';?>
@@ -24,9 +25,9 @@ $("#suggesstion-box").hide();
 </script>
 
 <?php
-    $catN = new NewsAddN();
+    $addN = new NewsAddN();
     if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-        $insertNationNews = $catN->addNnews($_POST, $_FILES);
+        $insertNationNews = $addN->addNnews($_POST, $_FILES);
     }
 
 ?>
@@ -44,7 +45,29 @@ $("#suggesstion-box").hide();
                <div class="block copyblock"> 
 
                  <form action="" method="POST" enctype="multipart/form-data">
-                    <table class="form">					
+                    <table class="form">
+
+                         <tr>
+                            <td>
+                                <label>Districts</label>
+                            </td>
+                            <td>
+                                <select name="district_id">
+                                     <option value="">select District</option>
+                                <?php
+                                $dis = new Districts(); 
+                                    $getdis = $dis->getAllDistricts();
+                                    if ($getdis) {
+                                        while ($disresult = $getdis->fetch_assoc()) {
+                                ?>  
+                                    <option value="<?php echo $disresult['district_id']; ?>">
+                                        <?php echo $disresult['name']; ?>  
+                                    </option>
+                                <?php } } ?>    
+                                </select>
+                            </td>
+                        </tr>
+					
 
                         <tr>
                             <td>

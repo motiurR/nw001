@@ -40,7 +40,7 @@ class Cartoon{
 	    $div = explode('.', $file_name);
 	    $file_ext = strtolower(end($div));
 	    $unique_image = substr(md5(time()), 0, 10).'.'.$file_ext;
-	    $uploaded_image = "upload/".$unique_image;
+	    $uploaded_image = "../upload/".$unique_image;
 
 	    if ($news_title ==""|| $news_url =="" || $news_summery =="" || $file_name=="" || $author =="" || $date=="") {
 	    	$msg = "<span class='error'>Field must not be empty!</span>";
@@ -113,7 +113,7 @@ class Cartoon{
 	    $div = explode('.', $file_name);
 	    $file_ext = strtolower(end($div));
 	    $unique_image = substr(md5(time()), 0, 10).'.'.$file_ext;
-	    $uploaded_image = "upload/".$unique_image;
+	    $uploaded_image = "../upload/".$unique_image;
 
 	    if ($news_title ==""|| $news_url =="" || $news_summery =="") {
 	    	$msg = "<span class='error'>Field must not be empty!</span>";

@@ -1,10 +1,10 @@
-<?php include '../classes/Announcement.php';?>
+<?php include '../classes/localAnnouncement.php';?>
 
 <?php include 'inc/header.php';?>
 <?php include 'inc/sidebar.php';?>
 
 <?php
-    $brkn = new Announcement();
+    $brkn = new localAnnouncement();
     if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $upannouncement = $brkn->getUpdateannouncement($_POST);
     }

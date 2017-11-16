@@ -63,7 +63,7 @@
         </div>
         <div class="grid_12">
             <ul class="nav main">
-                <li class="ic-dashboard"><a href="../global-panel/index.php"><span>Dashboard</span></a> </li>
+                <li class="ic-dashboard"><a href="../national-panel/index.php"><span>Dashboard</span></a> </li>
             <?php
                 if (Session::get('level') == '0') { ?>
                 <li class="ic-form-style"><a href="AddnUser.php"><span>Add User</span></a></li>
@@ -71,7 +71,7 @@
                <li class="ic-form-style"><a href="usernlist.php"><span>User List</span></a></li>  
 				<li class="ic-charts"><a href="changeadminpas.php"><span>Change Password</span></a></li>
                 <li class="ic-grid-tables"><a href="cusinbox.php"><span>Inbox</li>
-                <li class="ic-charts"><a href="../index.php" target="_blank"><span>Visit Website</span></a></li>
+                <li class="ic-charts"><a href="../index2.php" target="_blank"><span>Visit Website</span></a></li>
                 <li class="ic-grid-tables"><a href="?action=logout"><span>Logout</li>
                     
             </ul>

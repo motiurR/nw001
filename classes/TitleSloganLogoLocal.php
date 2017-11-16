@@ -5,7 +5,7 @@
 ?>
 
 <?php
-class TitleSloganLogo{
+class TitleSloganLogoLocal{
 		private $db;
 		private $fm;
 
@@ -15,7 +15,7 @@ class TitleSloganLogo{
 	  }
 
 	   public function getDataById(){
-	  	$query = "SELECT * FROM tbl_logontitle WHERE logo_id='1'";
+	  	$query = "SELECT * FROM  tbl_logo_local WHERE logo_id='1'";
 	  	$data = $this->db->select($query);
 	  	return $data;
 	  }
@@ -28,7 +28,7 @@ class TitleSloganLogo{
 
 	    $div = explode('.', $file_name);
 	    $file_ext = strtolower(end($div));
-	    $same_image = 'logo'.'.'.$file_ext;
+	    $same_image = 'logoLocal'.'.'.$file_ext;
 	    $uploaded_image = "../upload/".$same_image;
 
 	    	if (!empty($file_name)) {
@@ -40,7 +40,7 @@ class TitleSloganLogo{
 				     .implode(', ', $permited)."</span>";
 				    }else{
 			    	move_uploaded_file($file_temp, $uploaded_image);
-					    	$query = "UPDATE tbl_logontitle
+					    	$query = "UPDATE tbl_logo_local
 			    			SET
 			    			logo 		='$uploaded_image'
 			    			WHERE logo_id ='1'";
@@ -59,7 +59,7 @@ class TitleSloganLogo{
 	       }
 
 	       public function getLogiIcon(){
-	       	 $query = "SELECT * FROM tbl_logontitle";
+	       	 $query = "SELECT * FROM tbl_logo_local";
 			 $data = $this->db->select($query);
 			 return $data;
 	       }
