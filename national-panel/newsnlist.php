@@ -1,6 +1,6 @@
-<?php include '../classes/LocalNews.php';?>
-<?php include '../classes/CategoryNatioal.php';?>
-<?php include '../classes/SubCategoryNational.php';?>
+<?php include '../classes/NewsLocal.php';?>
+<?php include '../classes/CategoryLocal.php';?>
+<?php include '../classes/SubcategoryLocal.php';?>
 
 <?php include 'inc/header.php';?>
 <?php include 'inc/sidebar.php';?>
@@ -27,7 +27,7 @@ function getSubcat(val) {
 ?>
 
 <?php
-    $newslist = new LocalNews();
+    $newslist = new NewsLocal();
     if (isset($_GET['istop'])) {
     	$id = $_GET['istop'];
     	$changeNewsTop =$newslist->changenNewsTopById($id);
@@ -79,7 +79,7 @@ function getSubcat(val) {
                                 <select id="subcategory_id"  onChange="getSubcat(this.value)">
                                      <option value="">select Sub Category</option>
                                 <?php
-                                $subcat = new SubCategoryNational(); 
+                                $subcat = new SubcategoryLocal(); 
                                     $getcat = $subcat->getAllNsCat();
                                     if ($getcat) {
                                         while ($catres = $getcat->fetch_assoc()) {
@@ -110,7 +110,7 @@ function getSubcat(val) {
                     </thead>
                     <tbody>
             <?php
-            $newslist = new LocalNews();
+            $newslist = new NewsLocal();
                 $getNews = $newslist->getAllLocalNews();
                 if ($getNews) {
                     $i = 0;

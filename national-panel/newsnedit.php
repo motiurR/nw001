@@ -1,6 +1,6 @@
-<?php include '../classes/LocalNews.php';?>
-<?php include '../classes/CategoryNatioal.php';?>
-<?php include '../classes/SubCategoryNational.php';?>
+<?php include '../classes/NewsLocal.php';?>
+<?php include '../classes/CategoryLocal.php';?>
+<?php include '../classes/SubcategoryLocal.php';?>
 
 <?php include 'inc/header.php';?>
 <?php include 'inc/sidebar.php';?>
@@ -14,7 +14,7 @@
 ?>
 
 <?php
-    $newsn = new LocalNews();
+    $newsn = new NewsLocal();
     if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $updateNews = $newsn->updateNewsInfo($_POST, $_FILES, $id);
     }
@@ -35,7 +35,7 @@
                <div class="block copyblock">
 
             <?php
-               $newsn = new LocalNews();
+               $newsn = new NewsLocal();
                 $getnesbyid = $newsn->getLocalNewsAllById($id);
                 if ($getnesbyid) {
                   while ($value = $getnesbyid->fetch_assoc()) {
@@ -51,7 +51,7 @@
                             <td>
                                 <select id="select" name="category_id">
                                 <?php
-                                $cat = new CategoryNatioal(); 
+                                $cat = new CategoryLocal(); 
                                     $getcat = $cat->getAllNCat();
                                     if ($getcat) {
                                         while ($catres = $getcat->fetch_assoc()) {
@@ -76,7 +76,7 @@
                             <td>
                                 <select id="select" name="subcategory_id">
                                 <?php
-                                  $subcat = new SubCategoryNational(); 
+                                  $subcat = new SubcategoryLocal(); 
                                     $getscat = $subcat->getAllNsCat();
                                     if ($getscat) {
                                         while ($subcatres = $getscat->fetch_assoc()) {

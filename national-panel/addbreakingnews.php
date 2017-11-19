@@ -1,10 +1,10 @@
-<?php include '../classes/BreakingNews.php';?>
+<?php include '../classes/BreakingNewsLocal.php';?>
 
 <?php include 'inc/header.php';?>
 <?php include 'inc/sidebar.php';?>
 
 <?php
-    $brkn = new BreakingNews();
+    $brkn = new BreakingNewsLocal();
     if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $insertbreaking = $brkn->getBreakingNews($_POST);
     }

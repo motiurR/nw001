@@ -652,6 +652,551 @@ class NewsAddN{
 	  	$result = $this->db->select($query);
 	  	return $result;
 	  }
+	   /*get top sylhet news*/
+	  public function sylhetTNews(){
+	  	$query = "SELECT * FROM tbl_newses WHERE status = '1' AND top_news = '1' AND district_id = '54' ORDER BY news_id DESC  LIMIT 1";
+	  	$result = $this->db->select($query);
+	  	return $result;
+	  }
+	  /*get all sylhet news*/
+	  public function sylhetNews(){
+	  	$query = "SELECT * FROM tbl_newses WHERE status = '1'AND district_id = '54' ORDER BY news_id DESC  LIMIT 3";
+	  	$result = $this->db->select($query);
+	  	return $result;
+	  }
+	   /*get top maulvibazar news*/
+	  public function maulvibazarTNews(){
+	  	$query = "SELECT * FROM tbl_newses WHERE status = '1' AND top_news = '1' AND district_id = '52' ORDER BY news_id DESC  LIMIT 1";
+	  	$result = $this->db->select($query);
+	  	return $result;
+	  }
+	  /*get all maulvibazar news*/
+	  public function maulvibazarallNews(){
+	  	$query = "SELECT * FROM tbl_newses WHERE status = '1'AND district_id = '52' ORDER BY news_id DESC  LIMIT 3";
+	  	$result = $this->db->select($query);
+	  	return $result;
+	  }
+	    /*get top habiganj news*/
+	  public function habiganjTNews(){
+	  	$query = "SELECT * FROM tbl_newses WHERE status = '1' AND top_news = '1' AND district_id = '51' ORDER BY news_id DESC  LIMIT 1";
+	  	$result = $this->db->select($query);
+	  	return $result;
+	  }
+	  /*get all habiganj news*/
+	  public function habiganjallNews(){
+	  	$query = "SELECT * FROM tbl_newses WHERE status = '1'AND district_id = '51' ORDER BY news_id DESC  LIMIT 3";
+	  	$result = $this->db->select($query);
+	  	return $result;
+	  }
+	   /*get top chuadanga news*/
+	  public function chuadangaTNews(){
+	  	$query = "SELECT * FROM tbl_newses WHERE status = '1' AND top_news = '1' AND district_id = '56' ORDER BY news_id DESC  LIMIT 1";
+	  	$result = $this->db->select($query);
+	  	return $result;
+	  }
+	  /*get all chuadanga news*/
+	  public function chuadangaallNews(){
+	  	$query = "SELECT * FROM tbl_newses WHERE status = '1'AND district_id = '56' ORDER BY news_id DESC  LIMIT 3";
+	  	$result = $this->db->select($query);
+	  	return $result;
+	  }
+	    /*get top chuadanga news*/
+	  public function jhenaidahTNews(){
+	  	$query = "SELECT * FROM tbl_newses WHERE status = '1' AND top_news = '1' AND district_id = '58' ORDER BY news_id DESC  LIMIT 1";
+	  	$result = $this->db->select($query);
+	  	return $result;
+	  }
+	  /*get all chuadanga news*/
+	  public function jhenaidahallNews(){
+	  	$query = "SELECT * FROM tbl_newses WHERE status = '1'AND district_id = '58' ORDER BY news_id DESC  LIMIT 3";
+	  	$result = $this->db->select($query);
+	  	return $result;
+	  }
+	   /*get top magura news*/
+	  public function maguraTNews(){
+	  	$query = "SELECT * FROM tbl_newses WHERE status = '1' AND top_news = '1' AND district_id = '61' ORDER BY news_id DESC  LIMIT 1";
+	  	$result = $this->db->select($query);
+	  	return $result;
+	  }
+	  /*get all magura news*/
+	  public function maguraallNews(){
+	  	$query = "SELECT * FROM tbl_newses WHERE status = '1'AND district_id = '61' ORDER BY news_id DESC  LIMIT 3";
+	  	$result = $this->db->select($query);
+	  	return $result;
+	  }
+	    /*get top jessore news*/
+	  public function jessoreTopNews(){
+	  	$query = "SELECT * FROM tbl_newses WHERE status = '1' AND top_news = '1' AND district_id = '57' ORDER BY news_id DESC  LIMIT 1";
+	  	$result = $this->db->select($query);
+	  	return $result;
+	  }
+	  /*get all jessore news*/
+	  public function jessoreallNews(){
+	  	$query = "SELECT * FROM tbl_newses WHERE status = '1'AND district_id = '57' ORDER BY news_id DESC  LIMIT 3";
+	  	$result = $this->db->select($query);
+	  	return $result;
+	  }
+	     /*get top narail news*/
+	  public function narailTopNews(){
+	  	$query = "SELECT * FROM tbl_newses WHERE status = '1' AND top_news = '1' AND district_id = '63' ORDER BY news_id DESC  LIMIT 1";
+	  	$result = $this->db->select($query);
+	  	return $result;
+	  }
+	  /*get all narail news*/
+	  public function narailallNews(){
+	  	$query = "SELECT * FROM tbl_newses WHERE status = '1'AND district_id = '63' ORDER BY news_id DESC  LIMIT 3";
+	  	$result = $this->db->select($query);
+	  	return $result;
+	  }
+	   /*get top gopalgonj news*/
+	  public function gopalgonjTopNews(){
+	  	$query = "SELECT * FROM tbl_newses WHERE status = '1' AND top_news = '1' AND district_id = '4' ORDER BY news_id DESC  LIMIT 1";
+	  	$result = $this->db->select($query);
+	  	return $result;
+	  }
+	  /*get all gopalgonj news*/
+	  public function gopalgonjallNews(){
+	  	$query = "SELECT * FROM tbl_newses WHERE status = '1'AND district_id = '4' ORDER BY news_id DESC  LIMIT 3";
+	  	$result = $this->db->select($query);
+	  	return $result;
+	  }
+	   /*get top chandpur news*/
+	  public function chandpurTopNews(){
+	  	$query = "SELECT * FROM tbl_newses WHERE status = '1' AND top_news = '1' AND district_id = '42' ORDER BY news_id DESC  LIMIT 1";
+	  	$result = $this->db->select($query);
+	  	return $result;
+	  }
+	  /*get all chandpur news*/
+	  public function chandpurallNews(){
+	  	$query = "SELECT * FROM tbl_newses WHERE status = '1'AND district_id = '42' ORDER BY news_id DESC  LIMIT 3";
+	  	$result = $this->db->select($query);
+	  	return $result;
+	  }
+	   /*get top chandpur news*/
+	  public function barisalTopNews(){
+	  	$query = "SELECT * FROM tbl_newses WHERE status = '1' AND top_news = '1' AND district_id = '35' ORDER BY news_id DESC  LIMIT 1";
+	  	$result = $this->db->select($query);
+	  	return $result;
+	  }
+	  /*get all chandpur news*/
+	  public function barisalallNews(){
+	  	$query = "SELECT * FROM tbl_newses WHERE status = '1'AND district_id = '35' ORDER BY news_id DESC  LIMIT 3";
+	  	$result = $this->db->select($query);
+	  	return $result;
+	  }
+	   /*get top khulna news*/
+	  public function khulnaTopNews(){
+	  	$query = "SELECT * FROM tbl_newses WHERE status = '1' AND top_news = '1' AND district_id = '59' ORDER BY news_id DESC  LIMIT 1";
+	  	$result = $this->db->select($query);
+	  	return $result;
+	  }
+	  /*get all khulna news*/
+	  public function khulnaallNews(){
+	  	$query = "SELECT * FROM tbl_newses WHERE status = '1'AND district_id = '59' ORDER BY news_id DESC  LIMIT 3";
+	  	$result = $this->db->select($query);
+	  	return $result;
+	  }
+	   /*get top satkhira news*/
+	  public function satkhiraTopNews(){
+	  	$query = "SELECT * FROM tbl_newses WHERE status = '1' AND top_news = '1' AND district_id = '64' ORDER BY news_id DESC  LIMIT 1";
+	  	$result = $this->db->select($query);
+	  	return $result;
+	  }
+	  /*get all satkhira news*/
+	  public function satkhiraallNews(){
+	  	$query = "SELECT * FROM tbl_newses WHERE status = '1'AND district_id = '64' ORDER BY news_id DESC  LIMIT 3";
+	  	$result = $this->db->select($query);
+	  	return $result;
+	  }
+	   /*get top bagerhat news*/
+	  public function bagerhatTopNews(){
+	  	$query = "SELECT * FROM tbl_newses WHERE status = '1' AND top_news = '1' AND district_id = '55' ORDER BY news_id DESC  LIMIT 1";
+	  	$result = $this->db->select($query);
+	  	return $result;
+	  }
+	  /*get all bagerhat news*/
+	  public function bagerhatallNews(){
+	  	$query = "SELECT * FROM tbl_newses WHERE status = '1'AND district_id = '55' ORDER BY news_id DESC  LIMIT 3";
+	  	$result = $this->db->select($query);
+	  	return $result;
+	  }
+	   /*get top noakhali news*/
+	  public function noakhaliTopNews(){
+	  	$query = "SELECT * FROM tbl_newses WHERE status = '1' AND top_news = '1' AND district_id = '49' ORDER BY news_id DESC  LIMIT 1";
+	  	$result = $this->db->select($query);
+	  	return $result;
+	  }
+	  /*get all noakhali news*/
+	  public function noakhaliallNews(){
+	  	$query = "SELECT * FROM tbl_newses WHERE status = '1'AND district_id = '49' ORDER BY news_id DESC  LIMIT 3";
+	  	$result = $this->db->select($query);
+	  	return $result;
+	  }
+	    /*get top jhalokhati news*/
+	  public function jhalokathiTopNews(){
+	  	$query = "SELECT * FROM tbl_newses WHERE status = '1' AND top_news = '1' AND district_id = '37' ORDER BY news_id DESC  LIMIT 1";
+	  	$result = $this->db->select($query);
+	  	return $result;
+	  }
+	  /*get all jhalokhati news*/
+	  public function jhalokathiallNews(){
+	  	$query = "SELECT * FROM tbl_newses WHERE status = '1'AND district_id = '37' ORDER BY news_id DESC  LIMIT 3";
+	  	$result = $this->db->select($query);
+	  	return $result;
+	  }
+	    /*get top bhola news*/
+	  public function bholaTopNews(){
+	  	$query = "SELECT * FROM tbl_newses WHERE status = '1' AND top_news = '1' AND district_id = '36' ORDER BY news_id DESC  LIMIT 1";
+	  	$result = $this->db->select($query);
+	  	return $result;
+	  }
+	  /*get all bhola news*/
+	  public function bholaallNews(){
+	  	$query = "SELECT * FROM tbl_newses WHERE status = '1'AND district_id = '36' ORDER BY news_id DESC  LIMIT 3";
+	  	$result = $this->db->select($query);
+	  	return $result;
+	  }
+	    /*get top khagrachari news*/
+	  public function khagrachariTopNews(){
+	  	$query = "SELECT * FROM tbl_newses WHERE status = '1' AND top_news = '1' AND district_id = '47' ORDER BY news_id DESC  LIMIT 1";
+	  	$result = $this->db->select($query);
+	  	return $result;
+	  }
+	  /*get all khagrachari news*/
+	  public function khagrachariallNews(){
+	  	$query = "SELECT * FROM tbl_newses WHERE status = '1'AND district_id = '47' ORDER BY news_id DESC  LIMIT 3";
+	  	$result = $this->db->select($query);
+	  	return $result;
+	  }
+	    /*get top rangamati news*/
+	  public function rangamatiTopNews(){
+	  	$query = "SELECT * FROM tbl_newses WHERE status = '1' AND top_news = '1' AND district_id = '50' ORDER BY news_id DESC  LIMIT 1";
+	  	$result = $this->db->select($query);
+	  	return $result;
+	  }
+	  /*get all rangamati news*/
+	  public function rangamatiallNews(){
+	  	$query = "SELECT * FROM tbl_newses WHERE status = '1'AND district_id = '50' ORDER BY news_id DESC  LIMIT 3";
+	  	$result = $this->db->select($query);
+	  	return $result;
+	  }
+	     /*get top bandarban news*/
+	  public function bandarbanTopNews(){
+	  	$query = "SELECT * FROM tbl_newses WHERE status = '1' AND top_news = '1' AND district_id = '40' ORDER BY news_id DESC  LIMIT 1";
+	  	$result = $this->db->select($query);
+	  	return $result;
+	  }
+	  /*get all bandarban news*/
+	  public function bandarbanallNews(){
+	  	$query = "SELECT * FROM tbl_newses WHERE status = '1'AND district_id = '40' ORDER BY news_id DESC  LIMIT 3";
+	  	$result = $this->db->select($query);
+	  	return $result;
+	  }
+	      /*get top cox-s-bazar news*/
+	  public function cox_s_bazarTopNews(){
+	  	$query = "SELECT * FROM tbl_newses WHERE status = '1' AND top_news = '1' AND district_id = '45' ORDER BY news_id DESC  LIMIT 1";
+	  	$result = $this->db->select($query);
+	  	return $result;
+	  }
+	  /*get all cox-s-bazar news*/
+	  public function cox_s_bazarallNews(){
+	  	$query = "SELECT * FROM tbl_newses WHERE status = '1'AND district_id = '45' ORDER BY news_id DESC  LIMIT 3";
+	  	$result = $this->db->select($query);
+	  	return $result;
+	  }
+	     /*get top borguna news*/
+	  public function borgunaTopNews(){
+	  	$query = "SELECT * FROM tbl_newses WHERE status = '1' AND top_news = '1' AND district_id = '34' ORDER BY news_id DESC  LIMIT 1";
+	  	$result = $this->db->select($query);
+	  	return $result;
+	  }
+	  /*get all cborguna news*/
+	  public function borgunaallNews(){
+	  	$query = "SELECT * FROM tbl_newses WHERE status = '1'AND district_id = '35' ORDER BY news_id DESC  LIMIT 3";
+	  	$result = $this->db->select($query);
+	  	return $result;
+	  }
+	  /*get top pirojpur news*/
+	  public function pirojpurTopNews(){
+	  	$query = "SELECT * FROM tbl_newses WHERE status = '1' AND top_news = '1' AND district_id = '39' ORDER BY news_id DESC  LIMIT 1";
+	  	$result = $this->db->select($query);
+	  	return $result;
+	  }
+	  /*get all pirojpur news*/
+	  public function pirojpurallNews(){
+	  	$query = "SELECT * FROM tbl_newses WHERE status = '1'AND district_id = '39' ORDER BY news_id DESC  LIMIT 3";
+	  	$result = $this->db->select($query);
+	  	return $result;
+	  }
+	    /*get top comilla news*/
+	  public function comillaTopNews(){
+	  	$query = "SELECT * FROM tbl_newses WHERE status = '1' AND top_news = '1' AND district_id = '44' ORDER BY news_id DESC  LIMIT 1";
+	  	$result = $this->db->select($query);
+	  	return $result;
+	  }
+	  /*get all comilla news*/
+	  public function comillaallNews(){
+	  	$query = "SELECT * FROM tbl_newses WHERE status = '1'AND district_id = '44' ORDER BY news_id DESC  LIMIT 3";
+	  	$result = $this->db->select($query);
+	  	return $result;
+	  }
+    /*get top feni news*/
+	  public function feniTopNews(){
+	  	$query = "SELECT * FROM tbl_newses WHERE status = '1' AND top_news = '1' AND district_id = '46' ORDER BY news_id DESC  LIMIT 1";
+	  	$result = $this->db->select($query);
+	  	return $result;
+	  }
+	  /*get all feni news*/
+	  public function feniallNews(){
+	  	$query = "SELECT * FROM tbl_newses WHERE status = '1'AND district_id = '46' ORDER BY news_id DESC  LIMIT 3";
+	  	$result = $this->db->select($query);
+	  	return $result;
+	  }
+	   /*get top lakshmipur news*/
+	  public function lakshmipurTopNews(){
+	  	$query = "SELECT * FROM tbl_newses WHERE status = '1' AND top_news = '1' AND district_id = '46' ORDER BY news_id DESC  LIMIT 1";
+	  	$result = $this->db->select($query);
+	  	return $result;
+	  }
+	  /*get all lakshmipur news*/
+	  public function lakshmipurallNews(){
+	  	$query = "SELECT * FROM tbl_newses WHERE status = '1'AND district_id = '48' ORDER BY news_id DESC  LIMIT 3";
+	  	$result = $this->db->select($query);
+	  	return $result;
+	  }
+	     /*get top munsigonj news*/
+	  public function munsigonjTopNews(){
+	  	$query = "SELECT * FROM tbl_newses WHERE status = '1' AND top_news = '1' AND district_id = '9' ORDER BY news_id DESC  LIMIT 1";
+	  	$result = $this->db->select($query);
+	  	return $result;
+	  }
+	  /*get all munsigonj news*/
+	  public function munsigonjallNews(){
+	  	$query = "SELECT * FROM tbl_newses WHERE status = '1'AND district_id = '9' ORDER BY news_id DESC  LIMIT 3";
+	  	$result = $this->db->select($query);
+	  	return $result;
+	  }
+     /*get top brahmonbaria news*/
+	  public function brahmonbariaTopNews(){
+	  	$query = "SELECT * FROM tbl_newses WHERE status = '1' AND top_news = '1' AND district_id = '41' ORDER BY news_id DESC  LIMIT 1";
+	  	$result = $this->db->select($query);
+	  	return $result;
+	  }
+	  /*get all brahmonbaria news*/
+	  public function brahmonbariaallNews(){
+	  	$query = "SELECT * FROM tbl_newses WHERE status = '1'AND district_id = '41' ORDER BY news_id DESC  LIMIT 3";
+	  	$result = $this->db->select($query);
+	  	return $result;
+	  }
+	       /*get top faridpur news*/
+	  public function faridpurTopNews(){
+	  	$query = "SELECT * FROM tbl_newses WHERE status = '1' AND top_news = '1' AND district_id = '2' ORDER BY news_id DESC  LIMIT 1";
+	  	$result = $this->db->select($query);
+	  	return $result;
+	  }
+	  /*get all faridpur news*/
+	  public function faridpurallNews(){
+	  	$query = "SELECT * FROM tbl_newses WHERE status = '1'AND district_id = '2' ORDER BY news_id DESC  LIMIT 3";
+	  	$result = $this->db->select($query);
+	  	return $result;
+	  }
+	   /*get top sirajganj news*/
+	  public function sirajganjTopNews(){
+	  	$query = "SELECT * FROM tbl_newses WHERE status = '1' AND top_news = '1' AND district_id = '25' ORDER BY news_id DESC  LIMIT 1";
+	  	$result = $this->db->select($query);
+	  	return $result;
+	  }
+	  /*get all sirajganj news*/
+	  public function sirajganjallNews(){
+	  	$query = "SELECT * FROM tbl_newses WHERE status = '1'AND district_id = '25' ORDER BY news_id DESC  LIMIT 3";
+	  	$result = $this->db->select($query);
+	  	return $result;
+	  }
+	  /*get top tangail news*/
+	  public function tangailTopNews(){
+	  	$query = "SELECT * FROM tbl_newses WHERE status = '1' AND top_news = '1' AND district_id = '17' ORDER BY news_id DESC  LIMIT 1";
+	  	$result = $this->db->select($query);
+	  	return $result;
+	  }
+	  /*get all tangail news*/
+	  public function tangailallNews(){
+	  	$query = "SELECT * FROM tbl_newses WHERE status = '1'AND district_id = '17' ORDER BY news_id DESC  LIMIT 3";
+	  	$result = $this->db->select($query);
+	  	return $result;
+	  }
+	  	  /*get top kurigram news*/
+	  public function kurigramTopNews(){
+	  	$query = "SELECT * FROM tbl_newses WHERE status = '1' AND top_news = '1' AND district_id = '28' ORDER BY news_id DESC  LIMIT 1";
+	  	$result = $this->db->select($query);
+	  	return $result;
+	  }
+	  /*get all kurigram news*/
+	  public function kurigramallNews(){
+	  	$query = "SELECT * FROM tbl_newses WHERE status = '1'AND district_id = '28' ORDER BY news_id DESC  LIMIT 3";
+	  	$result = $this->db->select($query);
+	  	return $result;
+	  }
+	  	 /*get top natore news*/
+	  public function natoreTopNews(){
+	  	$query = "SELECT * FROM tbl_newses WHERE status = '1' AND top_news = '1' AND district_id = '21' ORDER BY news_id DESC  LIMIT 1";
+	  	$result = $this->db->select($query);
+	  	return $result;
+	  }
+	  /*get all natore news*/
+	  public function natoreallNews(){
+	  	$query = "SELECT * FROM tbl_newses WHERE status = '1'AND district_id = '21' ORDER BY news_id DESC  LIMIT 3";
+	  	$result = $this->db->select($query);
+	  	return $result;
+	  }
+	  /*get top thakurgaong news*/
+	  public function thakurgaongTopNews(){
+	  	$query = "SELECT * FROM tbl_newses WHERE status = '1' AND top_news = '1' AND district_id = '33' ORDER BY news_id DESC  LIMIT 1";
+	  	$result = $this->db->select($query);
+	  	return $result;
+	  }
+	  /*get all thakurgaong news*/
+	  public function thakurgaongallNews(){
+	  	$query = "SELECT * FROM tbl_newses WHERE status = '1'AND district_id = '33' ORDER BY news_id DESC  LIMIT 3";
+	  	$result = $this->db->select($query);
+	  	return $result;
+	  }
+	  /*get top nilphamari news*/
+	  public function nilphamariTopNews(){
+	  	$query = "SELECT * FROM tbl_newses WHERE status = '1' AND top_news = '1' AND district_id = '30' ORDER BY news_id DESC  LIMIT 1";
+	  	$result = $this->db->select($query);
+	  	return $result;
+	  }
+	  /*get all nilphamari news*/
+	  public function nilphamariallNews(){
+	  	$query = "SELECT * FROM tbl_newses WHERE status = '1'AND district_id = '30' ORDER BY news_id DESC  LIMIT 3";
+	  	$result = $this->db->select($query);
+	  	return $result;
+	  }
+	  /*get top lalmonirhat news*/
+	  public function lalmonirhatTopNews(){
+	  	$query = "SELECT * FROM tbl_newses WHERE status = '1' AND top_news = '1' AND district_id = '29' ORDER BY news_id DESC  LIMIT 1";
+	  	$result = $this->db->select($query);
+	  	return $result;
+	  }
+	  /*get all lalmonirhat news*/
+	  public function lalmonirhatallNews(){
+	  	$query = "SELECT * FROM tbl_newses WHERE status = '1'AND district_id = '29' ORDER BY news_id DESC  LIMIT 3";
+	  	$result = $this->db->select($query);
+	  	return $result;
+	  }
+	  /*get top dinajpur news*/
+	  public function dinajpurTopNews(){
+	  	$query = "SELECT * FROM tbl_newses WHERE status = '1' AND top_news = '1' AND district_id = '26' ORDER BY news_id DESC  LIMIT 1";
+	  	$result = $this->db->select($query);
+	  	return $result;
+	  }
+	  /*get all dinajpur news*/
+	  public function dinajpurallNews(){
+	  	$query = "SELECT * FROM tbl_newses WHERE status = '1'AND district_id = '26' ORDER BY news_id DESC  LIMIT 3";
+	  	$result = $this->db->select($query);
+	  	return $result;
+	  }
+	  /*get top kushtia news*/
+	  public function kushtiaTopNews(){
+	  	$query = "SELECT * FROM tbl_newses WHERE status = '1' AND top_news = '1' AND district_id = '60' ORDER BY news_id DESC  LIMIT 1";
+	  	$result = $this->db->select($query);
+	  	return $result;
+	  }
+	  /*get all kushtia news*/
+	  public function kushtiaallNews(){
+	  	$query = "SELECT * FROM tbl_newses WHERE status = '1'AND district_id = '60' ORDER BY news_id DESC  LIMIT 3";
+	  	$result = $this->db->select($query);
+	  	return $result;
+	  }
+	  /*get top patuakhali news*/
+	  public function patuakhaliTopNews(){
+	  	$query = "SELECT * FROM tbl_newses WHERE status = '1' AND top_news = '1' AND district_id = '38' ORDER BY news_id DESC  LIMIT 1";
+	  	$result = $this->db->select($query);
+	  	return $result;
+	  }
+	  /*get all patuakhali news*/
+	  public function patuakhaliallNews(){
+	  	$query = "SELECT * FROM tbl_newses WHERE status = '1'AND district_id = '38' ORDER BY news_id DESC  LIMIT 3";
+	  	$result = $this->db->select($query);
+	  	return $result;
+	  }
+	  /*get top manikgonj news*/
+	  public function manikgonjTopNews(){
+	  	$query = "SELECT * FROM tbl_newses WHERE status = '1' AND top_news = '1' AND district_id = '8' ORDER BY news_id DESC  LIMIT 1";
+	  	$result = $this->db->select($query);
+	  	return $result;
+	  }
+	  /*get all manikgonj news*/
+	  public function manikgonjallNews(){
+	  	$query = "SELECT * FROM tbl_newses WHERE status = '1'AND district_id = '8' ORDER BY news_id DESC  LIMIT 3";
+	  	$result = $this->db->select($query);
+	  	return $result;
+	  }
+	  /*get top shariatpur news*/
+	  public function shariatpurTopNews(){
+	  	$query = "SELECT * FROM tbl_newses WHERE status = '1' AND top_news = '1' AND district_id = '15' ORDER BY news_id DESC  LIMIT 1";
+	  	$result = $this->db->select($query);
+	  	return $result;
+	  }
+	  /*get all shariatpur news*/
+	  public function shariatpurllNews(){
+	  	$query = "SELECT * FROM tbl_newses WHERE status = '1'AND district_id = '15' ORDER BY news_id DESC  LIMIT 3";
+	  	$result = $this->db->select($query);
+	  	return $result;
+	  }
+	  /*get top madaripur news*/
+	  public function madaripurTopNews(){
+	  	$query = "SELECT * FROM tbl_newses WHERE status = '1' AND top_news = '1' AND district_id = '7' ORDER BY news_id DESC  LIMIT 1";
+	  	$result = $this->db->select($query);
+	  	return $result;
+	  }
+	  /*get all madaripur news*/
+	  public function madaripurallNews(){
+	  	$query = "SELECT * FROM tbl_newses WHERE status = '1'AND district_id = '7' ORDER BY news_id DESC  LIMIT 3";
+	  	$result = $this->db->select($query);
+	  	return $result;
+	  }
+	  /*get top narayangonj news*/
+	  public function narayangonjTopNews(){
+	  	$query = "SELECT * FROM tbl_newses WHERE status = '1' AND top_news = '1' AND district_id = '11' ORDER BY news_id DESC  LIMIT 1";
+	  	$result = $this->db->select($query);
+	  	return $result;
+	  }
+	  /*get all narayangonj news*/
+	  public function narayangonjallNews(){
+	  	$query = "SELECT * FROM tbl_newses WHERE status = '1'AND district_id = '11' ORDER BY news_id DESC  LIMIT 3";
+	  	$result = $this->db->select($query);
+	  	return $result;
+	  }
+	  /*get top rajbari news*/
+	  public function rajbariTopNews(){
+	  	$query = "SELECT * FROM tbl_newses WHERE status = '1' AND top_news = '1' AND district_id = '14' ORDER BY news_id DESC  LIMIT 1";
+	  	$result = $this->db->select($query);
+	  	return $result;
+	  }
+	  /*get all rajbari news*/
+	  public function rajbariallNews(){
+	  	$query = "SELECT * FROM tbl_newses WHERE status = '1'AND district_id = '14' ORDER BY news_id DESC  LIMIT 3";
+	  	$result = $this->db->select($query);
+	  	return $result;
+	  }
+
+	  /*get top meherpur news*/
+	  public function meherpurTopNews(){
+	  	$query = "SELECT * FROM tbl_newses WHERE status = '1' AND top_news = '1' AND district_id = '62' ORDER BY news_id DESC  LIMIT 1";
+	  	$result = $this->db->select($query);
+	  	return $result;
+	  }
+	  /*get all meherpur news*/
+	  public function meherpurallNews(){
+	  	$query = "SELECT * FROM tbl_newses WHERE status = '1'AND district_id = '62' ORDER BY news_id DESC  LIMIT 3";
+	  	$result = $this->db->select($query);
+	  	return $result;
+	  }
+
+
+
+
 
 
 

@@ -1,7 +1,7 @@
-<?php include '../classes/SubCategoryNational.php';?>
+<?php include '../classes/SubcategoryLocal.php';?>
 
 <?php
-    $nscatglist = new SubCategoryNational();
+    $nscatglist = new SubcategoryLocal();
     /*category delete*/
     if (isset($_GET['delNscat'])) {
     	$id = $_GET['delNscat'];
@@ -9,7 +9,7 @@
     }
 ?>
 <?php
-    $nscatglist = new SubCategoryNational();
+    $nscatglist = new SubcategoryLocal();
     if (isset($_GET['status'])) {
     	$id = $_GET['status'];
     	$changeNsCategoryststus =$nscatglist->changeNsCatStatusById($id);

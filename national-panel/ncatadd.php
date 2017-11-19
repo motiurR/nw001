@@ -1,10 +1,10 @@
-<?php include '../classes/CategoryNatioal.php';?>
+<?php include '../classes/categoryLocal.php';?>
 
 <?php include 'inc/header.php';?>
 <?php include 'inc/sidebar.php';?>
 
 <?php
-    $catN = new CategoryNatioal();
+    $catN = new categoryLocal();
     if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $insertNationCat = $catN->addNCatTitle($_POST);
     }

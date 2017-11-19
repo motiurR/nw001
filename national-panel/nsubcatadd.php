@@ -1,11 +1,11 @@
-<?php include '../classes/CategoryNatioal.php';?>
-<?php include '../classes/SubCategoryNational.php';?>
+<?php include '../classes/CategoryLocal.php';?>
+<?php include '../classes/SubcategoryLocal.php';?>
 
 <?php include 'inc/header.php';?>
 <?php include 'inc/sidebar.php';?>
 
 <?php
-    $scatN = new SubCategoryNational();
+    $scatN = new SubcategoryLocal();
     if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $insertNationSubCat = $scatN->addNSubCatTitle($_POST);
     }
@@ -35,7 +35,7 @@
                                 <select name="category_id">
 
                                  <?php
-                                    $catg = new CategoryNatioal();
+                                    $catg = new CategoryLocal();
                                     $getcat = $catg->getAllCat();
                                     if ($getcat) {
                                     while ($result = $getcat->fetch_assoc()) {

@@ -1,7 +1,7 @@
-<?php include '../classes/BreakingNews.php';?>
+<?php include '../classes/BreakingNewsLocal.php';?>
 
 <?php
-    $nbrk = new BreakingNews();
+    $nbrk = new BreakingNewsLocal();
     /*category delete*/
     if (isset($_GET['delb'])) {
     	$id = $_GET['delb'];
@@ -9,7 +9,7 @@
     }
 ?>
 <?php
-    $nbrk = new BreakingNews();
+    $nbrk = new BreakingNewsLocal();
     if (isset($_GET['status'])) {
     	$id = $_GET['status'];
     	$changebreaking =$nbrk->changeNbreakingById($id);

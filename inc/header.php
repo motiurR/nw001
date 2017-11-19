@@ -84,7 +84,7 @@
                                 <a href="political.php" class="menu-items">রাজনীতি</a>
                             </li>
                             <li>
-                                <a href="allbangladesh.php" class="menu-items">সারা বাংলা</a>
+                                <a href="allbangladesh.php" class="menu-items">সারাবাংলা</a>
                             </li>
                             <li>
                                 <a href="economic.php" class="menu-items">অর্থনীতি</a>

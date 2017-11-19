@@ -1,6 +1,6 @@
-<?php include '../classes/NewsAddN.php';?>
-<?php include '../classes/CategoryNatioal.php';?>
-<?php include '../classes/SubCategoryNational.php';?>
+<?php include '../classes/NewsLocal.php';?>
+<?php include '../classes/CategoryLocal.php';?>
+<?php include '../classes/SubcategoryLocal.php';?>
 
 <?php include 'inc/header.php';?>
 <?php include 'inc/sidebar.php';?>
@@ -16,15 +16,10 @@ function getSubcat(val) {
     }
     });
 }
-
-function selectCountry(val) {
-$("#search-box").val(val);
-$("#suggesstion-box").hide();
-}
 </script>
 
 <?php
-    $catN = new NewsAddN();
+    $catN = new NewsLocal();
     if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $insertNationNews = $catN->addNnews($_POST, $_FILES);
     }
@@ -54,7 +49,7 @@ $("#suggesstion-box").hide();
                                 <select name="category_id" onChange="getSubcat(this.value)">
                                      <option value="">select Category</option>
                                 <?php
-                                $cat = new CategoryNatioal(); 
+                                $cat = new CategoryLocal(); 
                                     $getcat = $cat->getAllNCat();
                                     if ($getcat) {
                                         while ($catres = $getcat->fetch_assoc()) {

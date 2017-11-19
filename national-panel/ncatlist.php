@@ -1,7 +1,7 @@
-<?php include '../classes/CategoryNatioal.php';?>
+<?php include '../classes/categoryLocal.php';?>
 
 <?php
-    $ncatglist = new CategoryNatioal();
+    $ncatglist = new categoryLocal();
     /*category delete*/
     if (isset($_GET['delNcat'])) {
     	$id = $_GET['delNcat'];
@@ -9,7 +9,7 @@
     }
 ?>
 <?php
-    $ncatglist = new CategoryNatioal();
+    $ncatglist = new categoryLocal();
     if (isset($_GET['status'])) {
     	$id = $_GET['status'];
     	$changeNCategoryststus =$ncatglist->changeNCatStatusById($id);

@@ -1,10 +1,10 @@
-<?php include '../classes/SocialSiteIcon.php';?>
+<?php include '../classes/LocalSocialSiteIcon.php';?>
 
 <?php include 'inc/header.php';?>
 <?php include 'inc/sidebar.php';?>
 
 <?php
-    $social = new SocialSiteIcon();
+    $social = new LocalSocialSiteIcon();
     if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $updatesocialicon = $social->getsocialicon($_POST);
     }
