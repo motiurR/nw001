@@ -32,7 +32,19 @@
                             <h2><?php echo $result['news_title']; ?></h2>
                             <hr />
                             <div class="media-part">
-                                <span class="date-time"><?php echo $result['create_date']; ?></span>
+                                <span class="date-time">
+
+                                    
+                                   <?php
+                                      $englishDate = $result['create_date'];
+
+                                      echo $englishDate;
+                                   ?>
+
+                                   
+                                  
+                                    
+                                  </span>
                             </div>
                             <!--Social share option here-->
                             <div class="custom_social_share">

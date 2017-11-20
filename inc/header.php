@@ -29,15 +29,30 @@
         <link rel="stylesheet" href="css/font-awesome.min.css" />
 
         <!-- jQuery link here -->
+        <link rel="stylesheet" href="jquery-ui-1.12.1/jquery-ui.min.css" />
         <script type="text/javascript" src="js/jquery-3.2.1.js"></script>
         <script type="text/javascript" src="js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="jquery-ui-1.12.1/jquery-ui.min.js"></script>
     </head>
     <body>
        <header>
-            <div class="col-lg-12">
-             <p id="demo" class="text-center">
-                <script type="text/javascript" src="http://bangladate.appspot.com/index4.php"></script>
-             </p>
+            <div class="top_header">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <p id="demo">
+                                <script type="text/javascript" src="http://bangladate.appspot.com/index3.php"></script>
+                            </p>
+                        </div>
+                        <div class="col-lg-6 text-right">
+                            <form action="" method="POST">
+                                <label style="color: white;">আর্কাইভ</label>
+                                <input type="date" class="datepicker btn btn-default archive_button"> 
+                                
+                            </form>
+                        </div>
+                    </div>
+                </div>
             </div>
             <div class="container main-content">
                 <div class="row">
@@ -129,6 +144,7 @@
                         </ul>
                     </div><!-- /.navbar-collapse -->
                 </div><!-- /.container-fluid -->
+
                 <script type="text/javascript">
                     $('.dropdown').hover(
                             function () {

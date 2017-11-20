@@ -20,7 +20,6 @@
                                             <div class="col-lg-7">
                                                 <div class="details">
                                                     <a href="singlenews.php?nurl=<?php echo $result['news_url']; ?>"><h4><?php echo $result['news_title']; ?></h4></a>
-                                                    <a href="singlenews.php?nurl=<?php echo $result['news_url']; ?>"><p><?php echo $fm->textShorten($result['news_summery'],300); ?></p></a>
                                                 </div>
                                             </div>
                                         </div>

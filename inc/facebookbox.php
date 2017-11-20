@@ -32,6 +32,6 @@
                         </div>
 
                         <!-- Archive part start here -->
-                         <?php include 'inc/archive.php';?>
+                         <?php include 'inc/facebookkothon.php';?>
                         <!-- Archive part end here -->
                     </div>

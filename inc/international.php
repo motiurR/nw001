@@ -13,9 +13,7 @@
                                 <div class="thumbnail thumbnail-contents">
                                     <a href="singlenews.php?nurl=<?php echo $result['news_url']; ?>"><img src="global-panel/<?php echo $result['image']; ?>" alt="Suchi"></a>
                                     <div class="caption thumbnail-caption">
-                                        <a href="singlenews.php?nurl=<?php echo $result['news_url']; ?>"><h3><?php echo $result['news_title']; ?></h3></a>
-                                        
-                                        <a href="singlenews.php?nurl=<?php echo $result['news_url']; ?>"><p><?php echo $fm->textShorten($result['news_summery'],200); ?></p></a>
+                                        <h3><a href="singlenews.php?nurl=<?php echo $result['news_url']; ?>"><?php echo $result['news_title']; ?></a></h3>
                                     </div>
                                 </div>
                             </div>

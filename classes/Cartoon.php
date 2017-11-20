@@ -76,6 +76,18 @@ class Cartoon{
 	  	$result = $this->db->select($query);
 	  	return $result;
 	  }
+	  /*get last one cartoon news*/
+	  public function getOneCartoonNews(){
+	  	$query = "SELECT * FROM tbl_cartoon ORDER BY cartoon_id DESC LIMIT 1";
+	  	$result = $this->db->select($query);
+	  	return $result;
+	  } 
+	  /*get last one cartoon news*/
+	  public function getAllCartoonNewsformain(){
+	  	$query = "SELECT * FROM tbl_cartoon ORDER BY rand(), cartoon_id DESC LIMIT 2";
+	  	$result = $this->db->select($query);
+	  	return $result;
+	  } 
 
 	  public function changenCartoonNewsTopById($id){
 	  	$query = "UPDATE tbl_cartoon SET top_news = !top_news WHERE cartoon_id = '$id'";

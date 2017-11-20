@@ -18,8 +18,11 @@
                     ?>
                         <div class="main-news">
                             <h2><a href="singlenews.php?nurl=<?php echo $result['news_url']; ?>"><?php echo $result['news_title']; ?></a></h2>
-                            <a href="singlenews.php?nurl=<?php echo $result['news_url']; ?>" class="img"><img src="global-panel/<?php echo $result['image']; ?>" alt="" class="img-responsive"/></a>
-                            <h4><a href="#"><?php echo $fm->textShorten($result['news_summery']); ?></a></h4>
+                            <a href="singlenews.php?nurl=<?php echo $result['news_url']; ?>" class="img"><img src="global-panel/<?php echo $result['image']; ?>" alt="" class="img-responsive" width="200"/>
+                                <?php echo $result['news_summery']; ?>
+
+                            </a>
+                            
                         </div>
                     <?php } } ?>    
                         <!-- Sokaridol birodhidol part start here-->
@@ -74,6 +77,7 @@
 
                     <!-- Facebook like box Part start here-->
                     <?php include 'inc/facebookbox.php';?>
+                    <!-- ekhane facebook kothon include ache -->
                     <!-- Facebook like box Part end here-->
                 </div>
             </div>
@@ -122,8 +126,10 @@
         <!--Binodon part end here-->
 
         <!--sikhha part start here-->
-    <?php include 'inc/education.php';?>    
+    <?php include 'inc/sahitto.php';?> 
+    <!-- akhane nari include ache -->   
         <!--sikhha part end here-->
+
 
 
         <!--Technology Life-style part start here-->
@@ -152,7 +158,7 @@
                 <div class="row">
 
                     <!-- nari section start -->
-                 <?php include 'inc/women.php';?>   
+                 <?php include 'inc/education.php';?>   
                     <!-- nari section start -->
 
                     <!-- bicitro khobor start -->

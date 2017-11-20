@@ -21,8 +21,8 @@
                                     </div>
                                     <div class="col-lg-4">
                                         <div class="rajniti-content">
-                                            <a href="singlenews.php?nurl=<?php echo $result['news_url']; ?>"><h2><?php echo $result['news_title']; ?></h2></a>
-                                            <a href="singlenews.php?nurl=<?php echo $result['news_url']; ?>"><p><?php echo $fm->textShorten($result['news_summery']); ?></p></a>
+                                            <h2><a href="singlenews.php?nurl=<?php echo $result['news_url']; ?>"><?php echo $result['news_title']; ?></a></h2>
+                                            <a href="singlenews.php?nurl=<?php echo $result['news_url']; ?>"><!-- <p> --><?php echo $fm->textShorten($result['news_summery']); ?><!-- </p> --></a>
                                         </div>
                                     </div>
                                 <?php } } ?>    
@@ -41,7 +41,6 @@
                                                     <a href="singlenews.php?nurl=<?php echo $result['news_url']; ?>"><img src="admin/<?php echo $result['image']; ?>" alt="Rain"></a>
                                                     <div class="caption thumbnail-caption">
                                                         <a href="singlenews.php?nurl=<?php echo $result['news_url']; ?>"><h3><?php echo $result['news_title']; ?></h3></a>
-                                                        <a href="singlenews.php?nurl=<?php echo $result['news_url']; ?>"><p><?php echo $fm->textShorten($result['news_summery'],200); ?></p></a>
                                                     </div>
                                                 </div>
                                             </div>
