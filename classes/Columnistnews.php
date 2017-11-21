@@ -139,7 +139,7 @@ class Columnistnews{
 	    $div = explode('.', $file_name);
 	    $file_ext = strtolower(end($div));
 	    $unique_image = substr(md5(time()), 0, 10).'.'.$file_ext;
-	    $uploaded_image = "upload/".$unique_image;
+	    $uploaded_image = "../upload/".$unique_image;
 
 	  	if (empty($author)) {
 	  		$msg = "<span class='error'>Field must not be empty!</span>";
@@ -167,6 +167,21 @@ class Columnistnews{
 			}
 	    }
 
+	  }
+	  	/*mot dimot*/
+	  public function getAllmotdimotNews(){
+	  	$query = "SELECT tbl_columnist.*,tbl_columnistProfile.*
+					           FROM tbl_columnist
+					           INNER JOIN tbl_columnistProfile 
+					           ON tbl_columnist.author = tbl_columnistProfile.columnistProfile_id
+					           WHERE status = '1' ORDER BY columnistn_id DESC LIMIT 5";
+	    $result = $this->db->select($query);
+	  	return $result;
+/*
+
+	  	$query = "SELECT * FROM tbl_columnist WHERE status = '1' ORDER BY columnistn_id DESC LIMIT 5";
+	  	$result = $this->db->select($query);
+	  	return $result;*/
 	  }
 
 	  /*get show all colamist profile*/
@@ -253,7 +268,7 @@ class Columnistnews{
 	    $div = explode('.', $file_name);
 	    $file_ext = strtolower(end($div));
 	    $unique_image = substr(md5(time()), 0, 10).'.'.$file_ext;
-	    $uploaded_image = "upload/".$unique_image;
+	    $uploaded_image = "../upload/".$unique_image;
 
 	  	if (empty($author)) {
 	  		$msg = "<span class='error'>Field must not be empty!</span>";

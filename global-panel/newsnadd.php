@@ -164,7 +164,17 @@ $("#suggesstion-box").hide();
                                 <label>Image Caption</label>
                             </td>
                             <td>
-                                <input type="text" name="author" value="" class="medium" />
+                                <input type="text" name="author" class="medium" />
+                            </td>
+                        </tr>
+
+                         <tr>
+                            <td>
+                                <label>Writer Name</label>
+                            </td>
+                            <td>
+                                <input type="text" name="writer" value="<?php echo Session::get('adminUser')?>" class="medium" />
+                                <input type="hidden" name="admin_id" value="<?php echo Session::get('admin_id')?>" class="medium" />
                             </td>
                         </tr>
 

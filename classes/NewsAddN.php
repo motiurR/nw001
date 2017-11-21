@@ -35,6 +35,8 @@ class NewsAddN{
 		$news_details = mysqli_real_escape_string($this->db->link,$news_details);
 		$author = $this->fm->validation($data['author']);
 		$author = mysqli_real_escape_string($this->db->link,$author);
+		$writer = $this->fm->validation($data['writer']);
+		$writer = mysqli_real_escape_string($this->db->link,$writer);
 		$status = $this->fm->validation($data['status']);
 		$status = mysqli_real_escape_string($this->db->link,$status);
 		$date = $this->fm->validation($data['date']);
@@ -51,7 +53,7 @@ class NewsAddN{
 	    $unique_image = substr(md5(time()), 0, 10).'.'.$file_ext;
 	    $uploaded_image = "../upload/".$unique_image;
 
-	    if ($category_id =="" || $news_title ==""|| $news_url =="" || $news_seo_title =="" || $news_summery =="" || $news_details =="" || $file_name=="" || $author =="" || $date=="") {
+	    if ($category_id =="" || $news_title ==""|| $news_url =="" || $news_seo_title =="" || $news_summery =="" || $news_details =="" || $file_name=="" || $author =="" || $writer =="" || $date=="") {
 	    	$msg = "<span class='error'>Field must not be empty!</span>";
 			return $msg;
 	    }
@@ -65,7 +67,7 @@ class NewsAddN{
                    return $msg;
 		    }else{
 	    	move_uploaded_file($file_temp, $uploaded_image);
-	    	$query = "INSERT INTO tbl_newses(district_id,category_id,subcategory_id,top_news, news_title, news_url, news_seo_title,news_summery, news_details,image, author,status,date) VALUES('$district_id','$category_id','$subcategory_id','$top_news','$news_title','$news_url','$news_seo_title','$news_summery','$news_details','$uploaded_image','$author','$status','$date')";
+	    	$query = "INSERT INTO tbl_newses(district_id,category_id,subcategory_id,top_news, news_title, news_url, news_seo_title,news_summery, news_details,image, author,writer, status,date) VALUES('$district_id','$category_id','$subcategory_id','$top_news','$news_title','$news_url','$news_seo_title','$news_summery','$news_details','$uploaded_image','$author','$writer','$status','$date')";
 	    	$inserted_row = $this->db->insert($query);
 
 	    	$query = "INSERT INTO local_newses_tbl(category_id,subcategory_id,top_news, news_title, news_url, news_seo_title,news_summery, news_details,image, author,status,date) VALUES('$category_id','$subcategory_id','$top_news','$news_title','$news_url','$news_seo_title','$news_summery','$news_details','$uploaded_image','$author','$status','$date')";
@@ -114,12 +116,7 @@ class NewsAddN{
 	  	$result = $this->db->select($query);
 	  	return $result;
 	  }
-	  /*mot dimot*/
-	  public function getAllmotdimotNews(){
-	  	$query = "SELECT * FROM tbl_newses WHERE status = '1'AND category_id = '24' ORDER BY news_id DESC LIMIT 5";
-	  	$result = $this->db->select($query);
-	  	return $result;
-	  }
+
 	  /*interview*/
 	   public function getAllInterviewNews(){
 	  	$query = "SELECT * FROM tbl_newses WHERE status = '1'AND category_id = '25' ORDER BY news_id DESC  LIMIT 3";
@@ -188,13 +185,13 @@ class NewsAddN{
 	  }
 	  /*get all sports news*/
 	  public function getAllSportsNews(){
-	  	$query = "SELECT * FROM tbl_newses WHERE status = '1'AND category_id = '19' ORDER BY news_id DESC  LIMIT 4";
+	  	$query = "SELECT * FROM tbl_newses WHERE status = '1'AND category_id = '19' ORDER BY news_id DESC  LIMIT 1,4";
 	  	$result = $this->db->select($query);
 	  	return $result;
 	  }
 	   /*get all sports news*/
 	  public function getAllSportsNews2nd(){
-	  	$query = "SELECT * FROM tbl_newses WHERE status = '1'AND subcategory_id = '2' ORDER BY news_id DESC  LIMIT 2";
+	  	$query = "SELECT * FROM tbl_newses WHERE status = '1'AND subcategory_id = '2' ORDER BY news_id DESC  LIMIT 1,2";
 	  	$result = $this->db->select($query);
 	  	return $result;
 	  }
@@ -408,7 +405,7 @@ class NewsAddN{
 
 	  /*get all Entertainment new*/
 	  public function getAllIEntertainmentNews(){
-	  	$query = "SELECT * FROM tbl_newses WHERE status = '1'AND category_id = '20' ORDER BY news_id DESC  LIMIT 4";
+	  	$query = "SELECT * FROM tbl_newses WHERE status = '1'AND category_id = '20' ORDER BY news_id DESC  LIMIT 1,4";
 	  	$result = $this->db->select($query);
 	  	return $result;
 	  }
@@ -1420,17 +1417,12 @@ class NewsAddN{
 	  }
 
 	  /*date wise search*/
-	  public function getnewsByid($data, $dateFormat){
-	  	$dateFormat = $this->fm->validation($data['dateFormat']);
-	 /* 	$year = $this->fm->validation($data['year']);
-		$year = mysqli_real_escape_string($this->db->link,$year);
-		$month = $this->fm->validation($data['month']);
-		$month = mysqli_real_escape_string($this->db->link,$month);
-		$day = $this->fm->validation($data['day']);
-		$day = mysqli_real_escape_string($this->db->link,$day);
-
-		$date = $year.'-'.$month.'-'.$day;*/
-		$date = $year.'-'.$month.'-'.$day;
+	  public function getnewsByid($data){
+	  	$date = $this->fm->validation($data['date']);
+	  	$date = mysqli_real_escape_string($this->db->link,$date);
+	  	if (empty($date)) {
+	  		echo "<h1  style='text-align: center;color:red'>Please Enter Your Date Properly</h1>";
+	  	}
 
 		$query = "SELECT * FROM tbl_newses WHERE date = '$date'";
 		$result =$this->db->select($query);

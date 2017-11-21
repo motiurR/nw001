@@ -7,6 +7,14 @@
     });
 ?>
 
+<?php
+    $addN = new NewsAddN();
+    if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+        $searchnews = $addN->getnewsByid($_POST);
+    }
+
+?>
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -45,10 +53,10 @@
                             </p>
                         </div>
                         <div class="col-lg-6 text-right">
-                            <form action="" method="POST">
-                                <label style="color: white;">আর্কাইভ</label>
-                                <input type="date" class="datepicker btn btn-default archive_button"> 
-                                
+                            <form action="newssearchBydate.php" method="POST">
+                                <label style="color: white;">আর্কাইভ : </label>
+                                <input type="date" name="date" class="datepicker btn btn-default archive_button"> 
+                                <input type="submit" value="খুঁজুন" class="btn btn-default" style="margin-top: 10px;">
                             </form>
                         </div>
                     </div>

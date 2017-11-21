@@ -3,7 +3,6 @@
                 <div class="row">
                     <div class="rajniti-part-2">
                         <div class="col-lg-9">
-                            <div class="row">
                                 <div class="total-content">
                                     <a href="#"><h1>রাজনীতি</h1></a>
                                     <hr />
@@ -14,6 +13,7 @@
                                   if ($cricketTNews) {
                                     while ($result = $cricketTNews->fetch_assoc()) {
                               ?>    
+                                <div class="main_news">
                                     <div class="col-lg-8">
                                         <a href="singlenews.php?nurl=<?php echo $result['news_url']; ?>">
                                           <img class="main-image" src="global-panel/<?php echo $result['image'];?>" alt="Mirjja Fokrul" />
@@ -22,9 +22,10 @@
                                     <div class="col-lg-4">
                                         <div class="rajniti-content">
                                             <h2><a href="singlenews.php?nurl=<?php echo $result['news_url']; ?>"><?php echo $result['news_title']; ?></a></h2>
-                                            <a href="singlenews.php?nurl=<?php echo $result['news_url']; ?>"><!-- <p> --><?php echo $fm->textShorten($result['news_summery']); ?><!-- </p> --></a>
+                                            <a href="singlenews.php?nurl=<?php echo $result['news_url']; ?>"><p><?php echo $fm->textShorten($result['news_summery']); ?></p></a>
                                         </div>
                                     </div>
+                                  </div>  
                                 <?php } } ?>    
                                     <div class="row">
                                         <div class="col-lg-12">
@@ -50,7 +51,6 @@
                                         </div>
                                     </div>
                                 </div>
-                            </div>
                         </div>
                         <div class="col-lg-3">
                             <div class="row">
