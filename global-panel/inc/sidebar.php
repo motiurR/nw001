@@ -7,6 +7,8 @@
                         <li><a href="announcement.php">Announcement</a></li>
                         <li><a href="ntitleslogan.php">Logo</a></li>
                         <li><a href="nsocial.php">Social Site</a></li>
+                        <li><a href="editorinfoadd.php">Editor Information</a></li>
+                         <li><a href="emailNphoneadd.php">Email And Phone</a></li>
                     </ul>
                 </li>
 
@@ -16,6 +18,7 @@
                         <li><a href="sliderlist.php">Slider List</a> </li>
                     </ul>
                 </li> -->
+
                 <li><a class="menuitem">Breaking News </a>
                     <ul class="submenu">
                         <li><a href="addbreakingnews.php">Add Breaking News</a> </li>

@@ -62,7 +62,7 @@
                                            echo bn_date(date('l, d M Y, h:i a',strtotime($date)));
                                    ?>
 
-                           <?php
+                         <!--  <?php
                            $date = $result['create_date'];
                               function time_elapsed_string($datetime, $full = false) {
                                       $now = new DateTime;
@@ -93,7 +93,7 @@
                                       return $string ? implode(', ', $string) . ' ago' : 'just now';
                                   }
                                   echo time_elapsed_string($date, true);
-                                  ?>
+                                  ?> -->
 
                                    
                                   
