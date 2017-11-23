@@ -108,7 +108,6 @@ header .menu{
     float:left;
     width:calc(100% - 300px);
     margin-top: 5px;
-    text-align: center;
 }
 .slider_controller{
     float:right; 
@@ -321,7 +320,7 @@ header .menu{
 .jatio-news .jatio-content{
     border: 1px solid lightgrey;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    height: 739px;
+    height: 740px;
     margin-left: -15px;
 }
 .jatio-news .jatio-content hr{
@@ -459,7 +458,7 @@ header .menu{
     margin-left: -30px;
     display: block;
     overflow: hidden;
-   /* height: 196px;*/
+    height: 196px;
     color: #757578;
     font-size: 16px;
     line-height: 25px;
@@ -557,7 +556,7 @@ header .menu{
 .rajniti-part .rajniti-part-2 .total-content .rajniti-content a p{
     display: block;
     overflow: hidden;
-    /*height: 197px;*/
+    height: 197px;
     color: #757578;
     font-size: 16px;
     line-height: 25px;
@@ -654,7 +653,6 @@ header .menu{
     margin-right: -8px;
     border-radius: 0;
     margin-bottom: 7px;
-
 }
 .international .total-content .thumbnail-contents img{
     height: 156px;
@@ -785,16 +783,82 @@ header .menu{
     background: #282828;
     height: 200px;
 }
+.footer-part .footer_part_content{
+    margin-top: 20px;
+}
+.footer-part .footer_part_content .control-label{
+    font-weight: normal;
+}
+.footer-part .footer_part_content .editor_details{
+    font-size: 18px;
+    color: whitesmoke;
+    margin-left: -30px;
+    border-right: 5px solid whitesmoke;
+}
+.footer-part .footer_part_content .editor_details .form-group{
+    margin-bottom: 0px;
+}
+.footer-part .footer_part_content .newspaper_details{
+    line-height: 37px;
+    border-right: 5px solid whitesmoke;
+}
+.footer-part .footer_part_content .newspaper_details ul li a{
+    font-size: 18px;
+    color: whitesmoke;
+}
+.footer-part .footer_part_content .newspaper_details ul li h4{
+    font-size: 20px;
+    color: lightslategray;
+    font-weight: bold;
+}
+.footer-part .footer_part_content .newspaper_details ul li .modal_content{
+    margin-top: 40px;
+    border-radius: 0px;
+}
+.footer-part .footer_part_content .newspaper_details ul li .modal_content p{
+    line-height: 25px;
+    color: lightslategray;
+}
+.footer-part .footer_part_content .newspaper_details ul li .modal_content form .labels{
+    
+}
+.footer-part .footer_part_content .newspaper_details ul li .modal_content form .form_control{
+    width: 60%;
+    margin-left: 40px;
+}
+.footer-part .footer_part_content .newspaper_details ul li a:focus{
+    outline: none;
+}
+.footer-part .address_content{
+    font-size: 18px;
+    color: whitesmoke;
+}
+.footer-part .address_content .form-group{
+    margin-bottom: 0px;
+}
+.footer-part .address_content .form-group .email{
+    margin-top: -12px;
+}
 .footer-bottom{
     background: black;
-    height: 100px;
+    height: 70px;
+}
+.footer-bottom .copyright{
+    font-size: 20px;
+    color: #DAD605;
+    margin-top: 18px;
+}
+.footer-bottom .develope{
+    font-size: 20px;
+    color: #DAD605;
+    margin-top: 18px;
 }
 .footer-bottom .back-to-top {
     cursor: pointer;
     position: fixed;
     bottom: 0;
     right: 20px;
-    display: none;
+    margin-bottom: 50px;
 }
 
 
