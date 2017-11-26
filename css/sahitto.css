@@ -1,0 +1,58 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Nov 25, 2017, 11:24:36 AM
+    Author     : John
+*/
+.sahitto_page .cover_pic{
+    position: relative;
+}
+.sahitto_page .cover_pic img{
+    width: 100%;
+    height: 300px;
+}
+.sahitto_page .cover_pic .cover_title{
+    position: absolute;
+    bottom: 0px;
+    left: 10px;
+}
+.sahitto_page .cover_pic .cover_title h2{
+    color: #FFEA00;
+    font-size: 35px;
+    font-weight: bold;
+    cursor: default;
+}
+.sahitto_page .sahitto_body{
+    position: relative;
+    margin-top: -3px;
+}
+.sahitto_page .sahitto_body .sahitto_body_content{
+    position: absolute;
+    top: 0px;
+    width: 99%;
+    margin-left: 0px;
+}
+.sahitto_page .sahitto_body .sahitto_body_content h2{
+    color: #FFEA00;
+    font-size: 35px;
+    font-weight: bold;
+    cursor: default;
+    margin-left: 10px;
+    border-bottom: 2px solid black;
+    padding-bottom: 10px;
+    width: 100%;
+}
+.sahitto_page .sahitto_body .sahitto_body_content .sahitto_body_details .probondho_details .probondho_book_details{
+    width: 340px;
+    padding-left: 10px;
+}
+.sahitto_page .sahitto_body .sahitto_body_content .sahitto_body_details .probondho_details .sahitto_picture{
+    margin-left: 58px;
+}
+.sahitto_page .sahitto_body .sahitto_body_content .sahitto_body_details .probondho_details .sahitto_picture img{
+    width: 100%;
+    height: 160px;
+}

@@ -82,7 +82,7 @@
                             </p>
 
 
-                     <form data-toggle="validator" action="api/create.php" method="POST">
+                     <form data-toggle="validator" action="api/create.php" method="POST" enctype="multipart/form-data">
                         <div class="form-group text-left">
                             <label for="exampleInputEmail1">নাম</label>
                             <input type="text" name="name" class="form-control">
@@ -96,7 +96,7 @@
                             <textarea name="body" class="form-control" rows="6"></textarea>
                         </div>
                         <div class="form-group  text-left">
-                            <label for="exampleInputFile">লেখা যুক্ত করুন</label>
+                            <label for="exampleInputFile">ফটো যুক্ত করুন</label>
                             <input type="file" name="filedoc">
                         </div>
 

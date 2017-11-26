@@ -21,6 +21,7 @@
     color: black;
 }
 .inner_page .main_content .details p{
+    height: 180px;
     display: block;
     overflow: hidden;
     font-size: 18px;

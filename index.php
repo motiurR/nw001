@@ -174,6 +174,10 @@
         </div>
         <!--Nari-Bichitro-khobor-carton part end here-->
 
+        <!-- gallery start-->
+        <?php include 'inc/gallery.php';?>
+        <!-- gallery end--> 
+
         <!-- footer section start -->
         <?php include 'inc/footer.php';?> 
         <!-- footer section end -->

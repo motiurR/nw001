@@ -35,12 +35,17 @@
         <link rel="stylesheet" href="css/news-view.css" />
         <link rel="stylesheet" href="css/map.css" />
         <link rel="stylesheet" href="css/font-awesome.min.css" />
+        <link rel="stylesheet" href="css/jcarousel.responsive.css" />
 
         <!-- jQuery link here -->
-        <link rel="stylesheet" href="jquery-ui-1.12.1/jquery-ui.min.css" />
-        <script type="text/javascript" src="js/jquery-3.2.1.js"></script>
-        <script type="text/javascript" src="jquery-ui-1.12.1/jquery-ui.min.js"></script>
+    <link rel="stylesheet" href="jquery-ui-1.12.1/jquery-ui.min.css" />
+    <script type="text/javascript" src="js/jquery-3.2.1.js"></script>
+    <script type="text/javascript" src="jquery-ui-1.12.1/jquery-ui.min.js"></script>
+    <script src="js/jcarousel.responsive.js"></script>
+    <script src="js/jquery.jcarousel.min.js"></script>
+
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+
     </head>
     <body>
        <header>
