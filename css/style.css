@@ -64,7 +64,7 @@ header .menu{
     margin-right: -30px;
 }
 .menu .menu-item .menu-item-content li .menu-items{
-    font-size: 15px;
+    font-size: 14px;
     color: white;
 }
 .menu .menu-item .menu-item-content li .menu-items:hover{
@@ -502,7 +502,7 @@ header .menu{
     margin-left: -30px;
     display: block;
     overflow: hidden;
-    height: 196px;
+    /*height: 196px;*/
     color: #757578;
     font-size: 16px;
     line-height: 25px;
@@ -590,7 +590,7 @@ header .menu{
 }
 .rajniti-part .rajniti-part-2 .total-content .rajniti-content h2 a{
     display: block;
-    height: 60px;
+    /*height: 60px;*/
     overflow: hidden;
     font-size: 23px;
     padding-top: 5px;
@@ -600,7 +600,7 @@ header .menu{
 .rajniti-part .rajniti-part-2 .total-content .rajniti-content a p{
     display: block;
     overflow: hidden;
-    height: 197px;
+    /*height: 197px;*/
     color: #757578;
     font-size: 16px;
     line-height: 25px;

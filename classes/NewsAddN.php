@@ -37,6 +37,8 @@ class NewsAddN{
 		$author = mysqli_real_escape_string($this->db->link,$author);
 		$writer = $this->fm->validation($data['writer']);
 		$writer = mysqli_real_escape_string($this->db->link,$writer);
+		$sahittowriter = $this->fm->validation($data['sahittowriter']);
+		$sahittowriter = mysqli_real_escape_string($this->db->link,$sahittowriter);
 		$status = $this->fm->validation($data['status']);
 		$status = mysqli_real_escape_string($this->db->link,$status);
 		$date = $this->fm->validation($data['date']);
@@ -67,7 +69,7 @@ class NewsAddN{
                    return $msg;
 		    }else{
 	    	move_uploaded_file($file_temp, $uploaded_image);
-	    	$query = "INSERT INTO tbl_newses(district_id,category_id,subcategory_id,top_news, news_title, news_url, news_seo_title,news_summery, news_details,image, author,writer, status,date) VALUES('$district_id','$category_id','$subcategory_id','$top_news','$news_title','$news_url','$news_seo_title','$news_summery','$news_details','$uploaded_image','$author','$writer','$status','$date')";
+	    	$query = "INSERT INTO tbl_newses(district_id,category_id,subcategory_id,top_news, news_title, news_url, news_seo_title,news_summery, news_details,image, author,writer,sahittowriter, status,date) VALUES('$district_id','$category_id','$subcategory_id','$top_news','$news_title','$news_url','$news_seo_title','$news_summery','$news_details','$uploaded_image','$author','$writer','$sahittowriter','$status','$date')";
 	    	$inserted_row = $this->db->insert($query);
 
 	    	$query = "INSERT INTO local_newses_tbl(category_id,subcategory_id,top_news, news_title, news_url, news_seo_title,news_summery, news_details,image, author,status,date) VALUES('$category_id','$subcategory_id','$top_news','$news_title','$news_url','$news_seo_title','$news_summery','$news_details','$uploaded_image','$author','$status','$date')";
@@ -111,7 +113,7 @@ class NewsAddN{
 					           FROM tbl_newses
 					           INNER JOIN tbl_ncategory 
 					           ON tbl_newses.category_id = tbl_ncategory.category_id
-					           ORDER BY hits DESC LIMIT 5";
+					           ORDER BY hits DESC LIMIT 10";
 	  	/*$query = "SELECT * FROM tbl_newses WHERE status = '1' ORDER BY hits DESC LIMIT 5";*/
 	  	$result = $this->db->select($query);
 	  	return $result;
@@ -435,13 +437,13 @@ class NewsAddN{
 	  }
 	   /*get all Sahitto new*/
 	  public function getTopSahittoNews(){
-	  	$query = "SELECT * FROM tbl_newses WHERE status = '1' AND top_news = '1' AND subcategory_id = '9' ORDER BY news_id DESC  LIMIT 1";
+	  	$query = "SELECT * FROM tbl_newses WHERE status = '1' AND top_news = '1' AND subcategory_id = '17' ORDER BY news_id DESC  LIMIT 1";
 	  	$result = $this->db->select($query);
 	  	return $result;
 	  }
 	  /*get all Sahitto new*/
 	  public function getAllSahittoNews(){
-	  	$query = "SELECT * FROM tbl_newses WHERE status = '1'AND subcategory_id = '9' ORDER BY news_id DESC  LIMIT 3";
+	  	$query = "SELECT * FROM tbl_newses WHERE status = '1'AND subcategory_id = '17' ORDER BY news_id DESC  LIMIT 3";
 	  	$result = $this->db->select($query);
 	  	return $result;
 	  }
@@ -1256,6 +1258,13 @@ class NewsAddN{
 	  	return $result;
 	  }
 
+	  /*probondho news*/
+	  public function getallprobondhoNews(){
+	  	$query = "SELECT * FROM tbl_newses WHERE status = '1' AND subcategory_id = '17' ORDER BY news_id DESC  LIMIT 6";
+	  	$result = $this->db->select($query);
+	  	return $result;
+	  }
+
 
 
 
@@ -1335,6 +1344,12 @@ class NewsAddN{
 		$news_summery = mysqli_real_escape_string($this->db->link,$news_summery);
 		$news_details = $this->fm->validation($data['news_details']);
 		$news_details = mysqli_real_escape_string($this->db->link,$news_details);
+		$author = $this->fm->validation($data['author']);
+		$author = mysqli_real_escape_string($this->db->link,$author);
+		$writer = $this->fm->validation($data['writer']);
+		$writer = mysqli_real_escape_string($this->db->link,$writer);
+		$sahittowriter = $this->fm->validation($data['sahittowriter']);
+		$sahittowriter = mysqli_real_escape_string($this->db->link,$sahittowriter);
 		$update_dateN_time = date("Y-m-d H:i:s");
 
 		$permited  = array('jpg', 'jpeg', 'png', 'gif');
@@ -1373,6 +1388,9 @@ class NewsAddN{
 			    			image 		        ='$uploaded_image',
 			    			news_summery 	    ='$news_summery',
 			    			news_details 		='$news_details',
+			    			author 		        ='$author',
+			    			writer 		        ='$writer',
+			    			sahittowriter 		='$sahittowriter',
 			    			update_dateN_time   ='$update_dateN_time' 
 			    			WHERE news_id ='$id'";
 
@@ -1399,6 +1417,9 @@ class NewsAddN{
 			    			news_seo_title 		='$news_seo_title',
 			    			news_summery 	    ='$news_summery',
 			    			news_details 		='$news_details',
+			    			author 		        ='$author',
+			    			writer 		        ='$writer',
+			    			sahittowriter 		='$sahittowriter',
 			    			update_dateN_time   ='$update_dateN_time'
 
 			    			WHERE news_id ='$id'";

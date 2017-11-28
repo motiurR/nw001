@@ -27,7 +27,8 @@
                 $allInfoPhoneEmail = $emailPhone->getAllEmailNphoneInfo();
                 if ($allInfoPhoneEmail) {
                     while ($result = $allInfoPhoneEmail->fetch_assoc()) {
-              ?>  
+              ?> 
+
                  <form action="" method="POST">
                     <table class="form">    
 

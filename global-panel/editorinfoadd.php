@@ -62,9 +62,7 @@
                             <td><label>Address</label></td>
                             
                             <td>
-                                <textarea class="tinymce" name="editor_address">
-                                    <?php echo $result['editor_address']; ?>
-                                </textarea>
+                                <input type="text" name="editor_address" value="<?php echo $result['editor_address']; ?>" class="medium" />
                             </td>
                         </tr>
 
@@ -82,14 +80,5 @@
             </div>
         </div>
 
-<script src="js/tiny-mce/jquery.tinymce.js" type="text/javascript"></script>
-<script type="text/javascript">
-    $(document).ready(function () {
-        setupTinyMCE();
-        setDatePicker('date-picker');
-        $('input[type="checkbox"]').fancybutton();
-        $('input[type="radio"]').fancybutton();
-    });
-</script>
 
 <?php include 'inc/footer.php';?>

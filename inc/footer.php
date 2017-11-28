@@ -10,32 +10,41 @@
             <div class="row">
                 <div class="footer_part_content">
                     <div class="col-lg-5 editor_details">
+
+                 <?php
+                     $einfo = new EditorInfo();
+                      $editorinfo = $einfo->geteditorinfo();
+                      if ($editorinfo) {
+                        while ($result = $editorinfo->fetch_assoc()) {
+                 ?>    
                         <form class="form-horizontal">
                             <div class="form-group">
                                 <label class="col-sm-4 control-label">সম্পাদকের নাম :</label>
                                 <div class="col-sm-8">
-                                    <p class="form-control-static">সীমান্ত প্রধান</p>
+                                    <p class="form-control-static"><?php echo $result['editor_name'];?></p>
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label class="col-sm-4 control-label">মোবা :</label>
                                 <div class="col-sm-8">
-                                    <p class="form-control-static">0000000000</p>
+                                    <p class="form-control-static"><?php echo $result['editor_mobile'];?></p>
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label class="col-sm-4 control-label">ইমেইল :</label>
                                 <div class="col-sm-8">
-                                    <p class="form-control-static">sample@gmail.com</p>
+                                    <p class="form-control-static"><?php echo $result['editor_email'];?></p>
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label class="col-sm-4 control-label">ঠিকানা :</label>
                                 <div class="col-sm-8">
-                                    <p class="form-control-static">যাত্রাবাড়ী পানির ট্যাঙ্ক যাত্রাবাড়ী ঢাকা</p>
+                                    <p class="form-control-static"><?php echo $result['editor_address'];?></p>
                                 </div>
                             </div>
                         </form>
+                <?php  } } ?>        
+
                     </div>
                     <div class="col-lg-3">
                         <div class="newspaper_details text-center">
@@ -174,22 +183,33 @@
                     </div>
                     <div class="col-lg-4">
                         <div class="address_content">
+            <?php
+               $emailPhone = new EmailNphoneInfo();
+                $allInfoPhoneEmail = $emailPhone->getAllEmailNphoneInfo();
+                if ($allInfoPhoneEmail) {
+                    while ($result = $allInfoPhoneEmail->fetch_assoc()) {
+              ?> 
+
                             <form class="form-horizontal">
                                 <div class="form-group">
                                     <label class="col-sm-4 control-label">নিউজ রুম :</label>
                                     <div class="col-sm-8">
-                                        <p class="form-control-static">0170000000</p>
-                                        <p class="form-control-static email">sample@gmail.com</p>
+                                        <p class="form-control-static"><?php echo $result['newsroommobile'];?></p>
+                                        <p class="form-control-static email"><?php echo $result['newsroomemail'];?></p>
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label class="col-sm-4 control-label">বিজ্ঞাপন :</label>
                                     <div class="col-sm-8">
-                                        <p class="form-control-static">0000000000</p>
-                                        <p class="form-control-static email">sample@gmail.com</p>
+                                        <p class="form-control-static"><?php echo $result['advmobile'];?></p>
+                                        <p class="form-control-static email"><?php echo $result['advemail'];?></p>
                                     </div>
                                 </div>
                             </form>
+
+                  <?php } } ?>          
+
+
                         </div>
                     </div>
                 </div>

@@ -180,10 +180,36 @@
                                 </textarea>
                             </td>
                         </tr>
+                        <tr>
+                            <td>
+                                <label>Image Caption</label>
+                            </td>
+                            <td>
+                                <input type="text" name="author" value="<?php echo $value['author']; ?>" class="medium" />
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <label>সাহিত্য লেখকের নাম [optional]</label>
+                            </td>
+                            <td>
+                                <input type="text" name="sahittowriter" class="medium" value="<?php echo $value['sahittowriter']; ?>" />
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <label>Writer Name</label>
+                            </td>
+                            <td>
+                                <input type="text" name="writer" value="<?php echo $value['writer']; ?>" class="medium" />
+                            </td>
+                        </tr>
 
 
 
-						<tr> 
+						            <tr> 
                             <td>
                                 <input type="submit" name="submit" Value="Update" />
                             </td>

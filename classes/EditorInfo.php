@@ -52,5 +52,10 @@ class EditorInfo{
 	  	  					   
 	  	  }
 	  }
+	  public function geteditorinfo(){
+	  	$query = "SELECT * FROM tbl_editor";
+	  	 $result = $this->db->select($query);
+	  	 return $result;
+	  }
 
 }	  

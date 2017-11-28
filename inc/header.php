@@ -34,6 +34,7 @@
         <link rel="stylesheet" href="css/archive.css" />
         <link rel="stylesheet" href="css/news-view.css" />
         <link rel="stylesheet" href="css/map.css" />
+        <link rel="stylesheet" href="css/sahitto.css" />
         <link rel="stylesheet" href="css/font-awesome.min.css" />
         <link rel="stylesheet" href="css/jcarousel.responsive.css" />
 
@@ -145,7 +146,14 @@
                                     <li><a href="facebookkothon.php">ফেসবুক কথন</a></li>
                                     <li><a href="lifestyle.php">জীবনযাপন</a></li>
                                     <li><a href="women.php">নারী</a></li>
-                                    <li><a href="sahitto.php">সাহিত্য</a></li>
+                                </ul>
+                             </li>   
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle menu-items" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">সাহিত্য<i class="fa fa-chevron-down" aria-hidden="true"></i></a>
+                                <ul class="dropdown-menu dropdown-content">
+                                    <li><a href="probondho.php">প্রবন্ধ</a></li>
+                                    <li><a href="probas.php">ঘাসফড়িং</a></li>
+                                    <li><a href="probas.php">কবিতা</a></li>
                                 </ul>
                             </li>
                             <li>

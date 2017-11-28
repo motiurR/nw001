@@ -46,7 +46,18 @@
                         <li><a href="cartoonmanage.php">Cartoon News List</a> </li>
                     </ul>
                 </li>
-
+                <li><a class="menuitem">Voting Pool</a>
+                    <ul class="submenu">
+                        <li><a href="addquesans.php">Add Pool</a> </li>
+                        <li><a href="questionanslist.php">Pool List</a> </li>
+                    </ul>
+                </li>
+                <li><a class="menuitem">Photo Gallery</a>
+                    <ul class="submenu">
+                        <li><a href="galleryadd.php">Add Photo</a> </li>
+                        <li><a href="gallerylist.php">Photo List</a> </li>
+                    </ul>
+                </li>
                  <li><a class="menuitem">Columnist Profile</a>
                     <ul class="submenu">
                         <li><a href="columnistdd.php">Add Columnist</a> </li>

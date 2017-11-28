@@ -49,7 +49,7 @@ $("#suggesstion-box").hide();
 
                          <tr>
                             <td>
-                                <label>Districts</label>
+                                <label>সারাদেশ সংবাদের জন্য[optional]</label>
                             </td>
                             <td>
                                 <select name="district_id">
@@ -165,6 +165,15 @@ $("#suggesstion-box").hide();
                             </td>
                             <td>
                                 <input type="text" name="author" class="medium" />
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <label>সাহিত্য লেখকের নাম [optional]</label>
+                            </td>
+                            <td>
+                                <input type="text" name="sahittowriter" class="medium" placeholder="যদি সাহিত্য কলাম লিখতে চান তাহলে লেখকের নাম দিন।" />
                             </td>
                         </tr>
 

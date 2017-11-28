@@ -21,7 +21,7 @@
                             <div class="col-lg-4">
                                 <div class="rajniti-content">
                                     <h2><a href="singlenews.php?nurl=<?php echo $result['news_url']; ?>"><?php echo $result['news_title']; ?></a></h2>
-                                    <a href="singlenews.php?nurl=<?php echo $result['news_url']; ?>"><?php echo $result['news_summery']; ?></a>
+                                    <a href="singlenews.php?nurl=<?php echo $result['news_url']; ?>"><p><?php echo $fm->textShorten($result['news_summery']); ?></p></a>
                                 </div>
                             </div>
                            <?php } } ?> 

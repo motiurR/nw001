@@ -26,14 +26,11 @@ and open the template in the editor.
     cursor: default;
 }
 .sahitto_page .sahitto_body{
-    position: relative;
-    margin-top: -3px;
+    background-image: url(../images/sahitto2.png);
+    background-size: 100% 100%;
 }
 .sahitto_page .sahitto_body .sahitto_body_content{
-    position: absolute;
-    top: 0px;
-    width: 99%;
-    margin-left: 0px;
+    margin-top: -2px;
 }
 .sahitto_page .sahitto_body .sahitto_body_content h2{
     color: #FFEA00;
@@ -43,16 +40,82 @@ and open the template in the editor.
     margin-left: 10px;
     border-bottom: 2px solid black;
     padding-bottom: 10px;
+    padding-top: 20px;
+    width: 99%;
+    margin-bottom: 0;
+    margin-top: 0;
+}
+.sahitto_page .sahitto_body .sahitto_body_content .sahitto_body_details{
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-bottom: 20px;
+}
+.sahitto_page .sahitto_body .sahitto_body_content .sahitto_body_details .probondho_book_details{
+    margin-top: 20px;
+}
+.sahitto_page .sahitto_body .sahitto_body_content .sahitto_body_details .probondho_book_details h3{
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+.sahitto_page .sahitto_body .sahitto_body_content .sahitto_body_details .sahitto_img img{
+    margin-left: -25px;
+    margin-top: 6px;
+    border: 3px solid wheat;
+}
+.sahitto_page .sahitto_body .sahitto_body_content .sahitto_body_details .probondho_details p{
+    max-height: 175px;
+    display: block;
+    overflow: hidden;
+    font-size: 18px;
+    text-align: justify;
+    line-height: 25px;
+    margin-top: 10px;
+}
+.sahitto_page .sahitto_body .sahitto_body_content .sahitto_body_details .probondho_details p .more_button{
+    border-radius: 0;
+    border: navajowhite;
+    padding: 6px 20px;
+    font-size: 17px;
+    font-weight: bold;
+}
+.sahitto_page .sahitto_body .sahitto_body_content .sahitto_body_details .probondho_details p .more_button:active{
+    background-color: white;
+    color: black;
+}
+
+
+
+.sahitto_page .sahitto_part_2{
+    background-image: url(../images/sahitto2.png);
+    background-size: 100% 100%;
+    margin-bottom: 20px;
+}
+.sahitto_page .sahitto_part_2 .sahitto_part_2_content{
+    margin-top: 50px;
+}
+.sahitto_page .sahitto_part_2 .sahitto_part_2_content .thumbnail_contents{
+    background-color: transparent;
+    margin-left: 15px;
+    border: none;
+    margin-right: 15px;
+}
+.sahitto_page .sahitto_part_2 .sahitto_part_2_content .thumbnail_contents img{
     width: 100%;
+    height: 200px;
+    border: 2px solid wheat;
 }
-.sahitto_page .sahitto_body .sahitto_body_content .sahitto_body_details .probondho_details .probondho_book_details{
-    width: 340px;
-    padding-left: 10px;
+.sahitto_page .sahitto_part_2 .sahitto_part_2_content .thumbnail_contents .thumbnail_captions{    
+    margin-top: 8px;
+    margin-right: -7px;
+    margin-left: -7px;
 }
-.sahitto_page .sahitto_body .sahitto_body_content .sahitto_body_details .probondho_details .sahitto_picture{
-    margin-left: 58px;
+.sahitto_page .sahitto_part_2 .sahitto_part_2_content .thumbnail_contents .thumbnail_captions h3{
+    margin-top: 0;
+    margin-bottom: 10px;
 }
-.sahitto_page .sahitto_body .sahitto_body_content .sahitto_body_details .probondho_details .sahitto_picture img{
-    width: 100%;
-    height: 160px;
+.sahitto_page .sahitto_part_2 .sahitto_part_2_content .thumbnail_contents .thumbnail_captions p{
+    overflow: hidden;
+    font-size: 19px;
+    max-height: 130px;
+    text-align: justify;
 }
